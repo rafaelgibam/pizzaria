@@ -1,0 +1,21 @@
+<?php
+
+
+
+require_once "autoload.php";
+use Models\Cliente;
+use Models\Endereco;
+
+
+$c = new Cliente();
+$e = new Endereco();
+
+$e->setNomerua("Rua doutor Miguel");
+$e->setCidade("Recife");
+
+$c->setNome("Rafael");
+$c->setSobrenome("Willames");
+$c->setEmail("rafael@rafael.com");
+$c->setEndereco($e);
+
+echo $c->getNome() ." ". $c->getSobrenome() . '<br>' . $c->getEmail() . '<br>' . $c->getEndereco()->getNomeRua() . '<br>' . $c->getEndereco()->getCidade();
