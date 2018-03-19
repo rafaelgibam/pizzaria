@@ -8,7 +8,7 @@ use stdClass;
 class BaseModel
 {
     protected function inserir(stdClass $object){
-        
+        aa
     }
 
     protected function listar(){
