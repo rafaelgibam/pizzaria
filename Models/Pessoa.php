@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rafaelgibam
- * Date: 19/03/2018
- * Time: 11:33
- */
 
 namespace Models;
 
@@ -25,5 +19,15 @@ abstract class Pessoa
     protected $numfixo;
     protected $numrecado;
     protected $status;
+
+    protected function getIdade(){
+
+        $nasc = $this->datanasc;
+        $anoatual =  date('Y');
+        $anonasc = explode('/',$nasc);
+
+        return $anoatual - $anonasc[2];
+    }
+
 
 }
