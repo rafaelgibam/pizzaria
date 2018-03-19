@@ -13,7 +13,6 @@ $e = new Endereco();
 $e->setNomerua("Rua doutor Miguel");
 $e->setCidade("Recife");
 
-
 $c->setNome("Rafael");
 $c->setSobrenome("Rafael Willames");
 $c->setSobrenome("Willames");
@@ -26,3 +25,5 @@ echo $c->getNome() ." ". $c->getSobrenome() . '<br>' .
      $c->getEndereco()->getNomeRua() . '<br>' .
      $c->getEndereco()->getCidade() . '<br>' .
      $c->getIdade() . '<br>';
+
+\Infra\Conexao::getConnection();
