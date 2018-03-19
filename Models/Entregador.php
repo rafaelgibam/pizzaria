@@ -2,48 +2,38 @@
 
 namespace Models;
 
-class Cliente extends Pessoa
+class Entregador extends Funcionario
 {
     protected $id;
-    protected $nome;
-    protected $sobrenome;
     protected $cpf;
-    protected $altura;
-    protected $peso;
-    protected $email;
+    protected $nome;
     protected $sexo;
     protected $nascionalidade;
+    protected $sobrenome;
     protected $datanasc;
+    protected $altura;
+    protected $peso;
     protected $numcelular;
     protected $numfixo;
     protected $numrecado;
     protected $status;
-    protected $criadoem;
     protected $endereco;
-    protected $mesa;
+    protected $delivery;
 
     /**
-     * @return $idade
+     * @return Delivery
      */
-    public function getIdade()
+    public function getDelivery()
     {
-        return parent::getIdade();
+        return $this->delivery;
     }
 
     /**
-     * @return Mesa
+     * @param Delivery $delivery
      */
-    public function getMesa()
+    public function setDelivery(Delivery $delivery)
     {
-        return $this->mesa;
-    }
-
-    /**
-     * @param Mesa $mesa
-     */
-    public function setMesa(Mesa $mesa)
-    {
-        $this->mesa = $mesa;
+        $this->delivery = $delivery;
     }
 
     /**
@@ -65,38 +55,6 @@ class Cliente extends Pessoa
     /**
      * @return mixed
      */
-    public function getNome()
-    {
-        return $this->nome;
-    }
-
-    /**
-     * @param mixed $nome
-     */
-    public function setNome($nome)
-    {
-        $this->nome = $nome;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSobrenome()
-    {
-        return $this->sobrenome;
-    }
-
-    /**
-     * @param mixed $sobrenome
-     */
-    public function setSobrenome($sobrenome)
-    {
-        $this->sobrenome = $sobrenome;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getCpf()
     {
         return $this->cpf;
@@ -113,49 +71,17 @@ class Cliente extends Pessoa
     /**
      * @return mixed
      */
-    public function getAltura()
+    public function getNome()
     {
-        return $this->altura;
+        return $this->nome;
     }
 
     /**
-     * @param mixed $altura
+     * @param mixed $nome
      */
-    public function setAltura($altura)
+    public function setNome($nome)
     {
-        $this->altura = $altura;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPeso()
-    {
-        return $this->peso;
-    }
-
-    /**
-     * @param mixed $peso
-     */
-    public function setPeso($peso)
-    {
-        $this->peso = $peso;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param mixed $email
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
+        $this->nome = $nome;
     }
 
     /**
@@ -193,6 +119,22 @@ class Cliente extends Pessoa
     /**
      * @return mixed
      */
+    public function getSobrenome()
+    {
+        return $this->sobrenome;
+    }
+
+    /**
+     * @param mixed $sobrenome
+     */
+    public function setSobrenome($sobrenome)
+    {
+        $this->sobrenome = $sobrenome;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getDatanasc()
     {
         return $this->datanasc;
@@ -204,6 +146,38 @@ class Cliente extends Pessoa
     public function setDatanasc($datanasc)
     {
         $this->datanasc = $datanasc;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAltura()
+    {
+        return $this->altura;
+    }
+
+    /**
+     * @param mixed $altura
+     */
+    public function setAltura($altura)
+    {
+        $this->altura = $altura;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPeso()
+    {
+        return $this->peso;
+    }
+
+    /**
+     * @param mixed $peso
+     */
+    public function setPeso($peso)
+    {
+        $this->peso = $peso;
     }
 
     /**
@@ -273,33 +247,18 @@ class Cliente extends Pessoa
     /**
      * @return mixed
      */
-    public function getCriadoem()
-    {
-        return $this->criadoem;
-    }
-
-    /**
-     * @param mixed $criadoem
-     */
-    public function setCriadoem($criadoem)
-    {
-        $this->criadoem = $criadoem;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getEndereco()
     {
         return $this->endereco;
     }
 
     /**
-     * @param Endereco $endereco
+     * @param mixed $endereco
      */
-    public function setEndereco(Endereco $endereco)
+    public function setEndereco($endereco)
     {
         $this->endereco = $endereco;
     }
+
 
 }
