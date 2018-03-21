@@ -25,5 +25,3 @@ echo $c->getNome() ." ". $c->getSobrenome() . '<br>' .
      $c->getEndereco()->getNomeRua() . '<br>' .
      $c->getEndereco()->getCidade() . '<br>' .
      $c->getIdade() . '<br>';
-
-\Infra\Conexao::getConnection();

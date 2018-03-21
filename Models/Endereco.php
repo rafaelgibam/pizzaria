@@ -4,46 +4,67 @@ namespace Models;
 
 class Endereco
 {
-    private $nomerua;
-    private $numcasa;
+    private $id;
+    private $logadouro;
+    private $numero;
     private $bairro;
-    private $cidade;
-    private $estado;
-    private $complemento;
-    private $referencia;
     private $cep;
+    private $municipio;
+    private $uf;
     private $pais;
+    private $referencia;
+    private $complemento;
 
-    /**
-     * @return mixed
-     */
-    public function getNomeRua()
-    {
-        return $this->nomerua;
-    }
-
-    /**
-     * @param mixed $nomerua
-     */
-    public function setNomerua($nomerua)
-    {
-        $this->nomerua = $nomerua;
+    public function getEndereco($cep){
+        // Método que captura o endereço atráves do cep
     }
 
     /**
      * @return mixed
      */
-    public function getNumcasa()
+    public function getId()
     {
-        return $this->numcasa;
+        return $this->id;
     }
 
     /**
-     * @param mixed $numcasa
+     * @param mixed $id
      */
-    public function setNumcasa($numcasa)
+    public function setId($id)
     {
-        $this->numcasa = $numcasa;
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLogadouro()
+    {
+        return $this->logadouro;
+    }
+
+    /**
+     * @param mixed $logadouro
+     */
+    public function setLogadouro($logadouro)
+    {
+        $this->logadouro = $logadouro;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNumero()
+    {
+        return $this->numero;
+    }
+
+    /**
+     * @param mixed $numero
+     */
+    public function setNumero($numero)
+    {
+        $this->numero = $numero;
     }
 
     /**
@@ -65,49 +86,65 @@ class Endereco
     /**
      * @return mixed
      */
-    public function getCidade()
+    public function getCep()
     {
-        return $this->cidade;
+        return $this->cep;
     }
 
     /**
-     * @param mixed $cidade
+     * @param mixed $cep
      */
-    public function setCidade($cidade)
+    public function setCep($cep)
     {
-        $this->cidade = $cidade;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEstado()
-    {
-        return $this->estado;
-    }
-
-    /**
-     * @param mixed $estado
-     */
-    public function setEstado($estado)
-    {
-        $this->estado = $estado;
+        $this->cep = $cep;
     }
 
     /**
      * @return mixed
      */
-    public function getComplemento()
+    public function getMunicipio()
     {
-        return $this->complemento;
+        return $this->municipio;
     }
 
     /**
-     * @param mixed $complemento
+     * @param mixed $municipio
      */
-    public function setComplemento($complemento)
+    public function setMunicipio($municipio)
     {
-        $this->complemento = $complemento;
+        $this->municipio = $municipio;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUf()
+    {
+        return $this->uf;
+    }
+
+    /**
+     * @param mixed $uf
+     */
+    public function setUf($uf)
+    {
+        $this->uf = $uf;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPais()
+    {
+        return $this->pais;
+    }
+
+    /**
+     * @param mixed $pais
+     */
+    public function setPais($pais)
+    {
+        $this->pais = $pais;
     }
 
     /**
@@ -129,33 +166,17 @@ class Endereco
     /**
      * @return mixed
      */
-    public function getCep()
+    public function getComplemento()
     {
-        return $this->cep;
+        return $this->complemento;
     }
 
     /**
-     * @param mixed $cep
+     * @param mixed $complemento
      */
-    public function setCep($cep)
+    public function setComplemento($complemento)
     {
-        $this->cep = $cep;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPais()
-    {
-        return $this->pais;
-    }
-
-    /**
-     * @param mixed $pais
-     */
-    public function setPais($pais)
-    {
-        $this->pais = $pais;
+        $this->complemento = $complemento;
     }
 
 

@@ -5,24 +5,19 @@ namespace Models;
 abstract class Pessoa
 
 {
-    protected  $cpf;
+    protected $id;
+    protected $cpf;
     protected $nome;
-    protected $sobrenome;
-    protected $datanasc;
     protected $sexo;
-    protected $nascionalidade;
-    protected $endereco;
-    protected $altura;
-    protected $peso;
-    protected $email;
-    protected $numcelular;
+    protected $dtnasc;
     protected $numfixo;
-    protected $numrecado;
-    protected $status;
+    protected $numcel;
+    protected $endereco;
+    protected $estado;
 
     protected function getIdade(){
 
-        $nasc = $this->datanasc;
+        $nasc = $this->dtnasc;
         $anoatual =  date('Y');
         $anonasc = explode('/',$nasc);
 

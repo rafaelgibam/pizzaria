@@ -6,21 +6,14 @@ class Cliente extends Pessoa
 {
     protected $id;
     protected $nome;
-    protected $sobrenome;
     protected $cpf;
-    protected $altura;
-    protected $peso;
-    protected $email;
     protected $sexo;
-    protected $nascionalidade;
-    protected $datanasc;
-    protected $numcelular;
+    protected $dtnasc;
+    protected $numcel;
     protected $numfixo;
-    protected $numrecado;
-    protected $status;
-    protected $criadoem;
+    protected $estado;
     protected $endereco;
-    protected $mesa;
+    private $criadoem;
 
     /**
      * @return $idade
@@ -28,22 +21,6 @@ class Cliente extends Pessoa
     public function getIdade()
     {
         return parent::getIdade();
-    }
-
-    /**
-     * @return Mesa
-     */
-    public function getMesa()
-    {
-        return $this->mesa;
-    }
-
-    /**
-     * @param Mesa $mesa
-     */
-    public function setMesa(Mesa $mesa)
-    {
-        $this->mesa = $mesa;
     }
 
     /**
@@ -81,22 +58,6 @@ class Cliente extends Pessoa
     /**
      * @return mixed
      */
-    public function getSobrenome()
-    {
-        return $this->sobrenome;
-    }
-
-    /**
-     * @param mixed $sobrenome
-     */
-    public function setSobrenome($sobrenome)
-    {
-        $this->sobrenome = $sobrenome;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getCpf()
     {
         return $this->cpf;
@@ -108,54 +69,6 @@ class Cliente extends Pessoa
     public function setCpf($cpf)
     {
         $this->cpf = $cpf;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAltura()
-    {
-        return $this->altura;
-    }
-
-    /**
-     * @param mixed $altura
-     */
-    public function setAltura($altura)
-    {
-        $this->altura = $altura;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPeso()
-    {
-        return $this->peso;
-    }
-
-    /**
-     * @param mixed $peso
-     */
-    public function setPeso($peso)
-    {
-        $this->peso = $peso;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param mixed $email
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
     }
 
     /**
@@ -177,49 +90,33 @@ class Cliente extends Pessoa
     /**
      * @return mixed
      */
-    public function getNascionalidade()
+    public function getDtnasc()
     {
-        return $this->nascionalidade;
+        return $this->dtnasc;
     }
 
     /**
-     * @param mixed $nascionalidade
+     * @param mixed $dtnasc
      */
-    public function setNascionalidade($nascionalidade)
+    public function setDtnasc($dtnasc)
     {
-        $this->nascionalidade = $nascionalidade;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDatanasc()
-    {
-        return $this->datanasc;
-    }
-
-    /**
-     * @param mixed $datanasc
-     */
-    public function setDatanasc($datanasc)
-    {
-        $this->datanasc = $datanasc;
+        $this->dtnasc = $dtnasc;
     }
 
     /**
      * @return mixed
      */
-    public function getNumcelular()
+    public function getNumcel()
     {
-        return $this->numcelular;
+        return $this->numcel;
     }
 
     /**
-     * @param mixed $numcelular
+     * @param mixed $numcel
      */
-    public function setNumcelular($numcelular)
+    public function setNumcel($numcel)
     {
-        $this->numcelular = $numcelular;
+        $this->numcel = $numcel;
     }
 
     /**
@@ -241,33 +138,33 @@ class Cliente extends Pessoa
     /**
      * @return mixed
      */
-    public function getNumrecado()
+    public function getEstado()
     {
-        return $this->numrecado;
+        return $this->estado;
     }
 
     /**
-     * @param mixed $numrecado
+     * @param mixed $estado
      */
-    public function setNumrecado($numrecado)
+    public function setEstado($estado)
     {
-        $this->numrecado = $numrecado;
+        $this->estado = $estado;
     }
 
     /**
      * @return mixed
      */
-    public function getStatus()
+    public function getEndereco()
     {
-        return $this->status;
+        return $this->endereco;
     }
 
     /**
-     * @param mixed $status
+     * @param Endereco $endereco
      */
-    public function setStatus($status)
+    public function setEndereco(Endereco $endereco)
     {
-        $this->status = $status;
+        $this->endereco = $endereco;
     }
 
     /**
@@ -286,20 +183,7 @@ class Cliente extends Pessoa
         $this->criadoem = $criadoem;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getEndereco()
-    {
-        return $this->endereco;
-    }
 
-    /**
-     * @param Endereco $endereco
-     */
-    public function setEndereco(Endereco $endereco)
-    {
-        $this->endereco = $endereco;
-    }
+
 
 }

@@ -2,7 +2,7 @@
 
 namespace Models;
 
-class Cozinheiro extends Funcionario
+class MotoBoy extends Funcionario
 {
     protected $id;
     protected $cpf;
@@ -17,10 +17,30 @@ class Cozinheiro extends Funcionario
     protected $salario;
     protected $ctps;
     protected $pis;
+    private $placa;
 
+
+
+    
     public function getIdade()
     {
         return parent::getIdade();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPlaca()
+    {
+        return $this->placa;
+    }
+
+    /**
+     * @param mixed $placa
+     */
+    public function setPlaca($placa)
+    {
+        $this->placa = $placa;
     }
 
     /**

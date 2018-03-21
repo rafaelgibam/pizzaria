@@ -1,20 +1,28 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: rafaelgibam
+ * Date: 21/03/2018
+ * Time: 11:40
+ */
 
 namespace Models;
 
-class Mesa
+
+class Pizza extends Produto
 {
-    private $id;
-    private $numero;
-    private $nome;
-    private $cor;
-    private $capacidade;
-    private $peso;
-    private $altura;
-    private $comprimento;
-    private $largura;
-    private $tipomesa;
-    private $estado;
+    protected $id;
+    protected $nome;
+    protected $cat;
+    protected $descricao;
+    protected $preco;
+    protected $altura;
+    protected $comprimento;
+    protected $largura;
+    protected $peso;
+    protected $estado;
+    private $fatia;
+    private $borda;
 
     /**
      * @return mixed
@@ -30,22 +38,6 @@ class Mesa
     public function setId($id)
     {
         $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNumero()
-    {
-        return $this->numero;
-    }
-
-    /**
-     * @param mixed $numero
-     */
-    public function setNumero($numero)
-    {
-        $this->numero = $numero;
     }
 
     /**
@@ -67,49 +59,49 @@ class Mesa
     /**
      * @return mixed
      */
-    public function getCor()
+    public function getCat()
     {
-        return $this->cor;
+        return $this->cat;
     }
 
     /**
-     * @param mixed $cor
+     * @param mixed $cat
      */
-    public function setCor($cor)
+    public function setCat($cat)
     {
-        $this->cor = $cor;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCapacidade()
-    {
-        return $this->capacidade;
-    }
-
-    /**
-     * @param mixed $capacidade
-     */
-    public function setCapacidade($capacidade)
-    {
-        $this->capacidade = $capacidade;
+        $this->cat = $cat;
     }
 
     /**
      * @return mixed
      */
-    public function getPeso()
+    public function getDescricao()
     {
-        return $this->peso;
+        return $this->descricao;
     }
 
     /**
-     * @param mixed $peso
+     * @param mixed $descricao
      */
-    public function setPeso($peso)
+    public function setDescricao($descricao)
     {
-        $this->peso = $peso;
+        $this->descricao = $descricao;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPreco()
+    {
+        return $this->preco;
+    }
+
+    /**
+     * @param mixed $preco
+     */
+    public function setPreco($preco)
+    {
+        $this->preco = $preco;
     }
 
     /**
@@ -163,17 +155,17 @@ class Mesa
     /**
      * @return mixed
      */
-    public function getTipomesa()
+    public function getPeso()
     {
-        return $this->tipomesa;
+        return $this->peso;
     }
 
     /**
-     * @param mixed $tipomesa
+     * @param mixed $peso
      */
-    public function setTipomesa($tipomesa)
+    public function setPeso($peso)
     {
-        $this->tipomesa = $tipomesa;
+        $this->peso = $peso;
     }
 
     /**
@@ -192,4 +184,37 @@ class Mesa
         $this->estado = $estado;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getFatia()
+    {
+        return $this->fatia;
+    }
+
+    /**
+     * @param mixed $fatia
+     */
+    public function setFatia($fatia)
+    {
+        $this->fatia = $fatia;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBorda()
+    {
+        return $this->borda;
+    }
+
+    /**
+     * @param mixed $borda
+     */
+    public function setBorda($borda)
+    {
+        $this->borda = $borda;
+    }
+
+    
 }
