@@ -1,17 +1,21 @@
 <?php
-    session_start();
+session_start();
 
-    if(!isset($_SESSION['garcomlogin'])){
-        header("location: /../index.php");
-        session_destroy();
-    }
+if(!isset($_SESSION['cpf'])){
+    header("location: /../index.php");
+    session_destroy();
+}
+if(isset($_GET['action'])){
+    session_destroy();
+    header("location: /../index.php");
+}
 ?>
 
 <?php include __DIR__ . "/../layout/head.php"; ?>
 <?php include __DIR__ . "/../layout/menugarcom.php"; ?>
 
 
-<h1 class="text-center">Bem Vindo Garcom!</h1>
+<h1 class="text-center">Bem Vindo <?php echo $_SESSION['nome']; ?></h1>
 
 
 <?php include __DIR__ . "/../layout/footer.php"; ?>

@@ -17,13 +17,14 @@ $con = \Infra\Conexao::getConnection();
 
 switch ($cargo){
     case 1:
-        $sql = "SELECT CPF FROM COZINHEIRO;";
+        $sql = "SELECT NOME,CPF FROM COZINHEIRO;";
         $stmt = $con->prepare($sql);
         if($stmt->execute()){
             while ($linha = $stmt->fetch()){
                 if( $linha->CPF == $cozin->getCpf()){
-                    $_SESSION['cozinlogin'] = true;
-                    header("location: cozinheiro/index.php");
+                    $_SESSION['cpf'] = $cozin->getCpf();
+                    $_SESSION['nome'] = $linha->NOME;
+                    header("location: cozinheiro/");
                     die();
                 }else{
                     header("location: index.php");
@@ -32,13 +33,14 @@ switch ($cargo){
         }
         break;
     case 2:
-        $sql = "SELECT CPF FROM GARCOM;";
+        $sql = "SELECT NOME,CPF FROM GARCOM;";
         $stmt = $con->prepare($sql);
         if($stmt->execute()){
             while ($linha = $stmt->fetch()){
                 if( $linha->CPF == $garcom->getCpf()){
-                    $_SESSION['garcomlogin'] = true;
-                    header("location: garcom/index.php");
+                    $_SESSION['cpf'] = $cozin->getCpf();
+                    $_SESSION['nome'] = $linha->NOME;
+                    header("location: garcom/");
                     die();
                 }else{
                     header("location: index.php");
@@ -47,13 +49,14 @@ switch ($cargo){
         }
         break;
     case 3:
-        $sql = "SELECT CPF FROM MOTOBOY;";
+        $sql = "SELECT NOME,CPF FROM MOTOBOY;";
         $stmt = $con->prepare($sql++);
         if($stmt->execute()){
             while ($linha = $stmt->fetch()){
                 if( $linha->CPF == $moto->getCpf()){
-                    $_SESSION['motologin'] = true;
-                    header("location: motoboy/index.php");
+                    $_SESSION['cpf'] = $moto->getCpf();
+                    $_SESSION['nome'] = $linha->NOME;
+                    header("location: motoboy/");
                     die();
                 }else{
                     header("location: index.php");

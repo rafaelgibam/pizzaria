@@ -1,6 +1,18 @@
+<?php
+
+if(!isset($_SESSION['cpf'])){
+    header("location: /../index.php");
+    session_destroy();
+}
+if(isset($_GET['action'])){
+    session_destroy();
+    header("location: /../index.php");
+}
+?>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="/../index.php">PizzariaCTL</a>
+        <a class="navbar-brand" href="#">PizzariaCTL</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,7 +36,7 @@
                     <a href="#" class="nav-link ml-2" data-toggle="modal" data-target="#exampleModal" >Perfil</a>
                 </li>
                 <li class="nav-item">
-                    <a href="?sair" class="nav-link ml-2">Sair</a>
+                    <a href="?action=sair" class="nav-link ml-2">Sair</a>
                 </li>
             </ul>
         </div>
@@ -36,10 +48,11 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <h5 class="modal-title" id="exampleModalLabel">Olá  <?php echo $_SESSION['nome']; ?></h5>
             </div>
             <div class="modal-body">
-                Meu Perfil
+                <a href="#">Editar Perfil</a>
+                <a href="?action=sair">Sair</a>
             </div>
         </div>
     </div>

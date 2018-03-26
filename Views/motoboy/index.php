@@ -1,9 +1,13 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['motologin'])){
+if(!isset($_SESSION['cpf'])){
     header("location: /../index.php");
     session_destroy();
+}
+if(isset($_GET['action'])){
+    session_destroy();
+    header("location: /../index.php");
 }
 ?>
 
@@ -11,7 +15,7 @@ if(!isset($_SESSION['motologin'])){
 <?php include __DIR__ . "/../layout/menumoto.php"; ?>
 
 
-<h1 class="text-center">Bem Vindo Motoboy</h1>
+<h1 class="text-center">Bem Vindo <?php echo $_SESSION['nome']; ?></h1>
 
 
 <?php include __DIR__ . "/../layout/footer.php"; ?>

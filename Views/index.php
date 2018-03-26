@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php
+    if(isset($_SESSION['cpf'])){
+        session_destroy();
+    }
+?>
 
 <?php include __DIR__ . "/layout/head.php"; ?>
 <?php include __DIR__ . "/layout/menu.php"; ?>
