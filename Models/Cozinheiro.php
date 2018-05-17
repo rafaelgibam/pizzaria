@@ -21,37 +21,6 @@ class Cozinheiro extends PessoaJuridica
         $this->id = $id;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCpf()
-    {
-        return $this->cpf;
-    }
-
-    /**
-     * @param mixed $cpf
-     */
-    public function setCpf($cpf)
-    {
-        $this->cpf = $cpf;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRg()
-    {
-        return $this->rg;
-    }
-
-    /**
-     * @param mixed $rg
-     */
-    public function setRg($rg)
-    {
-        $this->rg = $rg;
-    }
 
     /**
      * @return mixed
@@ -196,38 +165,6 @@ class Cozinheiro extends PessoaJuridica
     public function setEndereco(Endereco $endereco)
     {
         $this->endereco = $endereco;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDtadmissao()
-    {
-        return $this->dtadmissao;
-    }
-
-    /**
-     * @param mixed $dtadmissao
-     */
-    public function setDtadmissao($dtadmissao)
-    {
-        $this->dtadmissao = $dtadmissao;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSalario()
-    {
-        return $this->salario;
-    }
-
-    /**
-     * @param mixed $salario
-     */
-    public function setSalario($salario)
-    {
-        $this->salario = $salario;
     }
 
 

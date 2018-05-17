@@ -15,9 +15,17 @@ abstract class Model
     }
 
     public function find($id){
-        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE ID = :ID");
-        $stmt->bindParam(":ID", $id);
+        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE ID = ?");
+        $stmt->bindValue(1, $id);
         $stmt->execute();
         return $stmt->fetch();
+    }
+
+    public function delete($id)
+    {
+        $stmt = DB::getCon()->prepare("DELETE FROM {$this->table} WHERE ID = ?");
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+        $stmt->closeCursor();
     }
 }

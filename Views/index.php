@@ -5,30 +5,28 @@
 <?php
 
     $co = new \Models\Cozinheiro();
-    $codao = new \DAO\ClienteDAO();
+    $codao = new \DAO\CozinheiroDAO();
     $e = new \Models\Endereco();
 
     $e->setId(1);
 
     //ID, CPF, RG, CNPJ, RAZAOSOCIAL, NOME, SEXO, DATA_NASC, NUM_FIXO,
-    //NUM_CELULAR, ESTADO, SALARIO, DATA_ADMISSAO, ENDERECO_ID
-    $co->setCpf("222");
-    $co->setRg("333");
+    //NUM_CELULAR, ESTADO, SALARIO, ENDERECO_ID
+    $co->setId(1);
     $co->setCnpj("33333");
     $co->setRazaosocial("firma");
-    $co->setNome("Cozinheiro");
+    $co->setNome("rafael cozinheiro");
     $co->setSexo("Masc");
     $co->setDtnasc("2018-12-12");
     $co->setNumfixo("22222");
     $co->setNumcel("4444");
     $co->setEstado(1);
-    $co->setSalario("20000");
     $co->setEndereco($e);
 
 
     //$codao->update($c->getId(),$c);
     print_r($co);
-    $codao->insert($co);
+    $codao->update($co);
 
 ?>
 </pre>

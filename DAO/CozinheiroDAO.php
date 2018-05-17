@@ -2,7 +2,6 @@
 
 namespace DAO;
 
-
 class CozinheiroDAO extends Model implements ICrud
 {
 
@@ -10,35 +9,42 @@ class CozinheiroDAO extends Model implements ICrud
 
     public function insert($obj)
     {
-        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`, `RG`, `CNPJ`, `RAZAOSOCIAL`, `NOME`, `SEXO`, `DATA_NASC`, `NUM_FIXO`,
-                                                                             `NUM_CELULAR`, `ESTADO`, `SALARIO`, `ENDERECO_ID` ) 
-                                                 VALUES (?,?,?,?,?,?,?,?,?,?,?,?88)");
-
-
-        $stmt->bindValue(1, $obj->getCpf());
-        $stmt->bindValue(2, $obj->getRg());
-        $stmt->bindValue(3, $obj->getCnpj());
-        $stmt->bindValue(4, $obj->getRazaosocial());
-        $stmt->bindValue(5, $obj->getNome());
-        $stmt->bindValue(6, $obj->getSexo());
-        $stmt->bindValue(7, $obj->getDtnasc());
-        $stmt->bindValue(8, $obj->getNumfixo());
-        $stmt->bindValue(9, $obj->getNumcel());
-        $stmt->bindValue(10, $obj->getEstado());
-        $stmt->bindValue(11, $obj->getSalario());
-        $stmt->bindValue(12, $obj->getEndereco()->getId());
+        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CNPJ`, `RAZAOSOCIAL`, `NOME`, `SEXO`, `DATA_NASC`, 
+                                                                            `NUM_FIXO`,`NUM_CELULAR`,`ESTADO`,`ENDERECO_ID`) 
+                                                                            VALUES (?,?,?,?,?,?,?,?,?)");
+        $stmt->bindValue(1, $obj->getCnpj());
+        $stmt->bindValue(2, $obj->getRazaosocial());
+        $stmt->bindValue(3, $obj->getNome());
+        $stmt->bindValue(4, $obj->getSexo());
+        $stmt->bindValue(5, $obj->getDtnasc());
+        $stmt->bindValue(6, $obj->getNumfixo());
+        $stmt->bindValue(7, $obj->getNumcel());
+        $stmt->bindValue(8, $obj->getEstado());
+        $stmt->bindValue(9, $obj->getEndereco()->getId());
 
         $stmt->execute();
         $stmt->closeCursor();
     }
 
-    public function delete($id)
+    public function update($obj)
     {
-        // TODO: Implement delete() method.
-    }
+        $stmt = DB::getCon()->prepare("UPDATE {$this->table}
+                                                 SET CNPJ = ?, RAZAOSOCIAL = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?, NUM_CELULAR = ?, ESTADO = ?, ENDERECO_ID = ?
+                                                 WHERE ID = ?");
 
-    public function update($id, $obj)
-    {
-        // TODO: Implement update() method.
+
+        $stmt->bindValue(1, $obj->getCnpj());
+        $stmt->bindValue(2, $obj->getRazaosocial());
+        $stmt->bindValue(3, $obj->getNome());
+        $stmt->bindValue(4, $obj->getSexo());
+        $stmt->bindValue(5, $obj->getDtnasc());
+        $stmt->bindValue(6, $obj->getNumfixo());
+        $stmt->bindValue(7, $obj->getNumcel());
+        $stmt->bindValue(8, $obj->getEstado());
+        $stmt->bindValue(9, $obj->getEndereco()->getId());
+        $stmt->bindValue(10, $obj->getId());
+
+        $stmt->execute();
+        $stmt->closeCursor();
     }
 }
