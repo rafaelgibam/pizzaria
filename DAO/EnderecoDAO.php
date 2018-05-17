@@ -39,16 +39,18 @@ class EnderecoDAO extends Model implements ICrud
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
                                                  SET LOGRADOURO = ?, NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?, PAIS = ?, REFERENCIA = ?, CEP = ?
                                                  WHERE ID = ?");
-        $stmt->bindValue(1, $obj->getId());
-        $stmt->bindValue(2, $obj->getLogradouro());
-        $stmt->bindValue(3, $obj->getNumero());
-        $stmt->bindValue(4, $obj->getComplemento());
-        $stmt->bindValue(5, $obj->getBairro());
-        $stmt->bindValue(6, $obj->getMunicipio());
-        $stmt->bindValue(7, $obj->getUf());
-        $stmt->bindValue(8, $obj->getPais());
-        $stmt->bindValue(9, $obj->getReferencia());
-        $stmt->bindValue(10, $obj->getCep());
+
+
+        $stmt->bindValue(1, $obj->getLogradouro());
+        $stmt->bindValue(2, $obj->getNumero());
+        $stmt->bindValue(3, $obj->getComplemento());
+        $stmt->bindValue(4, $obj->getBairro());
+        $stmt->bindValue(5, $obj->getMunicipio());
+        $stmt->bindValue(6, $obj->getUf());
+        $stmt->bindValue(7, $obj->getPais());
+        $stmt->bindValue(8, $obj->getReferencia());
+        $stmt->bindValue(9, $obj->getCep());
+        $stmt->bindValue(10, $id);
 
         $stmt->execute();
         $stmt->closeCursor();

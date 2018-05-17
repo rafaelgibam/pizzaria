@@ -2,7 +2,7 @@
 
 namespace Models;
 
-class Cozinheiro extends Funcionario
+class Cozinheiro extends PessoaJuridica
 {
 
     /**
@@ -36,6 +36,55 @@ class Cozinheiro extends Funcionario
     {
         $this->cpf = $cpf;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getRg()
+    {
+        return $this->rg;
+    }
+
+    /**
+     * @param mixed $rg
+     */
+    public function setRg($rg)
+    {
+        $this->rg = $rg;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCnpj()
+    {
+        return $this->cnpj;
+    }
+
+    /**
+     * @param mixed $cnpj
+     */
+    public function setCnpj($cnpj)
+    {
+        $this->cnpj = $cnpj;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRazaosocial()
+    {
+        return $this->razaosocial;
+    }
+
+    /**
+     * @param mixed $razaosocial
+     */
+    public function setRazaosocial($razaosocial)
+    {
+        $this->razaosocial = $razaosocial;
+    }
+
 
     /**
      * @return mixed

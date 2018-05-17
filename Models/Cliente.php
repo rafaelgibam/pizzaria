@@ -2,7 +2,7 @@
 
 namespace Models;
 
-class Cliente extends Pessoa
+class Cliente extends PessoaFisica
 {
     private $criadoem;
 
@@ -37,6 +37,23 @@ class Cliente extends Pessoa
     {
         $this->nome = $nome;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getRg()
+    {
+        return $this->rg;
+    }
+
+    /**
+     * @param mixed $rg
+     */
+    public function setRg($rg)
+    {
+        $this->rg = $rg;
+    }
+
 
     /**
      * @return mixed
