@@ -1,25 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rafaelgibam
- * Date: 21/03/2018
- * Time: 11:27
- */
+
 
 namespace Models;
 
 
-class PedidoNormal extends Pedido
+class PedidoPresencial extends Pedido
 {
-    protected $id;
-    protected $numero;
-    protected $dtabertura;
-    protected $dtfechamento;
-    protected $itempedido;
-    protected $estado;
-    protected $valorpedido;
-    protected $obs;
+    private $mesa;
+    private $cliente;
     private $garcom;
+
 
     /**
      * @return mixed
@@ -164,6 +154,40 @@ class PedidoNormal extends Pedido
     {
         $this->garcom = $garcom;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getMesa()
+    {
+        return $this->mesa;
+    }
+
+    /**
+     * @param mixed $mesa
+     */
+    public function setMesa($mesa)
+    {
+        $this->mesa = $mesa;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCliente()
+    {
+        return $this->cliente;
+    }
+
+    /**
+     * @param mixed $cliente
+     */
+    public function setCliente($cliente)
+    {
+        $this->cliente = $cliente;
+    }
+
+
 
 
 }

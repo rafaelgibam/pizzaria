@@ -13,7 +13,6 @@ class Mesa
     private $altura;
     private $comprimento;
     private $largura;
-    private $tipomesa;
     private $estado;
 
     /**
@@ -158,22 +157,6 @@ class Mesa
     public function setLargura($largura)
     {
         $this->largura = $largura;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTipomesa()
-    {
-        return $this->tipomesa;
-    }
-
-    /**
-     * @param mixed $tipomesa
-     */
-    public function setTipomesa($tipomesa)
-    {
-        $this->tipomesa = $tipomesa;
     }
 
     /**

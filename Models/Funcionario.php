@@ -2,12 +2,10 @@
 
 namespace Models;
 
-abstract class Funcionario extends Pessoa
+abstract class Funcionario extends PessoaFisica
 {
 
     public $dtadmissao;
     public $salario;
-    public $ctps;
-    public $pis;
 
 }

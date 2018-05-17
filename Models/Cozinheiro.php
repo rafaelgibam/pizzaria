@@ -181,38 +181,5 @@ class Cozinheiro extends Funcionario
         $this->salario = $salario;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCtps()
-    {
-        return $this->ctps;
-    }
-
-    /**
-     * @param mixed $ctps
-     */
-    public function setCtps($ctps)
-    {
-        $this->ctps = $ctps;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPis()
-    {
-        return $this->pis;
-    }
-
-    /**
-     * @param mixed $pis
-     */
-    public function setPis($pis)
-    {
-        $this->pis = $pis;
-    }
-
-
 
 }

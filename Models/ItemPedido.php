@@ -4,26 +4,28 @@ namespace Models;
 
 class ItemPedido
 {
-    private $produto;
+    private $id;
     private $qtd;
     private $obs;
-    private $pedido;
+    private $produto;
+
 
     /**
-     * @return Pedido
+     * @return mixed
      */
-    public function getPedido()
+    public function getId()
     {
-        return $this->pedido;
+        return $this->id;
     }
 
     /**
-     * @param Pedido $pedido
+     * @param mixed $id
      */
-    public function setPedido(Pedido $pedido)
+    public function setId($id)
     {
-        $this->pedido = $pedido;
-    }
+        $this->id = $id;
+    } // objeto de Produto
+
 
     /**
      * @return Produto

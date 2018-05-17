@@ -5,11 +5,6 @@ namespace Models;
 class PedidoDelivery extends Pedido
 {
 
-    private $dtentrega;
-    private $preco;
-    private $endereco; // return a um objeto de Endereco
-    private $motoboy; // return a um objeto de motoboy
-
     public function calculaFrete(Endereco $endereco){
         // Calcula frete com informações do endereço;
     }
@@ -81,22 +76,6 @@ class PedidoDelivery extends Pedido
     /**
      * @return mixed
      */
-    public function getItempedido()
-    {
-        return $this->itempedido;
-    }
-
-    /**
-     * @param mixed $itempedido
-     */
-    public function setItempedido($itempedido)
-    {
-        $this->itempedido = $itempedido;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getEstado()
     {
         return $this->estado;
@@ -145,66 +124,19 @@ class PedidoDelivery extends Pedido
     /**
      * @return mixed
      */
-    public function getDtentrega()
+    public function getItempedido()
     {
-        return $this->dtentrega;
+        return $this->itempedido;
     }
 
     /**
-     * @param mixed $dtentrega
+     * @param mixed $itempedido
      */
-    public function setDtentrega($dtentrega)
+    public function setItempedido($itempedido)
     {
-        $this->dtentrega = $dtentrega;
+        $this->itempedido = $itempedido;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPreco()
-    {
-        return $this->preco;
-    }
-
-    /**
-     * @param mixed $preco
-     */
-    public function setPreco($preco)
-    {
-        $this->preco = $preco;
-    }
-
-    /**
-     * @return Endereco
-     */
-    public function getEndereco()
-    {
-        return $this->endereco;
-    }
-
-    /**
-     * @param Endereco $endereco
-     */
-    public function setEndereco(Endereco $endereco)
-    {
-        $this->endereco = $endereco;
-    }
-
-    /**
-     * @return MotoBoy
-     */
-    public function getMotoboy()
-    {
-        return $this->motoboy;
-    }
-
-    /**
-     * @param MotoBoy $motoboy
-     */
-    public function setMotoboy(MotoBoy $motoboy)
-    {
-        $this->motoboy = $motoboy;
-    }
 
 
 

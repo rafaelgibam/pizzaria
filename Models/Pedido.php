@@ -4,14 +4,12 @@ namespace Models;
 
 class Pedido
 {
-    protected $id;
-    protected $numero;
-    protected $dtabertura;
-    protected $dtfechamento;
-    protected $itempedido;
-    protected $estado;
-    protected $valorpedido;
-    protected $obs;
-
-
+    public $id;
+    public $numero;
+    public $dtabertura;
+    public $dtfechamento;
+    public $itempedido; // objeto de itemPedido
+    public $estado;
+    public $valorpedido;
+    public $obs;
 }

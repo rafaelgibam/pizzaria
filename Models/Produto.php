@@ -2,7 +2,7 @@
 
 namespace Models;
 
-abstract class Produto
+class Produto
 {
     public $id;
     public $nome;

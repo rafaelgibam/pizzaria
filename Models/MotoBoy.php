@@ -7,6 +7,37 @@ class MotoBoy extends Funcionario
 
     private $placa;
 
+    /**
+     * @return mixed
+     */
+    public function getDtadmissao()
+    {
+        return $this->dtadmissao;
+    }
+
+    /**
+     * @param mixed $dtadmissao
+     */
+    public function setDtadmissao($dtadmissao)
+    {
+        $this->dtadmissao = $dtadmissao;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSalario()
+    {
+        return $this->salario;
+    }
+
+    /**
+     * @param mixed $salario
+     */
+    public function setSalario($salario)
+    {
+        $this->salario = $salario;
+    }
 
     /**
      * @return mixed
@@ -38,22 +69,6 @@ class MotoBoy extends Funcionario
     public function setId($id)
     {
         $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCpf()
-    {
-        return $this->cpf;
-    }
-
-    /**
-     * @param mixed $cpf
-     */
-    public function setCpf($cpf)
-    {
-        $this->cpf = $cpf;
     }
 
     /**
@@ -107,6 +122,22 @@ class MotoBoy extends Funcionario
     /**
      * @return mixed
      */
+    public function getNumfixo()
+    {
+        return $this->numfixo;
+    }
+
+    /**
+     * @param mixed $numfixo
+     */
+    public function setNumfixo($numfixo)
+    {
+        $this->numfixo = $numfixo;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getNumcel()
     {
         return $this->numcel;
@@ -123,17 +154,17 @@ class MotoBoy extends Funcionario
     /**
      * @return mixed
      */
-    public function getNumfixo()
+    public function getEndereco()
     {
-        return $this->numfixo;
+        return $this->endereco;
     }
 
     /**
-     * @param mixed $numfixo
+     * @param mixed $endereco
      */
-    public function setNumfixo($numfixo)
+    public function setEndereco($endereco)
     {
-        $this->numfixo = $numfixo;
+        $this->endereco = $endereco;
     }
 
     /**
@@ -153,84 +184,37 @@ class MotoBoy extends Funcionario
     }
 
     /**
-     * @return Endereco
+     * @return mixed
      */
-    public function getEndereco()
+    public function getCpf()
     {
-        return $this->endereco;
+        return $this->cpf;
     }
 
     /**
-     * @param Endereco $endereco
+     * @param mixed $cpf
      */
-    public function setEndereco(Endereco $endereco)
+    public function setCpf($cpf)
     {
-        $this->endereco = $endereco;
+        $this->cpf = $cpf;
     }
 
     /**
      * @return mixed
      */
-    public function getDtadmissao()
+    public function getRg()
     {
-        return $this->dtadmissao;
+        return $this->rg;
     }
 
     /**
-     * @param mixed $dtadmissao
+     * @param mixed $rg
      */
-    public function setDtadmissao($dtadmissao)
+    public function setRg($rg)
     {
-        $this->dtadmissao = $dtadmissao;
+        $this->rg = $rg;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getSalario()
-    {
-        return $this->salario;
-    }
-
-    /**
-     * @param mixed $salario
-     */
-    public function setSalario($salario)
-    {
-        $this->salario = $salario;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCtps()
-    {
-        return $this->ctps;
-    }
-
-    /**
-     * @param mixed $ctps
-     */
-    public function setCtps($ctps)
-    {
-        $this->ctps = $ctps;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPis()
-    {
-        return $this->pis;
-    }
-
-    /**
-     * @param mixed $pis
-     */
-    public function setPis($pis)
-    {
-        $this->pis = $pis;
-    }
 
 
 

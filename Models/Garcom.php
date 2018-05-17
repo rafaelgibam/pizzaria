@@ -187,38 +187,6 @@ class Garcom extends Funcionario
     /**
      * @return mixed
      */
-    public function getCtps()
-    {
-        return $this->ctps;
-    }
-
-    /**
-     * @param mixed $ctps
-     */
-    public function setCtps($ctps)
-    {
-        $this->ctps = $ctps;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPis()
-    {
-        return $this->pis;
-    }
-
-    /**
-     * @param mixed $pis
-     */
-    public function setPis($pis)
-    {
-        $this->pis = $pis;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getGojeta()
     {
         return $this->gojeta;
