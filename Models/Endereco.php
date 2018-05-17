@@ -2,10 +2,12 @@
 
 namespace Models;
 
-class Endereco extends Model
+
+
+class Endereco
 {
     private $id;
-    private $logadouro;
+    private $logradouro;
     private $numero;
     private $bairro;
     private $cep;
@@ -38,17 +40,17 @@ class Endereco extends Model
     /**
      * @return mixed
      */
-    public function getLogadouro()
+    public function getLogradouro()
     {
-        return $this->logadouro;
+        return $this->logradouro;
     }
 
     /**
-     * @param mixed $logadouro
+     * @param mixed $logradouro
      */
-    public function setLogadouro($logadouro)
+    public function setLogradouro($logradouro)
     {
-        $this->logadouro = $logadouro;
+        $this->logradouro = $logradouro;
     }
 
     /**

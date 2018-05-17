@@ -4,8 +4,9 @@
 
 <?php
 
+    $edao = new \DAO\EnderecoDAO();
     $e = new \Models\Endereco();
-    $e->setLogadouro("RUA PHP");
+    $e->setLogradouro("RUA PHP");
     $e->setNumero("107");
     $e->setComplemento("Casa");
     $e->setBairro("CordeiroPHP");
@@ -15,8 +16,7 @@
     $e->setReferencia("GALEGOPHP");
     $e->setCep("50721230");
 
-    $e->inserir($e);
-
+    $edao->insert($e);
 
 ?>
 
