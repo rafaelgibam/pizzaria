@@ -11,6 +11,6 @@ namespace Models;
 
 abstract class PessoaFisica extends Pessoa
 {
-    public $cpf;
-    public $rg;
+    protected $cpf;
+    protected $rg;
 }

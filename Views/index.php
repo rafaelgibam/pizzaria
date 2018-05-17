@@ -4,29 +4,24 @@
 <pre>
 <?php
 
-    $co = new \Models\Cozinheiro();
-    $codao = new \DAO\CozinheiroDAO();
-    $e = new \Models\Endereco();
+    $p = new \Models\Produto();
+    $pdao = new \DAO\ProdutoDAO();
 
-    $e->setId(1);
+    //ID	NOME	DESCRICAO	PRECO	ALTURA	COMPRIMENTO	LARGURA	PESO	ESTADO	FATIA	BORDA
 
-    //ID, CPF, RG, CNPJ, RAZAOSOCIAL, NOME, SEXO, DATA_NASC, NUM_FIXO,
-    //NUM_CELULAR, ESTADO, SALARIO, ENDERECO_ID
-    $co->setId(1);
-    $co->setCnpj("33333");
-    $co->setRazaosocial("firma");
-    $co->setNome("rafael cozinheiro");
-    $co->setSexo("Masc");
-    $co->setDtnasc("2018-12-12");
-    $co->setNumfixo("22222");
-    $co->setNumcel("4444");
-    $co->setEstado(1);
-    $co->setEndereco($e);
+    //$p->setId(1);
+    $p->setNome("Pizza Mussarela");
+    $p->setDescricao("COM TOMATE");
+    $p->setPreco(20.5);
+    $p->setAltura(1.5);
+    $p->setComprimento(2.5);
+    $p->setLargura(1.2);
+    $p->setPeso(10.5);
+    $p->setEstado(1);
+    $p->setFatia(2);
+    $p->setBorda(1);
 
-
-    //$codao->update($c->getId(),$c);
-    print_r($co);
-    $codao->update($co);
+    $pdao->insert($p);
 
 ?>
 </pre>

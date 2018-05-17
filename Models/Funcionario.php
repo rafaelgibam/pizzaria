@@ -5,7 +5,7 @@ namespace Models;
 abstract class Funcionario extends PessoaFisica
 {
 
-    public $dtadmissao;
-    public $salario;
+    protected $dtadmissao;
+    protected $salario;
 
 }

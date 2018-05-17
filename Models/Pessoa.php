@@ -4,12 +4,12 @@ namespace Models;
 
 abstract class Pessoa
 {
-    public $id;
-    public $nome;
-    public $sexo;
-    public $dtnasc;
-    public $numfixo;
-    public $numcel;
-    public $endereco;
-    public $estado;
+    protected $id;
+    protected $nome;
+    protected $sexo;
+    protected $dtnasc;
+    protected $numfixo;
+    protected $numcel;
+    protected $endereco;
+    protected $estado;
 }
