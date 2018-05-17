@@ -4,24 +4,7 @@ namespace Models;
 
 class Cliente extends Pessoa
 {
-    protected $id;
-    protected $nome;
-    protected $cpf;
-    protected $sexo;
-    protected $dtnasc;
-    protected $numcel;
-    protected $numfixo;
-    protected $estado;
-    protected $endereco;
     private $criadoem;
-
-    /**
-     * @return $idade
-     */
-    public function getIdade()
-    {
-        return parent::getIdade();
-    }
 
     /**
      * @return mixed

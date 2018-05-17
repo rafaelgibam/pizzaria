@@ -2,7 +2,7 @@
 
 namespace Models;
 
-class Endereco
+class Endereco extends Model
 {
     private $id;
     private $logadouro;
@@ -179,5 +179,11 @@ class Endereco
         $this->complemento = $complemento;
     }
 
+    public function inserir($objeto)
+    {
+        $query =  "INSERT INTO `endereco` (`NOMERUA`, `NUMCASA`, `COMPLEMENTO`, `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`, `CEP`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        parent::inserir($query, $objeto);
+    }
 
 }

@@ -1,22 +1,7 @@
-<?php
-session_start();
-require_once __DIR__ . "/../../autoload.php";
-
-if(!isset($_SESSION['cpf'])){
-    header("location: /../index.php");
-    session_destroy();
-}
-if(isset($_GET['action'])){
-    session_destroy();
-    header("location: /../index.php");
-}
-$con = \Infra\Conexao::getConnection();
-$sql = "SELECT * FROM GARCOM;";
-$stmt = $con->prepare($sql);
-
-?>
+<?php require_once __DIR__ . "/../session.php"; ?>
 <?php include __DIR__ . "/../layout/head.php"; ?>
 <?php include __DIR__ . "/../layout/menucozin.php"; ?>
+
     <div class="container-fluid">
         <table class="table">
             <thead class="thead-dark">
@@ -31,10 +16,15 @@ $stmt = $con->prepare($sql);
                 <th scope="col">GOJETA</th>
                 <th scope="col">DATA ADMISSÃO</th>
                 <th scope="col">SALÁRIO</th>
+                <th scope="col"></th>
             </tr>
             </thead>
             <tbody>
             <?php
+                $con = \Infra\Conexao::getConnection();
+                $sql = "SELECT * FROM GARCOM;";
+                $stmt = $con->prepare($sql);
+
                 if($stmt->execute()):
                     while ($linha = $stmt->fetch()):
             ?>
@@ -49,6 +39,7 @@ $stmt = $con->prepare($sql);
                 <td><?= $linha->GOJETA . "%" ?></td>
                 <td><?= $linha->DATA_ADMISSAO ?></td>
                 <td><?= "R$" . $linha->SALARIO ?></td>
+                <td><a href="?action=editar&&id=<?php $linha->ID ?>">[Editar]</a> | [Apagar]</td>
             </tr>
             <?php endwhile;  endif; ?>
             </tbody>

@@ -1,29 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rafaelgibam
- * Date: 21/03/2018
- * Time: 11:27
- */
 
 namespace Models;
 
-
-class PedidoNormal extends Pedido
+class PedidoDelivery extends Pedido
 {
-    protected $id;
-    protected $numero;
-    protected $dtabertura;
-    protected $dtfechamento;
-    protected $itempedido;
-    protected $estado;
-    protected $valorpedido;
-    protected $obs;
+
     private $dtentrega;
     private $preco;
     private $endereco; // return a um objeto de Endereco
     private $motoboy; // return a um objeto de motoboy
-
 
     public function calculaFrete(Endereco $endereco){
         // Calcula frete com informações do endereço;

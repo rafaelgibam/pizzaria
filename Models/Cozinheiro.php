@@ -4,24 +4,6 @@ namespace Models;
 
 class Cozinheiro extends Funcionario
 {
-    protected $id;
-    protected $cpf;
-    protected $nome;
-    protected $sexo;
-    protected $dtnasc;
-    protected $numcel;
-    protected $numfixo;
-    protected $estado;
-    protected $endereco;
-    protected $dtadmissao;
-    protected $salario;
-    protected $ctps;
-    protected $pis;
-
-    public function getIdade()
-    {
-        return parent::getIdade();
-    }
 
     /**
      * @return mixed

@@ -4,16 +4,14 @@ namespace Models;
 
 abstract class Produto
 {
-    protected $id;
-    protected $nome;
-    protected $cat;
-    protected $descricao;
-    protected $preco;
-    protected $altura;
-    protected $comprimento;
-    protected $largura;
-    protected $peso;
-    protected $estado;
-
-
+    public $id;
+    public $nome;
+    public $cat;
+    public $descricao;
+    public $preco;
+    public $altura;
+    public $comprimento;
+    public $largura;
+    public $peso;
+    public $estado;
 }

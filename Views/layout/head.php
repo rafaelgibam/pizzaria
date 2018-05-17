@@ -1,6 +1,5 @@
 <?php require_once __DIR__ . "/../../autoload.php"; ?>
 
-
 <!doctype html>
 <html lang="pt-br">
 <head>

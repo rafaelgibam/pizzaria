@@ -3,26 +3,14 @@
 namespace Models;
 
 abstract class Pessoa
-
 {
-    protected $id;
-    protected $cpf;
-    protected $nome;
-    protected $sexo;
-    protected $dtnasc;
-    protected $numfixo;
-    protected $numcel;
-    protected $endereco;
-    protected $estado;
-
-    protected function getIdade(){
-
-        $nasc = $this->dtnasc;
-        $anoatual =  date('Y');
-        $anonasc = explode('/',$nasc);
-
-        return $anoatual - $anonasc[2];
-    }
-
-
+    public $id;
+    public $cpf;
+    public $nome;
+    public $sexo;
+    public $dtnasc;
+    public $numfixo;
+    public $numcel;
+    public $endereco;
+    public $estado;
 }
