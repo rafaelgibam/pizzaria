@@ -1,25 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rafaelgibam
- * Date: 17/05/2018
- * Time: 17:48
- */
 
 namespace DAO;
 
-
-class GarcomDAO extends Model implements ICrud
+class MotoBoyDAO extends Model implements ICrud
 {
-
-    protected $table = "garcom";
+    protected $table = "motoboy";
 
     public function insert($obj)
     {
-        //ID	CPF	RG	NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	GOJETA	DATA_ADMISSAO	SALARIO	ENDERECO_ID
-
         $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`,`RG`,`NOME`,`SEXO`,`DATA_NASC`,`NUM_FIXO`,
-                                                `NUM_CELULAR`,`ESTADO`,`GOJETA`,`DATA_ADMISSAO`,`SALARIO`,`ENDERECO_ID`)
+                                                `NUM_CELULAR`,`ESTADO`,`DATA_ADMISSAO`,`SALARIO`, `PLACA`,`ENDERECO_ID`)
                                                  VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
 
 
@@ -31,9 +21,9 @@ class GarcomDAO extends Model implements ICrud
         $stmt->bindValue(6, $obj->getNumfixo());
         $stmt->bindValue(7, $obj->getNumcel());
         $stmt->bindValue(8, $obj->getEstado());
-        $stmt->bindValue(9, $obj->getGojeta());
-        $stmt->bindValue(10, $obj->getDtadmissao());
-        $stmt->bindValue(11, $obj->getSalario());
+        $stmt->bindValue(9, $obj->getDtadmissao());
+        $stmt->bindValue(10, $obj->getSalario());
+        $stmt->bindValue(11, $obj->getPlaca());
         $stmt->bindValue(12, $obj->getEndereco()->getId());
 
         $stmt->execute();
@@ -44,8 +34,9 @@ class GarcomDAO extends Model implements ICrud
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
                                                  SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?, 
-                                                 NUM_CELULAR = ?, ESTADO = ?, GOJETA = ?, DATA_ADMISSAO = ?, SALARIO = ?, ENDERECO_ID = ?
+                                                 NUM_CELULAR = ?, ESTADO = ?, DATA_ADMISSAO = ?, SALARIO = ?, PLACA = ?, ENDERECO_ID = ?
                                                  WHERE ID = ?");
+
 
         $stmt->bindValue(1, $obj->getCpf());
         $stmt->bindValue(2, $obj->getRg());
@@ -55,11 +46,10 @@ class GarcomDAO extends Model implements ICrud
         $stmt->bindValue(6, $obj->getNumfixo());
         $stmt->bindValue(7, $obj->getNumcel());
         $stmt->bindValue(8, $obj->getEstado());
-        $stmt->bindValue(9, $obj->getGojeta());
-        $stmt->bindValue(10, $obj->getDtadmissao());
-        $stmt->bindValue(11, $obj->getSalario());
+        $stmt->bindValue(9, $obj->getDtadmissao());
+        $stmt->bindValue(10, $obj->getSalario());
+        $stmt->bindValue(11, $obj->getPlaca());
         $stmt->bindValue(12, $obj->getEndereco()->getId());
-        $stmt->bindValue(13, $obj->getId());
 
         $stmt->execute();
         $stmt->closeCursor();

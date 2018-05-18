@@ -43,6 +43,24 @@ class Garcom extends Funcionario
     /**
      * @return mixed
      */
+    public function getRg()
+    {
+        return $this->rg;
+    }
+
+    /**
+     * @param mixed $rg
+     */
+    public function setRg($rg)
+    {
+        $this->rg = $rg;
+    }
+
+
+
+    /**
+     * @return mixed
+     */
     public function getNome()
     {
         return $this->nome;

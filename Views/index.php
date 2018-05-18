@@ -4,24 +4,27 @@
 <pre>
 <?php
 
-    $p = new \Models\Produto();
-    $pdao = new \DAO\ProdutoDAO();
-
-    //ID	NOME	DESCRICAO	PRECO	ALTURA	COMPRIMENTO	LARGURA	PESO	ESTADO	FATIA	BORDA
+    $g = new \Models\MotoBoy();
+    $gdao = new \DAO\MotoBoyDAO();
+    $e = new \Models\Endereco();
+    //ID	CPF	RG	NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	GOJETA	DATA_ADMISSAO	SALARIO	ENDERECO_ID
+    $e->setId(1);
 
     //$p->setId(1);
-    $p->setNome("Pizza Mussarela");
-    $p->setDescricao("COM TOMATE");
-    $p->setPreco(20.5);
-    $p->setAltura(1.5);
-    $p->setComprimento(2.5);
-    $p->setLargura(1.2);
-    $p->setPeso(10.5);
-    $p->setEstado(1);
-    $p->setFatia(2);
-    $p->setBorda(1);
+    $g->setCpf("111111");
+    $g->setRg("555");
+    $g->setNome("Paulo");
+    $g->setSexo("Masculino");
+    $g->setDtnasc("1994-12-12");
+    $g->setNumfixo("255555545");
+    $g->setNumcel("44546454");
+    $g->setEstado(1);
+    $g->setPlaca("PDG3648");
+    $g->setDtadmissao("2018-12-12");
+    $g->setSalario(2000);
+    $g->setEndereco($e);
 
-    $pdao->insert($p);
+    $gdao->insert($g);
 
 ?>
 </pre>
