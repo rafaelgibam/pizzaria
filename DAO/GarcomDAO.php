@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rafaelgibam
- * Date: 17/05/2018
- * Time: 17:48
- */
+
 
 namespace DAO;
 
@@ -16,8 +11,6 @@ class GarcomDAO extends Model implements ICrud
 
     public function insert($obj)
     {
-        //ID	CPF	RG	NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	GOJETA	DATA_ADMISSAO	SALARIO	ENDERECO_ID
-
         $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`,`RG`,`NOME`,`SEXO`,`DATA_NASC`,`NUM_FIXO`,
                                                 `NUM_CELULAR`,`ESTADO`,`GOJETA`,`DATA_ADMISSAO`,`SALARIO`,`ENDERECO_ID`)
                                                  VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
@@ -39,7 +32,7 @@ class GarcomDAO extends Model implements ICrud
         $stmt->execute();
         $stmt->closeCursor();
     }
- 
+
     public function update($obj)
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
