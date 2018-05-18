@@ -39,7 +39,7 @@ class GarcomDAO extends Model implements ICrud
         $stmt->execute();
         $stmt->closeCursor();
     }
-
+ 
     public function update($obj)
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
