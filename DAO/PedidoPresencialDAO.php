@@ -6,7 +6,7 @@ namespace DAO;
 
 use Models\Pedido;
 
-class PedidoPresencialDAO extends Pedido
+class PedidoPresencialDAO extends Model implements ICrud
 {
     protected $table = "pedido_presencial";
 
@@ -37,7 +37,7 @@ class PedidoPresencialDAO extends Pedido
     {
 
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET NOME = ?, NUMERO = ?, DATA_ABERTURA = ?, DATA_FECHAMENTO = ?, ESTADO = ?, TOTAL = ?, 
+                                                 SET NUMERO = ?, DATA_ABERTURA = ?, DATA_FECHAMENTO = ?, ESTADO = ?, TOTAL = ?, 
                                                  OBSERVACOES = ?, GARCOM_ID = ?, MESA_ID = ?, ITEM_PEDIDO_ID = ?, CLIENTE_ID = ? 
                                                  WHERE ID = ?");
 

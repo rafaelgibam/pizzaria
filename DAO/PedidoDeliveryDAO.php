@@ -31,7 +31,7 @@ class PedidoDeliveryDAO extends Model implements ICrud
     {
 
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET NOME = ?, NUMERO = ?, DATA_ABERTURA = ?, DATA_FECHAMENTO = ?, ESTADO = ?, TOTAL = ?, 
+                                                 SET NUMERO = ?, DATA_ABERTURA = ?, DATA_FECHAMENTO = ?, ESTADO = ?, TOTAL = ?, 
                                                  OBSERVACOES = ?, ITEM_PEDIDO_ID = ?
                                                  WHERE ID = ?");
 
