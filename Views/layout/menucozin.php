@@ -1,15 +1,3 @@
-<?php
-
-if(!isset($_SESSION['cpf'])){
-    header("location: /../index.php");
-    session_destroy();
-}
-if(isset($_GET['action'])){
-    session_destroy();
-    header("location: /../index.php");
-}
-?>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#">PizzariaCTL</a>
@@ -42,19 +30,4 @@ if(isset($_GET['action'])){
         </div>
     </div>
 </nav>
-
-<!-- Modal Perfil -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Olá  <?php echo $_SESSION['nome']; ?></h5>
-            </div>
-            <div class="modal-body">
-                <a href="#">Editar Perfil</a>
-                <a href="?action=sair">Sair</a>
-            </div>
-        </div>
-    </div>
-</div>
 
