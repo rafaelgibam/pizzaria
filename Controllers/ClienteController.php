@@ -8,45 +8,54 @@ use Models\Endereco;
 
 class ClienteController
 {
+    private $c;
+    private $cdao;
+    private $e;
+
+    public function __construct()
+    {
+        $this->c = new Cliente();
+        $this->cdao = new ClienteDAO();
+        $this->e = new Endereco();
+    }
+
     public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcelular, $estado, $enderecoid){
         // ID	CPF	RG	NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	CRIADO_EM	ENDERECO_ID
-        $c = new Cliente();
-        $cdao = new ClienteDAO();
 
-        $e = new Endereco();
-        $e->setId($enderecoid);
 
-        $c->setCpf($cpf);
-        $c->setNome($nome);
-        $c->setSexo($sexo);
-        $c->setDtnasc($datanasc);
-        $c->setNumfixo($numfixo);
-        $c->setNumcel($numcelular);
-        $c->setEstado($estado);
-        $c->setEndereco($e);
+        $this->e = new Endereco();
+        $this->e->setId($enderecoid);
 
-        $cdao->insert($c);
+        $this->c->setCpf($cpf);
+        $this->c->setNome($nome);
+        $this->c->setSexo($sexo);
+        $this->c->setDtnasc($datanasc);
+        $this->c->setNumfixo($numfixo);
+        $this->c->setNumcel($numcelular);
+        $this->c->setEstado($estado);
+        $this->c->setEndereco($this->e);
+
+        $this->cdao->insert($this->c);
 
     }
 
     public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcelular, $estado, $enderecoid){
-        $c = new Cliente();
-        $cdao = new ClienteDAO();
 
-        $e = new Endereco();
-        $e->setId($enderecoid);
 
-        $c->setId($id);
-        $c->setCpf($cpf);
-        $c->setRg($rg);
-        $c->setNome($nome);
-        $c->setSexo($sexo);
-        $c->setDtnasc($datanasc);
-        $c->setNumfixo($numfixo);
-        $c->setNumcel($numcelular);
-        $c->setEstado($estado);
-        $c->setEndereco($e);
 
-        $cdao->update($c);
+        $this->c->setId($id);
+        $this->c->setCpf($cpf);
+        $this->c->setRg($rg);
+        $this->c->setNome($nome);
+        $this->c->setSexo($sexo);
+        $this->c->setDtnasc($datanasc);
+        $this->c->setNumfixo($numfixo);
+        $this->c->setNumcel($numcelular);
+        $this->c->setEstado($estado);
+
+        $this->e->setId($enderecoid);
+        $this->c->setEndereco($this->e);
+
+        $this->cdao->update($this->c);
     }
 }

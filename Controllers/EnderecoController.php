@@ -7,37 +7,46 @@ use Models\Endereco;
 
 class EnderecoController
 {
-    public function insert($logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia, $cep){
-        $e = new Endereco();
-        $edao = new EnderecoDAO();
+    private $e;
+    private $edao;
 
-        $e->setLogradouro($logradouro);
-        $e->setNumero($numero);
-        $e->setComplemento($complemento);
-        $e->setBairro($bairro);
-        $e->setMunicipio($municipio);
-        $e->setUf($uf);
-        $e->setPais($pais);
-        $e->setReferencia($referencia);
-        $e->setCep($cep);
-
-        $edao->insert($e);
+    public function __construct()
+    {
+        $this->e = new Endereco();
+        $this->edao = new EnderecoDAO();
     }
 
-    public function update($id ,$logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia, $cep){
-        $e = new Endereco();
-        $edao = new EnderecoDAO();
-        $e->setId($id);
-        $e->setLogradouro($logradouro);
-        $e->setNumero($numero);
-        $e->setComplemento($complemento);
-        $e->setBairro($bairro);
-        $e->setMunicipio($municipio);
-        $e->setUf($uf);
-        $e->setPais($pais);
-        $e->setReferencia($referencia);
-        $e->setCep($cep);
+    public function insert($logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia, $cep)
+    {
+        $this->e = new Endereco();
+        $this->edao = new EnderecoDAO();
 
-        $edao->update($e);
+        $this->e->setLogradouro($logradouro);
+        $this->e->setNumero($numero);
+        $this->e->setComplemento($complemento);
+        $this->e->setBairro($bairro);
+        $this->e->setMunicipio($municipio);
+        $this->e->setUf($uf);
+        $this->e->setPais($pais);
+        $this->e->setReferencia($referencia);
+        $this->e->setCep($cep);
+
+        $this->edao->insert($this->e);
+    }
+
+    public function update($id ,$logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia, $cep)
+    {
+        $this->e->setId($id);
+        $this->e->setLogradouro($logradouro);
+        $this->e->setNumero($numero);
+        $this->e->setComplemento($complemento);
+        $this->e->setBairro($bairro);
+        $this->e->setMunicipio($municipio);
+        $this->e->setUf($uf);
+        $this->e->setPais($pais);
+        $this->e->setReferencia($referencia);
+        $this->e->setCep($cep);
+
+        $this->edao->update($this->e);
     }
 }
