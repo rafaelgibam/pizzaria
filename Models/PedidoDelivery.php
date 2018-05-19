@@ -76,6 +76,22 @@ class PedidoDelivery extends Pedido
     /**
      * @return mixed
      */
+    public function getItempedido()
+    {
+        return $this->itempedido;
+    }
+
+    /**
+     * @param mixed $itempedido
+     */
+    public function setItempedido($itempedido)
+    {
+        $this->itempedido = $itempedido;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getEstado()
     {
         return $this->estado;
@@ -92,17 +108,17 @@ class PedidoDelivery extends Pedido
     /**
      * @return mixed
      */
-    public function getValorpedido()
+    public function getTotal()
     {
-        return $this->valorpedido;
+        return $this->total;
     }
 
     /**
-     * @param mixed $valorpedido
+     * @param mixed $total
      */
-    public function setValorpedido($valorpedido)
+    public function setTotal($total)
     {
-        $this->valorpedido = $valorpedido;
+        $this->total = $total;
     }
 
     /**
@@ -120,23 +136,6 @@ class PedidoDelivery extends Pedido
     {
         $this->obs = $obs;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getItempedido()
-    {
-        return $this->itempedido;
-    }
-
-    /**
-     * @param mixed $itempedido
-     */
-    public function setItempedido($itempedido)
-    {
-        $this->itempedido = $itempedido;
-    }
-
 
 
 

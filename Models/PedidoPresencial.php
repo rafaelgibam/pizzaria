@@ -10,7 +10,6 @@ class PedidoPresencial extends Pedido
     private $cliente;
     private $garcom;
 
-
     /**
      * @return mixed
      */
@@ -110,17 +109,17 @@ class PedidoPresencial extends Pedido
     /**
      * @return mixed
      */
-    public function getValorpedido()
+    public function getTotal()
     {
-        return $this->valorpedido;
+        return $this->total;
     }
 
     /**
-     * @param mixed $valorpedido
+     * @param mixed $total
      */
-    public function setValorpedido($valorpedido)
+    public function setTotal($total)
     {
-        $this->valorpedido = $valorpedido;
+        $this->total = $total;
     }
 
     /**
@@ -137,22 +136,6 @@ class PedidoPresencial extends Pedido
     public function setObs($obs)
     {
         $this->obs = $obs;
-    }
-
-    /**
-     * @return Garcom
-     */
-    public function getGarcom()
-    {
-        return $this->garcom;
-    }
-
-    /**
-     * @param Garcom $garcom
-     */
-    public function setGarcom(Garcom $garcom)
-    {
-        $this->garcom = $garcom;
     }
 
     /**
@@ -186,6 +169,24 @@ class PedidoPresencial extends Pedido
     {
         $this->cliente = $cliente;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getGarcom()
+    {
+        return $this->garcom;
+    }
+
+    /**
+     * @param mixed $garcom
+     */
+    public function setGarcom($garcom)
+    {
+        $this->garcom = $garcom;
+    }
+
+
 
 
 

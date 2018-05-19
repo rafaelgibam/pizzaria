@@ -5,6 +5,8 @@ namespace Models;
 class Cozinheiro extends PessoaJuridica
 {
 
+    private $produto; // Objeto de produto
+
     /**
      * @return mixed
      */
@@ -138,6 +140,40 @@ class Cozinheiro extends PessoaJuridica
     /**
      * @return mixed
      */
+    public function getDtadmissao()
+    {
+        return $this->dtadmissao;
+    }
+
+    /**
+     * @param mixed $dtadmissao
+     */
+    public function setDtadmissao($dtadmissao)
+    {
+        $this->dtadmissao = $dtadmissao;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSalario()
+    {
+        return $this->salario;
+    }
+
+    /**
+     * @param mixed $salario
+     */
+    public function setSalario($salario)
+    {
+        $this->salario = $salario;
+    }
+
+
+
+    /**
+     * @return mixed
+     */
     public function getEstado()
     {
         return $this->estado;
@@ -166,6 +202,24 @@ class Cozinheiro extends PessoaJuridica
     {
         $this->endereco = $endereco;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getProduto()
+    {
+        return $this->produto;
+    }
+
+    /**
+     * @param mixed $produto
+     */
+    public function setProduto($produto)
+    {
+        $this->produto = $produto;
+    }
+
+
 
 
 }

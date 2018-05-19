@@ -6,23 +6,22 @@ namespace DAO;
 
 class PedidoDeliveryDAO extends Model implements ICrud
 {
-    protected $table = "pedido";
+    protected $table = "pedido_delivery";
 
     public function insert($obj)
     {
-        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`NUMERO`,`NUMERO`,`COR`,`QTD_LUGAR`,
-                                                `PESO`,`ALTURA`,`COMPRIMENTO`,`LARGURA`,`ESTADO`)
-                                                 VALUES (?,?,?,?,?,?,?,?)");
 
-        $stmt->bindValue(1, $obj->getNome());
-        $stmt->bindValue(2, $obj->getNumero());
-        $stmt->bindValue(3, $obj->getCor());
-        $stmt->bindValue(4, $obj->getCapacidade());
-        $stmt->bindValue(5, $obj->getPeso());
-        $stmt->bindValue(6, $obj->getAltura());
-        $stmt->bindValue(7, $obj->getComprimento());
-        $stmt->bindValue(8, $obj->getLargura());
-        $stmt->bindValue(9, $obj->getEstado());
+        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`NUMERO`,`DATA_ABERTURA`,`DATA_FECHAMENTO`,`ESTADO`,
+                                                `TOTAL`,`OBSERVACOES`,`ITEM_PEDIDO_ID`)
+                                                 VALUES (?,?,?,?,?,?,?)");
+
+        $stmt->bindValue(1, $obj->getNumero());
+        $stmt->bindValue(2, $obj->getDtabertura());
+        $stmt->bindValue(3, $obj->getDtfechamento());
+        $stmt->bindValue(4, $obj->getEstado());
+        $stmt->bindValue(5, $obj->getTotal());
+        $stmt->bindValue(6, $obj->getObs());
+        $stmt->bindValue(7, $obj->getItempedido());
 
         $stmt->execute();
         $stmt->closeCursor();
@@ -30,6 +29,23 @@ class PedidoDeliveryDAO extends Model implements ICrud
 
     public function update($obj)
     {
-        // TODO: Implement update() method.
+
+        $stmt = DB::getCon()->prepare("UPDATE {$this->table}
+                                                 SET NOME = ?, NUMERO = ?, DATA_ABERTURA = ?, DATA_FECHAMENTO = ?, ESTADO = ?, TOTAL = ?, 
+                                                 OBSERVACOES = ?, ITEM_PEDIDO_ID = ?
+                                                 WHERE ID = ?");
+
+        $stmt->bindValue(1, $obj->getNumero());
+        $stmt->bindValue(2, $obj->getDtabertura());
+        $stmt->bindValue(3, $obj->getDtfechamento());
+        $stmt->bindValue(4, $obj->getEstado());
+        $stmt->bindValue(5, $obj->getTotal());
+        $stmt->bindValue(6, $obj->getObs());
+        $stmt->bindValue(7, $obj->getItempedido());
+        $stmt->bindValue(8, $obj->getId());
+
+        $stmt->execute();
+        $stmt->closeCursor();
+
     }
 }

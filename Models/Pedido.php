@@ -10,7 +10,7 @@ class Pedido
     public $dtfechamento;
     public $itempedido; // objeto de itemPedido
     public $estado;
-    public $valorpedido;
+    public $total;
     public $obs;
 
     /**
@@ -112,17 +112,17 @@ class Pedido
     /**
      * @return mixed
      */
-    public function getValorpedido()
+    public function getTotal()
     {
-        return $this->valorpedido;
+        return $this->total;
     }
 
     /**
      * @param mixed $valorpedido
      */
-    public function setValorpedido($valorpedido)
+    public function setTotal($total)
     {
-        $this->valorpedido = $valorpedido;
+        $this->total = $total;
     }
 
     /**
