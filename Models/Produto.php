@@ -16,6 +16,7 @@ class Produto
     private $estado;
     private $fatia;
     private $borda;
+    private $cozinheiro;
 
 
     /**
@@ -209,6 +210,24 @@ class Produto
     {
         $this->borda = $borda;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCozinheiro()
+    {
+        return $this->cozinheiro;
+    }
+
+    /**
+     * @param mixed $cozinheiro
+     */
+    public function setCozinheiro($cozinheiro)
+    {
+        $this->cozinheiro = $cozinheiro;
+    }
+
+
 
 
 }
