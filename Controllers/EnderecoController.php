@@ -49,4 +49,13 @@ class EnderecoController
 
         $this->edao->update($this->e);
     }
+
+    public function findAll()
+    {
+        return $this->edao->findAll();
+    }
+
+    public function find($id){
+        return $this->edao->find($id);
+    }
 }

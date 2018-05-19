@@ -61,4 +61,13 @@ class ProdutoController
 
         $this->pdao->insert($this->p);
     }
+
+    public function findAll()
+    {
+        return $this->pdao->findAll();
+    }
+
+    public function find($id){
+        return $this->pdao->find($id);
+    }
 }

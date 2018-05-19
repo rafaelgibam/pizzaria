@@ -25,14 +25,14 @@
                 <form action="/../acesso.php" method="post">
                     <div class="form-group">
                         <label for="exampleInputNumber">CPF</label>
-                        <input type="number" name="cpf" class="form-control" id="exampleInputNumber" aria-describedby="cpfHelp" placeholder="Digite seu CPF">
+                        <input type="number" name="cpfcnpj" class="form-control" id="exampleInputNumber" aria-describedby="cpfHelp" placeholder="Digite seu CPF/CNPJ">
                         <small id="cpfHelp" class="form-text text-muted">Não divulgue seus dados pessoais!</small>
                         <label class="mr-sm-2" for="inlineFormCustomSelect" >Selecione seu Cargo: </label>
                         <select name="cargo" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                             <option selected hidden >Selecione</option>
                             <option value="1">Cozinheiro</option>
-                            <option value="2">Garcom</option>
-                            <option value="3">Motoboy</option>
+                            <option value="2">Motoboy</option>
+                            <option value="3">Garcom</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Entrar</button>

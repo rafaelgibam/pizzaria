@@ -58,4 +58,13 @@ class ClienteController
 
         $this->cdao->update($this->c);
     }
+
+    public function findAll()
+    {
+        return $this->cdao->findAll();
+    }
+
+    public function find($id){
+        return $this->cdao->find($id);
+    }
 }

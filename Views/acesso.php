@@ -2,66 +2,33 @@
 require_once __DIR__ . "/../autoload.php";
 
 session_start();
+$ac = new \Controllers\AcessoController();
 
-$cozin = new \Models\Cozinheiro();
-$moto = new \Models\MotoBoy();
-$garcom = new \Models\Garcom();
+$acesso = $ac->acessarLogin($_POST['cpfcnpj'],$_POST['cargo']);
 
-$cozin->setCpf($_POST['cpf']);
-$moto->setCpf($_POST['cpf']);
-$garcom->setCpf($_POST['cpf']);
-
-$cargo = $_POST['cargo'];
-
-$con = \Infra\Conexao::getConnection();
-
-switch ($cargo){
+switch ($acesso){
     case 1:
-        $sql = "SELECT NOME,CPF FROM COZINHEIRO;";
-        $stmt = $con->prepare($sql);
-        if($stmt->execute()){
-            while ($linha = $stmt->fetch()){
-                if( $linha->CPF == $cozin->getCpf()){
-                    $_SESSION['cpf'] = $cozin->getCpf();
-                    $_SESSION['nome'] = $linha->NOME;
-                    header("location: cozinheiro/");
-                    die();
-                }else{
-                    header("location: index.php");
-                }
-            }
-        }
+        //Cozinheiro
+        $_SESSION['codigo'] = $ac->co->getCnpj();
+        $_SESSION['nome'] = $ac->co->getNome();
+        header("location: cozinheiro/index.php");
         break;
     case 2:
-        $sql = "SELECT NOME,CPF FROM GARCOM;";
-        $stmt = $con->prepare($sql);
-        if($stmt->execute()){
-            while ($linha = $stmt->fetch()){
-                if( $linha->CPF == $garcom->getCpf()){
-                    $_SESSION['cpf'] = $cozin->getCpf();
-                    $_SESSION['nome'] = $linha->NOME;
-                    header("location: garcom/");
-                    die();
-                }else{
-                    header("location: index.php");
-                }
-            }
-        }
+        //Motoboy
+        $_SESSION['codigo'] = $ac->m->getCpf();
+        $_SESSION['nome'] = $ac->m->getNome();
+        header("location: motoboy/index.php");
         break;
     case 3:
-        $sql = "SELECT NOME,CPF FROM MOTOBOY;";
-        $stmt = $con->prepare($sql++);
-        if($stmt->execute()){
-            while ($linha = $stmt->fetch()){
-                if( $linha->CPF == $moto->getCpf()){
-                    $_SESSION['cpf'] = $moto->getCpf();
-                    $_SESSION['nome'] = $linha->NOME;
-                    header("location: motoboy/");
-                    die();
-                }else{
-                    header("location: index.php");
-                }
-            }
-        }
+        //Garçom
+        $_SESSION['codigo'] = $ac->g->getCpf();
+        $_SESSION['nome'] = $ac->g->getNome();
+        header("location: garcom/index.php");
+        break;
+
+    default:
+        header("location: index.php");
         break;
 }
+
+

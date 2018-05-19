@@ -54,4 +54,5 @@ class CozinheiroDAO extends Model implements ICrud
         $stmt->execute();
         $stmt->closeCursor();
     }
+
 }

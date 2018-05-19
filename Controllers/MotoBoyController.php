@@ -59,4 +59,13 @@ class MotoBoyController
 
         $this->mdao->insert($this->m);
     }
+
+    public function findAll()
+    {
+        return $this->mdao->findAll();
+    }
+
+    public function find($id){
+        return $this->mdao->find($id);
+    }
 }

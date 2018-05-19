@@ -63,4 +63,15 @@ class CozinheiroController
 
         $this->codao->insert($this->co);
     }
+
+    public function findAll()
+    {
+        return $this->codao->findAll();
+    }
+
+    public function find($id){
+        return $this->codao->find($id);
+    }
+
+
 }
