@@ -8,13 +8,13 @@ use Models\Endereco;
 
 class ClienteController
 {
-    public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcelular, $estado, $endereco){
+    public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcelular, $estado, $enderecoid){
         // ID	CPF	RG	NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	CRIADO_EM	ENDERECO_ID
         $c = new Cliente();
         $cdao = new ClienteDAO();
 
         $e = new Endereco();
-        $e->setId($endereco);
+        $e->setId($enderecoid);
 
         $c->setCpf($cpf);
         $c->setNome($nome);
@@ -29,12 +29,12 @@ class ClienteController
 
     }
 
-    public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcelular, $estado, $endereco){
+    public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcelular, $estado, $enderecoid){
         $c = new Cliente();
         $cdao = new ClienteDAO();
 
         $e = new Endereco();
-        $e->setId($endereco);
+        $e->setId($enderecoid);
 
         $c->setId($id);
         $c->setCpf($cpf);
