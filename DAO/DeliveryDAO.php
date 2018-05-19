@@ -5,6 +5,7 @@ namespace DAO;
 
 class DeliveryDAO extends Model implements ICrud
 {
+    protected $table = "delivery";
 
     public function insert($obj)
     {
