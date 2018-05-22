@@ -1,3 +1,8 @@
+<?php
+
+    if($_SESSION['tipo'] == "cozinheiro"){
+
+?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#">PizzariaCTL</a>
@@ -10,13 +15,26 @@
                     <a href="/../cozinheiro/" class="nav-link ml-2">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/../cozinheiro/funcionarios.php" class="nav-link ml-2" >Funcionários</a>
+                    <div class="dropdown">
+
+                        <a href="#" class="nav-link ml-2 dropdown-toggle"
+                           id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Funcionários</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/../cozinheiro/funcionarios.php">Pesquisar</a>
+                            <a class="dropdown-item" href="#">Cadastrar</a>
+                            <a class="dropdown-item" href="#">Editar</a>
+                        </div>
+                    </div>
+
                 </li>
                 <li class="nav-item">
                     <a href="/../cozinheiro/pedidos.php" class="nav-link ml-2">Pedidos</a>
                 </li>
                 <li class="nav-item">
                     <a href="/../cozinheiro/delivery.php" class="nav-link ml-2">Delivery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/../cozinheiro/relatorio.php" class="nav-link ml-2">Relatório</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -31,3 +49,4 @@
     </div>
 </nav>
 
+<?php }?>

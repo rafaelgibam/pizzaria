@@ -13,7 +13,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'sair'){
 ?>
 
 <?php include __DIR__ . "/../layout/head.php"; ?>
-<?php include __DIR__ . "/../layout/menucozin.php"; ?>
+<?php include __DIR__ . "/../layout/menucozinheiro.php"; ?>
 
 <!-- Modal Perfil -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

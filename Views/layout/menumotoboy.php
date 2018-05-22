@@ -1,3 +1,9 @@
+<?php
+
+    if($_SESSION['tipo'] == "motoboy"){
+
+?>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#">PizzariaCTL</a>
@@ -42,3 +48,4 @@
     </div>
 </div>
 
+<?php } ?>

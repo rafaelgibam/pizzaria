@@ -1,13 +1,7 @@
 <?php
 
-if(!isset($_SESSION['cpf'])){
-    header("location: /../index.php");
-    session_destroy();
-}
-if(isset($_GET['action'])){
-    session_destroy();
-    header("location: /../index.php");
-}
+    if($_SESSION['tipo'] == "garcom"){
+
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -54,3 +48,4 @@ if(isset($_GET['action'])){
     </div>
 </div>
 
+<?php } ?>

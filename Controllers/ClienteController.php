@@ -20,13 +20,11 @@ class ClienteController
     }
 
     public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcelular, $estado, $enderecoid){
-        // ID	CPF	RG	NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	CRIADO_EM	ENDERECO_ID
-
 
         $this->e = new Endereco();
         $this->e->setId($enderecoid);
-
         $this->c->setCpf($cpf);
+        $this->c->setRg($rg);
         $this->c->setNome($nome);
         $this->c->setSexo($sexo);
         $this->c->setDtnasc($datanasc);

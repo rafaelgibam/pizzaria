@@ -1,6 +1,6 @@
 <?php include __DIR__ . "/../session.php"; ?>
 <?php include __DIR__ . "/../layout/head.php"; ?>
-<?php include __DIR__ . "/../layout/menumoto.php"; ?>
+<?php include __DIR__ . "/../layout/menumotoboy.php"; ?>
 
     <h1 class="text-center">Delivery!</h1>
 
