@@ -4,9 +4,10 @@
 <?php include __DIR__ . "/../errors.php"; ?>
 
 <div class="container">
-    <form method="post">
+    <form method="post" action="salvar.php">
         <div class="row">
             <div class="col-md-12 mt-4">
+                <?php include __DIR__ . "/../errors.php"; ?>
                 <div class="card">
                     <h5 class="card-header">Dados do MotoBoy</h5>
                     <div class="card-body">
@@ -64,6 +65,11 @@
                                 <label for="salario">Salário:</label>
                                 <input type="number" id="salario" class="form-control" name="salario"  placeholder="R$">
                             </div>
+
+                            <div class="form-group col-3">
+                                <label for="dataadmissao">Data Admissão:</label>
+                                <input type="date" id="dataadmissao" class="form-control" name="dataadmissao" >
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -118,7 +124,7 @@
                             </div>
                         </div>
 
-                        <input type="submit" class="btn btn-success btn-block float-right" value="Cadastrar">
+                        <input type="submit" name="motoboy" class="btn btn-success btn-block float-right" value="Cadastrar">
                     </div>
                 </div>
             </div>

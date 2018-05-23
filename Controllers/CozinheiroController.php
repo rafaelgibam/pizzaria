@@ -21,19 +21,21 @@ class CozinheiroController
         $this->e = new Endereco();
     }
 
-    public function insert($cnpj, $razaosocial, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado,
-                           $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
+    public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $dtadmissao,
+                           $salario, $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
     {
         // ID	CNPJ	RAZAOSOCIAL	NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	ENDERECO_ID
 
-        $this->co->setCnpj($cnpj);
-        $this->co->setRazaosocial($razaosocial);
+        $this->co->setCpf($cpf);
+        $this->co->setRg($rg);
         $this->co->setNome($nome);
         $this->co->setSexo($sexo);
         $this->co->setDtnasc($datanasc);
         $this->co->setNumfixo($numfixo);
         $this->co->setNumcel($numcel);
         $this->co->setEstado($estado);
+        $this->co->setDtadmissao($dtadmissao);
+        $this->co->setSalario($salario);
         $this->co->setLogradouro($logradouro);
         $this->co->setNumero($numero);
         $this->co->setComplemento($complemento);
@@ -43,23 +45,31 @@ class CozinheiroController
         $this->co->setPais($pais);
         $this->co->setReferencia($referencia);
 
-        $this->codao->insert($this->co);
+
+        if($this->co->getCpf() != null && $this->co->getNome() != null){
+            $this->codao->insert($this->co);
+            return header("location: coz_form.php?msg=salvo");
+        }else{
+            return header("location: coz_form.php?msg=erro");
+        }
+
 
     }
 
-    public function update($id, $cnpj, $razaosocial, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado,
-                           $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
+    public function update($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $dtadmissao,
+                           $salario, $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
     {
 
-
-        $this->co->setCnpj($cnpj);
-        $this->co->setRazaosocial($razaosocial);
+        $this->co->setCpf($cpf);
+        $this->co->setRg($rg);
         $this->co->setNome($nome);
         $this->co->setSexo($sexo);
         $this->co->setDtnasc($datanasc);
         $this->co->setNumfixo($numfixo);
         $this->co->setNumcel($numcel);
         $this->co->setEstado($estado);
+        $this->co->setDtadmissao($dtadmissao);
+        $this->co->setSalario($salario);
         $this->co->setLogradouro($logradouro);
         $this->co->setNumero($numero);
         $this->co->setComplemento($complemento);

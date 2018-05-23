@@ -12,12 +12,12 @@ class CozinheiroDAO extends Model implements ICrud
         // ID	CNPJ	RAZAOSOCIAL	NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	SALARIO	ENDERECO_ID
 
 
-        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CNPJ`, `RAZAOSOCIAL`, `NOME`, `SEXO`, `DATA_NASC`, 
+        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`, `RG`, `NOME`, `SEXO`, `DATA_NASC`, 
                                                                             `NUM_FIXO`,`NUM_CELULAR`, SALARIO, DATA_ADMISSAO, `ESTADO`,
                                                                             `LOGRADOURO`, `NUMERO`, `COMPLEMENTO`, `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA` ) 
-                                                                             VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-        $stmt->bindValue(1, $obj->getCnpj());
-        $stmt->bindValue(2, $obj->getRazaosocial());
+                                                                             VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $stmt->bindValue(1, $obj->getCpf());
+        $stmt->bindValue(2, $obj->getRg());
         $stmt->bindValue(3, $obj->getNome());
         $stmt->bindValue(4, $obj->getSexo());
         $stmt->bindValue(5, $obj->getDtnasc());
@@ -42,14 +42,14 @@ class CozinheiroDAO extends Model implements ICrud
     public function update($obj)
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET CNPJ = ?, RAZAOSOCIAL = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?,
+                                                 SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?,
                                                  NUM_CELULAR = ?, SALARIO = ?, DATA_ADMISSAO = ?, ESTADO = ?, LOGRADOURO = ?,
                                                  NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?, PAIS = ?, REFERENCIA = ?
                                                  WHERE ID = ?");
 
 
-        $stmt->bindValue(1, $obj->getCnpj());
-        $stmt->bindValue(2, $obj->getRazaosocial());
+        $stmt->bindValue(1, $obj->getCpf());
+        $stmt->bindValue(2, $obj->getRg());
         $stmt->bindValue(3, $obj->getNome());
         $stmt->bindValue(4, $obj->getSexo());
         $stmt->bindValue(5, $obj->getDtnasc());

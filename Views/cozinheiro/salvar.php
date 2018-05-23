@@ -1,15 +1,76 @@
 <?php
+    require_once __DIR__ . "/../../autoload.php";
 
-    $gc = new \Controllers\GarcomController();
+    $cc = new \Controllers\CozinheiroController();
     $mc = new \Controllers\MotoBoyController();
-    $_POST['cozinheiro'];
+    $gc = new \Controllers\GarcomController();
 
-    switch ($funcao){
-        case 1:
-            $gc->insert();
-            header("refresh: 3 cozinheiro/fun_form.php?msg=ok");
-        case 2:
-            $mc->insert();
-            header("refresh: 3 cozinheiro/fun_form.php?msg=ok");
+    if(isset($_POST['cozinheiro'])){
+        $cc->insert(
+            $_POST['cpf'],
+            $_POST['rg'],
+            $_POST['nome'],
+            $_POST['sexo'],
+            $_POST['datanasc'],
+            $_POST['numerofixo'],
+            $_POST['numerocelular'],
+            $_POST['estado'],
+            $_POST['dataadmissao'],
+            $_POST['salario'],
+            $_POST['logradouro'],
+            $_POST['numero'],
+            $_POST['complemento'],
+            $_POST['bairro'],
+            $_POST['municipio'],
+            $_POST['uf'],
+            $_POST['pais'],
+            $_POST['referencia']);
     }
-?>
+
+    if(isset($_POST['motoboy'])){
+        $mc->insert(
+            $_POST['cpf'],
+            $_POST['rg'],
+            $_POST['nome'],
+            $_POST['sexo'],
+            $_POST['datanasc'],
+            $_POST['numerofixo'],
+            $_POST['numerocelular'],
+            $_POST['estado'],
+            $_POST['placa'],
+            $_POST['dataadmissao'],
+            $_POST['salario'],
+            $_POST['logradouro'],
+            $_POST['numero'],
+            $_POST['complemento'],
+            $_POST['bairro'],
+            $_POST['municipio'],
+            $_POST['uf'],
+            $_POST['pais'],
+            $_POST['referencia']);
+    }
+
+    if(isset($_POST['garcom'])){
+        $gc->insert(
+            $_POST['cpf'],
+            $_POST['rg'],
+            $_POST['nome'],
+            $_POST['sexo'],
+            $_POST['datanasc'],
+            $_POST['numerofixo'],
+            $_POST['numerocelular'],
+            $_POST['estado'],
+            $_POST['gorjeta'],
+            $_POST['dataadmissao'],
+            $_POST['salario'],
+            $_POST['logradouro'],
+            $_POST['numero'],
+            $_POST['complemento'],
+            $_POST['bairro'],
+            $_POST['municipio'],
+            $_POST['uf'],
+            $_POST['pais'],
+            $_POST['referencia']);
+    }
+
+

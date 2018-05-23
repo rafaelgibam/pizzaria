@@ -14,6 +14,7 @@
     <form method="post">
         <div class="row">
             <div class="col-md-12 mt-4">
+                <?php include __DIR__ . "/../errors.php"; ?>
                 <div class="card">
                     <h5 class="card-header">Dados do Garçom</h5>
                     <div class="card-body">

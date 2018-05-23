@@ -44,7 +44,13 @@ class GarcomController
         $this->g->setPais($pais);
         $this->g->setReferencia($referencia);
 
-        $this->gdao->insert($this->g);
+        if($this->g->getCpf() != null && $this->g->getNome() != null){
+            $this->gdao->insert($this->g);
+            return header("location: coz_form.php?msg=salvo");
+        }else{
+            return header("location: coz_form.php?msg=erro");
+        }
+
 
     }
 
