@@ -1,8 +1,3 @@
-<?php
-
-    if($_SESSION['tipo'] == "cozinheiro"){
-
-?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#">PizzariaCTL</a>
@@ -21,8 +16,8 @@
                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Funcionários</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="/../cozinheiro/funcionarios.php">Pesquisar</a>
-                            <a class="dropdown-item" href="#">Cadastrar</a>
-                            <a class="dropdown-item" href="#">Editar</a>
+                            <a class="dropdown-item" href="/../cozinheiro/fun_incluir.php">Cadastrar</a>
+                            <a class="dropdown-item" href="/../cozinheiro/fun_alterar.php">Editar</a>
                         </div>
                     </div>
 
@@ -48,5 +43,3 @@
         </div>
     </div>
 </nav>
-
-<?php }?>

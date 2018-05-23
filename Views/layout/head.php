@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/../assets/js/scripts.js">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/icons/ionicons.min.css">
+
 
 </head>
 

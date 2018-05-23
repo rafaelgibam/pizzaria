@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7147cad-035d-4aea-b56a-0fd49f667fde" name="Default" comment="Alteracoes no menu do cozinheiro.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/cozinheiro/fun_incluir.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/404.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/cozinheiro/fun_alterar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/errors.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/layout/baselayout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Infra/bancopizzaria.mwb" afterPath="$PROJECT_DIR$/Infra/bancopizzaria.mwb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Infra/bancopizzaria.sql" afterPath="$PROJECT_DIR$/Infra/bancopizzaria.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/cozinheiro/fun_incluir.php" afterPath="$PROJECT_DIR$/Views/cozinheiro/fun_incluir.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/layout/footer.php" afterPath="$PROJECT_DIR$/Views/layout/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/layout/head.php" afterPath="$PROJECT_DIR$/Views/layout/head.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/layout/menucozinheiro.php" afterPath="$PROJECT_DIR$/Views/layout/menucozinheiro.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,18 +23,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="funcionarios.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/cozinheiro/funcionarios.php">
+      <file leaf-file-name="fun_incluir.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/cozinheiro/fun_incluir.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="746">
-              <caret line="74" column="63" lean-forward="true" selection-start-line="74" selection-start-column="63" selection-end-line="74" selection-end-column="63" />
+            <state relative-caret-position="68">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fun_incluir.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Views/cozinheiro/fun_incluir.php">
+      <file leaf-file-name="ClienteDAO.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DAO/ClienteDAO.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1526587093875" expanded="true" signature="276:473" ph="INSERT INTO $... " />
+                <marker date="1526587093875" expanded="true" signature="1054:1284" ph="UPDATE ${{$t... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/layout/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pedidos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/cozinheiro/pedidos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="404.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/404.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -34,11 +76,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="fun_alterar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/cozinheiro/fun_alterar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="menucozinheiro.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/layout/menucozinheiro.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="44" column="39" lean-forward="false" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+            <state relative-caret-position="596">
+              <caret line="44" column="6" lean-forward="false" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -65,7 +117,13 @@
         <option value="$PROJECT_DIR$/Views/layout/menumotoboy.php" />
         <option value="$PROJECT_DIR$/DAO/FuncionarioDAO.php" />
         <option value="$PROJECT_DIR$/Views/cozinheiro/funcionarios.php" />
+        <option value="$PROJECT_DIR$/Views/layout/baselayout.php" />
         <option value="$PROJECT_DIR$/Views/layout/menucozinheiro.php" />
+        <option value="$PROJECT_DIR$/Views/cozinheiro/fun_alterar.php" />
+        <option value="$PROJECT_DIR$/Views/errors.php" />
+        <option value="$PROJECT_DIR$/Views/layout/head.php" />
+        <option value="$PROJECT_DIR$/Views/layout/footer.php" />
+        <option value="$PROJECT_DIR$/Views/cozinheiro/fun_incluir.php" />
       </list>
     </option>
   </component>
@@ -114,13 +172,7 @@
             <path>
               <item name="Pizzaria" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pizzaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Pizzaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pizzaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="cozinheiro" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -160,7 +212,7 @@
       <workItem from="1526939639196" duration="44000" />
       <workItem from="1526957930067" duration="3088000" />
       <workItem from="1527016880763" duration="323000" />
-      <workItem from="1527034417364" duration="296000" />
+      <workItem from="1527034417364" duration="7533000" />
     </task>
     <task id="LOCAL-00001" summary="Alteracoes no menu do cozinheiro.">
       <created>1526960944903</created>
@@ -173,13 +225,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4346000" />
+    <option name="totallyTimeSpent" value="11583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -319,14 +370,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/cozinheiro/relatorio.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -385,27 +428,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/layout/menucozinheiro.php">
+    <entry file="file://$PROJECT_DIR$/Views/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="44" column="39" lean-forward="false" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/cozinheiro/funcionarios.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="74" column="63" lean-forward="true" selection-start-line="74" selection-start-column="63" selection-end-line="74" selection-end-column="63" />
+        <state relative-caret-position="1479">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="51" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/cozinheiro/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/cozinheiro/pedidos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/errors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding>
+            <marker date="1527036638146" expanded="true" signature="192:273" ph="..." />
+            <marker date="1527036638146" expanded="true" signature="365:484" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/layout/baselayout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/layout/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="63" lean-forward="false" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/layout/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/layout/menucozinheiro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="44" column="6" lean-forward="false" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/cozinheiro/fun_alterar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/EnderecoDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1526586026560" expanded="true" signature="188:363" ph="INSERT INTO $... " />
+            <marker date="1526586026560" expanded="true" signature="950:1200" ph="UPDATE ${{$t... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/cozinheiro/fun_incluir.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/ClienteDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1526587093875" expanded="true" signature="276:473" ph="INSERT INTO $... " />
+            <marker date="1526587093875" expanded="true" signature="1054:1284" ph="UPDATE ${{$t... " />
+          </folding>
         </state>
       </provider>
     </entry>
