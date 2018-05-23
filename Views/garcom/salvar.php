@@ -4,7 +4,6 @@ require_once __DIR__ . "/../../autoload.php";
 $c = new \Controllers\ClienteController();
 $e = new \Controllers\EnderecoController();
 
-
 if(isset($_POST['cliente'])){
     $c->insert(
         $_POST['cpf'],
@@ -24,10 +23,6 @@ if(isset($_POST['cliente'])){
         $_POST['pais'],
         $_POST['referencia'],
         $_POST['cep']);
-
-    echo "<pre>";
-    print_r($c);
-    echo "</pre>";
 }
 
 if(isset($_POST['endereco'])){
