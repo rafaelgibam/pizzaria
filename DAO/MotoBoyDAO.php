@@ -9,7 +9,8 @@ class MotoBoyDAO extends Model implements ICrud
     public function insert($obj)
     {
         $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`,`RG`,`NOME`,`SEXO`,`DATA_NASC`,`NUM_FIXO`,
-                                                `NUM_CELULAR`,`ESTADO`,`DATA_ADMISSAO`,`SALARIO`, `PLACA`,`ENDERECO_ID`)
+                                                `NUM_CELULAR`,`ESTADO`,`PLACA`,`DATA_ADMISSAO`,`SALARIO`,`LOGRADOURO`, `NUMERO`, `COMPLEMENTO`,
+                                                `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`)
                                                  VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
 
 
@@ -21,10 +22,17 @@ class MotoBoyDAO extends Model implements ICrud
         $stmt->bindValue(6, $obj->getNumfixo());
         $stmt->bindValue(7, $obj->getNumcel());
         $stmt->bindValue(8, $obj->getEstado());
-        $stmt->bindValue(9, $obj->getDtadmissao());
-        $stmt->bindValue(10, $obj->getSalario());
-        $stmt->bindValue(11, $obj->getPlaca());
-        $stmt->bindValue(12, $obj->getEndereco()->getId());
+        $stmt->bindValue(9, $obj->getPlaca());
+        $stmt->bindValue(10, $obj->getDtadmissao());
+        $stmt->bindValue(11, $obj->getSalario());
+        $stmt->bindValue(12, $obj->getLogradouro());
+        $stmt->bindValue(13, $obj->getNumero());
+        $stmt->bindValue(14, $obj->getComplemento());
+        $stmt->bindValue(15, $obj->getBairro());
+        $stmt->bindValue(16, $obj->getMunicipio());
+        $stmt->bindValue(17, $obj->getUf());
+        $stmt->bindValue(18, $obj->getPais());
+        $stmt->bindValue(19, $obj->getReferencia());
 
         $stmt->execute();
         $stmt->closeCursor();
@@ -34,7 +42,9 @@ class MotoBoyDAO extends Model implements ICrud
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
                                                  SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?, 
-                                                 NUM_CELULAR = ?, ESTADO = ?, DATA_ADMISSAO = ?, SALARIO = ?, PLACA = ?, ENDERECO_ID = ?
+                                                 NUM_CELULAR = ?, ESTADO = ?, GOJETA = ?, DATA_ADMISSAO = ?, SALARIO = ?,
+                                                 LOGRADOURO = ?, NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?,
+                                                 PAIS = ?, REFERENCIA = ?
                                                  WHERE ID = ?");
 
 
@@ -46,10 +56,18 @@ class MotoBoyDAO extends Model implements ICrud
         $stmt->bindValue(6, $obj->getNumfixo());
         $stmt->bindValue(7, $obj->getNumcel());
         $stmt->bindValue(8, $obj->getEstado());
-        $stmt->bindValue(9, $obj->getDtadmissao());
-        $stmt->bindValue(10, $obj->getSalario());
-        $stmt->bindValue(11, $obj->getPlaca());
-        $stmt->bindValue(12, $obj->getEndereco()->getId());
+        $stmt->bindValue(9, $obj->getPlaca());
+        $stmt->bindValue(10, $obj->getDtadmissao());
+        $stmt->bindValue(11, $obj->getSalario());
+        $stmt->bindValue(12, $obj->getLogradouro());
+        $stmt->bindValue(13, $obj->getNumero());
+        $stmt->bindValue(14, $obj->getComplemento());
+        $stmt->bindValue(15, $obj->getBairro());
+        $stmt->bindValue(16, $obj->getMunicipio());
+        $stmt->bindValue(17, $obj->getUf());
+        $stmt->bindValue(18, $obj->getPais());
+        $stmt->bindValue(19, $obj->getReferencia());
+        $stmt->bindValue(20, $obj->getEndereco()->getId());
 
         $stmt->execute();
         $stmt->closeCursor();

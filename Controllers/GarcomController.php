@@ -19,9 +19,10 @@ class GarcomController
         $this->e = new Endereco();
     }
 
-    public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $gojeta, $dtadmissao, $salario, $enderecoid)
+    public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $gojeta, $dtadmissao,
+                           $salario, $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
     {
-        // ID	CPF		RG NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	GOJETA	DATA_ADMISSAO	SALARIO	ENDERECO_ID
+        // ID	CPF		RG NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	GOJETA	DATA_ADMISSAO	SALARIO	LOGRADOURO	NUMERO	COMPLEMENTO	BAIRRO	MUNICIPIO	UF	PAIS	REFERENCIA
 
         $this->g->setCpf($cpf);
         $this->g->setRg($rg);
@@ -34,15 +35,21 @@ class GarcomController
         $this->g->setGojeta($gojeta);
         $this->g->setDtadmissao($dtadmissao);
         $this->g->setSalario($salario);
-
-        $this->e->setId($enderecoid);
-        $this->g->setEndereco($this->e);
+        $this->g->setLogradouro($logradouro);
+        $this->g->setNumero($numero);
+        $this->g->setComplemento($complemento);
+        $this->g->setBairro($bairro);
+        $this->g->setMunicipio($municipio);
+        $this->g->setUf($uf);
+        $this->g->setPais($pais);
+        $this->g->setReferencia($referencia);
 
         $this->gdao->insert($this->g);
 
     }
 
-    public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $gojeta, $dtadmissao, $salario, $enderecoid)
+    public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $gojeta, $dtadmissao, $salario,
+                           $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
     {
         $this->g->setId($id);
         $this->g->setCpf($cpf);
@@ -56,9 +63,14 @@ class GarcomController
         $this->g->setGojeta($gojeta);
         $this->g->setDtadmissao($dtadmissao);
         $this->g->setSalario($salario);
-
-        $this->e->setId($enderecoid);
-        $this->g->setEndereco($this->e);
+        $this->g->setLogradouro($logradouro);
+        $this->g->setNumero($numero);
+        $this->g->setComplemento($complemento);
+        $this->g->setBairro($bairro);
+        $this->g->setMunicipio($municipio);
+        $this->g->setUf($uf);
+        $this->g->setPais($pais);
+        $this->g->setReferencia($referencia);
 
         $this->gdao->insert($this->g);
     }

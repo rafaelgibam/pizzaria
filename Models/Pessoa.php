@@ -12,4 +12,13 @@ abstract class Pessoa
     protected $numcel;
     protected $endereco;
     protected $estado;
+    protected $logradouro;
+    protected $numero;
+    protected $complemento;
+    protected $bairro;
+    protected $municipio;
+    protected $uf;
+    protected $pais;
+    protected $referencia;
+
 }

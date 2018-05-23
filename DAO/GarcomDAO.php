@@ -12,9 +12,9 @@ class GarcomDAO extends Model implements ICrud
     public function insert($obj)
     {
         $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`,`RG`,`NOME`,`SEXO`,`DATA_NASC`,`NUM_FIXO`,
-                                                `NUM_CELULAR`,`ESTADO`,`GOJETA`,`DATA_ADMISSAO`,`SALARIO`,`ENDERECO_ID`)
-                                                 VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
-
+                                                `NUM_CELULAR`,`ESTADO`,`GOJETA`,`DATA_ADMISSAO`,`SALARIO`,`LOGRADOURO`, `NUMERO`, `COMPLEMENTO`,
+                                                `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`)
+                                                 VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         $stmt->bindValue(1, $obj->getCpf());
         $stmt->bindValue(2, $obj->getRg());
@@ -27,7 +27,14 @@ class GarcomDAO extends Model implements ICrud
         $stmt->bindValue(9, $obj->getGojeta());
         $stmt->bindValue(10, $obj->getDtadmissao());
         $stmt->bindValue(11, $obj->getSalario());
-        $stmt->bindValue(12, $obj->getEndereco()->getId());
+        $stmt->bindValue(12, $obj->getLogradouro());
+        $stmt->bindValue(13, $obj->getNumero());
+        $stmt->bindValue(14, $obj->getComplemento());
+        $stmt->bindValue(15, $obj->getBairro());
+        $stmt->bindValue(16, $obj->getMunicipio());
+        $stmt->bindValue(17, $obj->getUf());
+        $stmt->bindValue(18, $obj->getPais());
+        $stmt->bindValue(19, $obj->getReferencia());
 
         $stmt->execute();
         $stmt->closeCursor();
@@ -37,7 +44,9 @@ class GarcomDAO extends Model implements ICrud
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
                                                  SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?, 
-                                                 NUM_CELULAR = ?, ESTADO = ?, GOJETA = ?, DATA_ADMISSAO = ?, SALARIO = ?, ENDERECO_ID = ?
+                                                 NUM_CELULAR = ?, ESTADO = ?, GOJETA = ?, DATA_ADMISSAO = ?, SALARIO = ?,
+                                                 LOGRADOURO = ?, NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?,
+                                                 PAIS = ?, REFERENCIA = ?
                                                  WHERE ID = ?");
 
         $stmt->bindValue(1, $obj->getCpf());
@@ -51,8 +60,15 @@ class GarcomDAO extends Model implements ICrud
         $stmt->bindValue(9, $obj->getGojeta());
         $stmt->bindValue(10, $obj->getDtadmissao());
         $stmt->bindValue(11, $obj->getSalario());
-        $stmt->bindValue(12, $obj->getEndereco()->getId());
-        $stmt->bindValue(13, $obj->getId());
+        $stmt->bindValue(12, $obj->getLogradouro());
+        $stmt->bindValue(13, $obj->getNumero());
+        $stmt->bindValue(14, $obj->getComplemento());
+        $stmt->bindValue(15, $obj->getBairro());
+        $stmt->bindValue(16, $obj->getMunicipio());
+        $stmt->bindValue(17, $obj->getUf());
+        $stmt->bindValue(18, $obj->getPais());
+        $stmt->bindValue(19, $obj->getReferencia());
+        $stmt->bindValue(20, $obj->getId());
 
         $stmt->execute();
         $stmt->closeCursor();

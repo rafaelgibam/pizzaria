@@ -10,61 +10,61 @@
                 <div class="card">
                     <h5 class="card-header">Dados do Funcionario</h5>
                     <div class="card-body">
-                            <div class="form-row">
-                                <div class="form-group col-3">
-                                    <label for="nome">Nome:</label>
-                                    <input type="text" id="nome" class="form-control" name="nome">
-                                </div>
-                                <div class="form-group col-2">
-                                    <label for="cpf">CPF:</label>
-                                    <input type="text" id="cpf" maxlength="11" class="form-control" name="cpf">
-                                </div>
-                                <div class="form-group col-2">
-                                    <label for="rg">RG:</label>
-                                    <input type="text" id="rg" maxlength="9" class="form-control" name="rg">
-                                </div>
-                                <div class="form-group col-2">
-                                    <label for="sexo">Sexo:</label>
-                                    <select name="sexo" id="sexo" class="form-control">
-                                        <option value="NaoInformado">Não Informado</option>
-                                        <option value="masculino">Masculino</option>
-                                        <option value="feminino">Feminino</option>
+                        <div class="form-row">
+                            <div class="form-group col-3">
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" class="form-control" name="nome">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="cpf">CPF:</label>
+                                <input type="text" id="cpf" maxlength="11" class="form-control" name="cpf">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="rg">RG:</label>
+                                <input type="text" id="rg" maxlength="9" class="form-control" name="rg">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="sexo">Sexo:</label>
+                                <select name="sexo" id="sexo" class="form-control">
+                                    <option value="NaoInformado">Não Informado</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="feminino">Feminino</option>
 
-                                    </select>
-                                </div>
-                                <div class="form-group col-3">
-                                    <label for="datanasc">Data Nascimento:</label>
-                                    <input type="date" id="datanasc" class="form-control" name="datanasc">
-                                </div>
+                                </select>
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="datanasc">Data Nascimento:</label>
+                                <input type="date" id="datanasc" class="form-control" name="datanasc">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-3">
+                                <label for="numerofixo">Número Fixo:</label>
+                                <input type="text" id="numerofixo"  maxlength="11" class="form-control" name="numerofixo" placeholder="DDD+99999-9999">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="numerocelular">Número Celular:</label>
+                                <input type="text" id="numerocelular" maxlength="11" class="form-control" name="numerocelular"  placeholder="DDD+99999-9999">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="sexo">Estado:</label>
+                                <select name="estado" id="estado" class="form-control">
+                                    <option value="1">Ativo</option>
+                                    <option value="2">Desativado</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="gojeta">Perc. Gojeta:</label>
+                                <input type="text" id="gojeta" class="form-control" name="gojeta" maxlength="2" placeholder="%">
                             </div>
 
-                            <div class="form-row">
-                                <div class="form-group col-3">
-                                    <label for="numerofixo">Número Fixo:</label>
-                                    <input type="text" id="numerofixo"  maxlength="11" class="form-control" name="numerofixo" placeholder="DDD+99999-9999">
-                                </div>
-                                <div class="form-group col-3">
-                                    <label for="numerocelular">Número Celular:</label>
-                                    <input type="text" id="numerocelular" maxlength="11" class="form-control" name="numerocelular"  placeholder="DDD+99999-9999">
-                                </div>
-                                <div class="form-group col-2">
-                                    <label for="sexo">Estado:</label>
-                                    <select name="estado" id="estado" class="form-control">
-                                        <option value="1">Ativo</option>
-                                        <option value="2">Desativado</option>
-
-                                    </select>
-                                </div>
-                                <div class="form-group col-2">
-                                    <label for="gojeta">Perc. Gojeta:</label>
-                                    <input type="text" id="gojeta" class="form-control" name="gojeta" maxlength="2" placeholder="%">
-                                </div>
-
-                                <div class="form-group col-2">
-                                    <label for="salario">Salário:</label>
-                                    <input type="number" id="salario" class="form-control" name="salario"  placeholder="R$">
-                                </div>
+                            <div class="form-group col-2">
+                                <label for="salario">Salário:</label>
+                                <input type="number" id="salario" class="form-control" name="salario"  placeholder="R$">
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>

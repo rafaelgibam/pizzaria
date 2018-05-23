@@ -19,7 +19,8 @@ class MotoBoyController
         $this->e = new Endereco();
     }
 
-    public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $placa, $dtadmissao, $salario, $enderecoid)
+    public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $placa, $dtadmissao, $salario,
+                           $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
     {
         $this->m->setCpf($cpf);
         $this->m->setRg($rg);
@@ -32,14 +33,21 @@ class MotoBoyController
         $this->m->setPlaca($placa);
         $this->m->setDtadmissao($dtadmissao);
         $this->m->setSalario($salario);
+        $this->m->setLogradouro($logradouro);
+        $this->m->setNumero($numero);
+        $this->m->setComplemento($complemento);
+        $this->m->setBairro($bairro);
+        $this->m->setMunicipio($municipio);
+        $this->m->setUf($uf);
+        $this->m->setPais($pais);
+        $this->m->setReferencia($referencia);
 
-        $this->e->setId($enderecoid);
-        $this->m->setEndereco($this->e);
 
         $this->mdao->insert($this->m);
     }
 
-    public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $placa, $dtadmissao, $salario, $enderecoid)
+    public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $placa, $dtadmissao, $salario,
+                           $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
     {
         $this->m->setId($id);
         $this->m->setCpf($cpf);
@@ -53,9 +61,15 @@ class MotoBoyController
         $this->m->setPlaca($placa);
         $this->m->setDtadmissao($dtadmissao);
         $this->m->setSalario($salario);
+        $this->m->setLogradouro($logradouro);
+        $this->m->setNumero($numero);
+        $this->m->setComplemento($complemento);
+        $this->m->setBairro($bairro);
+        $this->m->setMunicipio($municipio);
+        $this->m->setUf($uf);
+        $this->m->setPais($pais);
+        $this->m->setReferencia($referencia);
 
-        $this->e->setId($enderecoid);
-        $this->m->setEndereco($this->e);
 
         $this->mdao->insert($this->m);
     }

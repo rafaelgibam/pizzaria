@@ -9,7 +9,7 @@
 namespace Models;
 
 
-abstract class PessoaFisica extends Funcionario
+abstract class PessoaFisica extends Pessoa
 {
     protected $cpf;
     protected $rg;

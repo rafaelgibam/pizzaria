@@ -11,16 +11,21 @@
                 </li>
                 <li class="nav-item">
                     <div class="dropdown">
-
                         <a href="#" class="nav-link ml-2 dropdown-toggle"
                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Funcionários</a>
+
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a href="#" class="nav-link ml-2 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Funcionários</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="/../cozinheiro/funcionarios.php">Pesquisar</a>
+                                <a class="dropdown-item" href="/../cozinheiro/funcionarios.php">Pesquisar</a>
+                                <a class="dropdown-item" href="/../cozinheiro/funcionarios.php">Pesquisar</a>
+                            </div>
                             <a class="dropdown-item" href="/../cozinheiro/funcionarios.php">Pesquisar</a>
                             <a class="dropdown-item" href="/../cozinheiro/fun_incluir.php">Cadastrar</a>
                             <a class="dropdown-item" href="/../cozinheiro/fun_alterar.php">Editar</a>
                         </div>
                     </div>
-
                 </li>
                 <li class="nav-item">
                     <a href="/../cozinheiro/pedidos.php" class="nav-link ml-2">Pedidos</a>

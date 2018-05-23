@@ -5,7 +5,23 @@ namespace Models;
 class Cozinheiro extends PessoaJuridica
 {
 
-    private $produto; // Objeto de produto
+    private $produto;
+
+    /**
+     * @return mixed
+     */
+    public function getProduto()
+    {
+        return $this->produto;
+    }
+
+    /**
+     * @param mixed $produto
+     */
+    public function setProduto($produto)
+    {
+        $this->produto = $produto;
+    }
 
     /**
      * @return mixed
@@ -22,40 +38,6 @@ class Cozinheiro extends PessoaJuridica
     {
         $this->id = $id;
     }
-
-
-    /**
-     * @return mixed
-     */
-    public function getCnpj()
-    {
-        return $this->cnpj;
-    }
-
-    /**
-     * @param mixed $cnpj
-     */
-    public function setCnpj($cnpj)
-    {
-        $this->cnpj = $cnpj;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRazaosocial()
-    {
-        return $this->razaosocial;
-    }
-
-    /**
-     * @param mixed $razaosocial
-     */
-    public function setRazaosocial($razaosocial)
-    {
-        $this->razaosocial = $razaosocial;
-    }
-
 
     /**
      * @return mixed
@@ -108,22 +90,6 @@ class Cozinheiro extends PessoaJuridica
     /**
      * @return mixed
      */
-    public function getNumcel()
-    {
-        return $this->numcel;
-    }
-
-    /**
-     * @param mixed $numcel
-     */
-    public function setNumcel($numcel)
-    {
-        $this->numcel = $numcel;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getNumfixo()
     {
         return $this->numfixo;
@@ -140,36 +106,34 @@ class Cozinheiro extends PessoaJuridica
     /**
      * @return mixed
      */
-    public function getDtadmissao()
+    public function getNumcel()
     {
-        return $this->dtadmissao;
+        return $this->numcel;
     }
 
     /**
-     * @param mixed $dtadmissao
+     * @param mixed $numcel
      */
-    public function setDtadmissao($dtadmissao)
+    public function setNumcel($numcel)
     {
-        $this->dtadmissao = $dtadmissao;
+        $this->numcel = $numcel;
     }
 
     /**
      * @return mixed
      */
-    public function getSalario()
+    public function getEndereco()
     {
-        return $this->salario;
+        return $this->endereco;
     }
 
     /**
-     * @param mixed $salario
+     * @param mixed $endereco
      */
-    public function setSalario($salario)
+    public function setEndereco($endereco)
     {
-        $this->salario = $salario;
+        $this->endereco = $endereco;
     }
-
-
 
     /**
      * @return mixed
@@ -188,37 +152,164 @@ class Cozinheiro extends PessoaJuridica
     }
 
     /**
-     * @return Endereco
+     * @return mixed
      */
-    public function getEndereco()
+    public function getCnpj()
     {
-        return $this->endereco;
+        return $this->cnpj;
     }
 
     /**
-     * @param Endereco $endereco
+     * @param mixed $cnpj
      */
-    public function setEndereco(Endereco $endereco)
+    public function setCnpj($cnpj)
     {
-        $this->endereco = $endereco;
+        $this->cnpj = $cnpj;
     }
 
     /**
      * @return mixed
      */
-    public function getProduto()
+    public function getRazaosocial()
     {
-        return $this->produto;
+        return $this->razaosocial;
     }
 
     /**
-     * @param mixed $produto
+     * @param mixed $razaosocial
      */
-    public function setProduto($produto)
+    public function setRazaosocial($razaosocial)
     {
-        $this->produto = $produto;
+        $this->razaosocial = $razaosocial;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getLogradouro()
+    {
+        return $this->logradouro;
+    }
+
+    /**
+     * @param mixed $logradouro
+     */
+    public function setLogradouro($logradouro)
+    {
+        $this->logradouro = $logradouro;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNumero()
+    {
+        return $this->numero;
+    }
+
+    /**
+     * @param mixed $numero
+     */
+    public function setNumero($numero)
+    {
+        $this->numero = $numero;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getComplemento()
+    {
+        return $this->complemento;
+    }
+
+    /**
+     * @param mixed $complemento
+     */
+    public function setComplemento($complemento)
+    {
+        $this->complemento = $complemento;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBairro()
+    {
+        return $this->bairro;
+    }
+
+    /**
+     * @param mixed $bairro
+     */
+    public function setBairro($bairro)
+    {
+        $this->bairro = $bairro;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMunicipio()
+    {
+        return $this->municipio;
+    }
+
+    /**
+     * @param mixed $municipio
+     */
+    public function setMunicipio($municipio)
+    {
+        $this->municipio = $municipio;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUf()
+    {
+        return $this->uf;
+    }
+
+    /**
+     * @param mixed $uf
+     */
+    public function setUf($uf)
+    {
+        $this->uf = $uf;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPais()
+    {
+        return $this->pais;
+    }
+
+    /**
+     * @param mixed $pais
+     */
+    public function setPais($pais)
+    {
+        $this->pais = $pais;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getReferencia()
+    {
+        return $this->referencia;
+    }
+
+    /**
+     * @param mixed $referencia
+     */
+    public function setReferencia($referencia)
+    {
+        $this->referencia = $referencia;
+    } // Objeto de produto
 
 
 

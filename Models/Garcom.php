@@ -11,6 +11,182 @@ class Garcom extends Funcionario
     /**
      * @return mixed
      */
+    public function getDtadmissao()
+    {
+        return $this->dtadmissao;
+    }
+
+    /**
+     * @param mixed $dtadmissao
+     */
+    public function setDtadmissao($dtadmissao)
+    {
+        $this->dtadmissao = $dtadmissao;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSalario()
+    {
+        return $this->salario;
+    }
+
+    /**
+     * @param mixed $salario
+     */
+    public function setSalario($salario)
+    {
+        $this->salario = $salario;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLogradouro()
+    {
+        return $this->logradouro;
+    }
+
+    /**
+     * @param mixed $logradouro
+     */
+    public function setLogradouro($logradouro)
+    {
+        $this->logradouro = $logradouro;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNumero()
+    {
+        return $this->numero;
+    }
+
+    /**
+     * @param mixed $numero
+     */
+    public function setNumero($numero)
+    {
+        $this->numero = $numero;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getComplemento()
+    {
+        return $this->complemento;
+    }
+
+    /**
+     * @param mixed $complemento
+     */
+    public function setComplemento($complemento)
+    {
+        $this->complemento = $complemento;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBairro()
+    {
+        return $this->bairro;
+    }
+
+    /**
+     * @param mixed $bairro
+     */
+    public function setBairro($bairro)
+    {
+        $this->bairro = $bairro;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMunicipio()
+    {
+        return $this->municipio;
+    }
+
+    /**
+     * @param mixed $municipio
+     */
+    public function setMunicipio($municipio)
+    {
+        $this->municipio = $municipio;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUf()
+    {
+        return $this->uf;
+    }
+
+    /**
+     * @param mixed $uf
+     */
+    public function setUf($uf)
+    {
+        $this->uf = $uf;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPais()
+    {
+        return $this->pais;
+    }
+
+    /**
+     * @param mixed $pais
+     */
+    public function setPais($pais)
+    {
+        $this->pais = $pais;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getReferencia()
+    {
+        return $this->referencia;
+    }
+
+    /**
+     * @param mixed $referencia
+     */
+    public function setReferencia($referencia)
+    {
+        $this->referencia = $referencia;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGojeta()
+    {
+        return $this->gojeta;
+    }
+
+    /**
+     * @param mixed $gojeta
+     */
+    public function setGojeta($gojeta)
+    {
+        $this->gojeta = $gojeta;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getId()
     {
         return $this->id;
@@ -23,40 +199,6 @@ class Garcom extends Funcionario
     {
         $this->id = $id;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getCpf()
-    {
-        return $this->cpf;
-    }
-
-    /**
-     * @param mixed $cpf
-     */
-    public function setCpf($cpf)
-    {
-        $this->cpf = $cpf;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRg()
-    {
-        return $this->rg;
-    }
-
-    /**
-     * @param mixed $rg
-     */
-    public function setRg($rg)
-    {
-        $this->rg = $rg;
-    }
-
-
 
     /**
      * @return mixed
@@ -109,6 +251,22 @@ class Garcom extends Funcionario
     /**
      * @return mixed
      */
+    public function getNumfixo()
+    {
+        return $this->numfixo;
+    }
+
+    /**
+     * @param mixed $numfixo
+     */
+    public function setNumfixo($numfixo)
+    {
+        $this->numfixo = $numfixo;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getNumcel()
     {
         return $this->numcel;
@@ -125,17 +283,17 @@ class Garcom extends Funcionario
     /**
      * @return mixed
      */
-    public function getNumfixo()
+    public function getEndereco()
     {
-        return $this->numfixo;
+        return $this->endereco;
     }
 
     /**
-     * @param mixed $numfixo
+     * @param mixed $endereco
      */
-    public function setNumfixo($numfixo)
+    public function setEndereco($endereco)
     {
-        $this->numfixo = $numfixo;
+        $this->endereco = $endereco;
     }
 
     /**
@@ -155,68 +313,35 @@ class Garcom extends Funcionario
     }
 
     /**
-     * @return Endereco
+     * @return mixed
      */
-    public function getEndereco()
+    public function getCpf()
     {
-        return $this->endereco;
+        return $this->cpf;
     }
 
     /**
-     * @param Endereco $endereco
+     * @param mixed $cpf
      */
-    public function setEndereco(Endereco $endereco)
+    public function setCpf($cpf)
     {
-        $this->endereco = $endereco;
+        $this->cpf = $cpf;
     }
 
     /**
      * @return mixed
      */
-    public function getDtadmissao()
+    public function getRg()
     {
-        return $this->dtadmissao;
+        return $this->rg;
     }
 
     /**
-     * @param mixed $dtadmissao
+     * @param mixed $rg
      */
-    public function setDtadmissao($dtadmissao)
+    public function setRg($rg)
     {
-        $this->dtadmissao = $dtadmissao;
+        $this->rg = $rg;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getSalario()
-    {
-        return $this->salario;
-    }
-
-    /**
-     * @param mixed $salario
-     */
-    public function setSalario($salario)
-    {
-        $this->salario = $salario;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getGojeta()
-    {
-        return $this->gojeta;
-    }
-
-    /**
-     * @param mixed $gojeta
-     */
-    public function setGojeta($gojeta)
-    {
-        $this->gojeta = $gojeta;
-    }
-
 
 }

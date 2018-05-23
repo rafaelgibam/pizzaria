@@ -13,8 +13,9 @@ class CozinheiroDAO extends Model implements ICrud
 
 
         $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CNPJ`, `RAZAOSOCIAL`, `NOME`, `SEXO`, `DATA_NASC`, 
-                                                                            `NUM_FIXO`,`NUM_CELULAR`, SALARIO, DATA_ADMISSAO, `ESTADO`,`ENDERECO_ID`, ) 
-                                                                            VALUES (?,?,?,?,?,?,?,?,?,?)");
+                                                                            `NUM_FIXO`,`NUM_CELULAR`, SALARIO, DATA_ADMISSAO, `ESTADO`,
+                                                                            `LOGRADOURO`, `NUMERO`, `COMPLEMENTO`, `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA` ) 
+                                                                             VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $stmt->bindValue(1, $obj->getCnpj());
         $stmt->bindValue(2, $obj->getRazaosocial());
         $stmt->bindValue(3, $obj->getNome());
@@ -25,7 +26,14 @@ class CozinheiroDAO extends Model implements ICrud
         $stmt->bindValue(8, $obj->getSalario());
         $stmt->bindValue(9, $obj->getDtadmissao());
         $stmt->bindValue(10, $obj->getEstado());
-        $stmt->bindValue(11, $obj->getEndereco()->getId());
+        $stmt->bindValue(11, $obj->getLogradouro());
+        $stmt->bindValue(12, $obj->getNumero());
+        $stmt->bindValue(13, $obj->getComplemento());
+        $stmt->bindValue(14, $obj->getBairro());
+        $stmt->bindValue(15, $obj->getMunicipio());
+        $stmt->bindValue(16, $obj->getUf());
+        $stmt->bindValue(17, $obj->getPais());
+        $stmt->bindValue(18, $obj->getReferencia());
 
         $stmt->execute();
         $stmt->closeCursor();
@@ -34,7 +42,9 @@ class CozinheiroDAO extends Model implements ICrud
     public function update($obj)
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET CNPJ = ?, RAZAOSOCIAL = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?, NUM_CELULAR = ?, SALARIO = ?, DATA_ADMISSAO = ?, ESTADO = ?, ENDERECO_ID = ?
+                                                 SET CNPJ = ?, RAZAOSOCIAL = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?,
+                                                 NUM_CELULAR = ?, SALARIO = ?, DATA_ADMISSAO = ?, ESTADO = ?, LOGRADOURO = ?,
+                                                 NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?, PAIS = ?, REFERENCIA = ?
                                                  WHERE ID = ?");
 
 
@@ -48,8 +58,15 @@ class CozinheiroDAO extends Model implements ICrud
         $stmt->bindValue(8, $obj->getSalario());
         $stmt->bindValue(9, $obj->getDtadmissao());
         $stmt->bindValue(10, $obj->getEstado());
-        $stmt->bindValue(11, $obj->getEndereco()->getId());
-        $stmt->bindValue(12, $obj->getId());
+        $stmt->bindValue(11, $obj->getLogradouro());
+        $stmt->bindValue(12, $obj->getNumero());
+        $stmt->bindValue(13, $obj->getComplemento());
+        $stmt->bindValue(14, $obj->getBairro());
+        $stmt->bindValue(15, $obj->getMunicipio());
+        $stmt->bindValue(16, $obj->getUf());
+        $stmt->bindValue(17, $obj->getPais());
+        $stmt->bindValue(18, $obj->getReferencia());
+        $stmt->bindValue(19, $obj->getId());
 
         $stmt->execute();
         $stmt->closeCursor();
