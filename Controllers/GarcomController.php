@@ -19,7 +19,7 @@ class GarcomController
         $this->e = new Endereco();
     }
 
-    public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $gojeta, $dtadmissao,
+    public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $gorjeta, $dtadmissao,
                            $salario, $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
     {
         // ID	CPF		RG NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	GOJETA	DATA_ADMISSAO	SALARIO	LOGRADOURO	NUMERO	COMPLEMENTO	BAIRRO	MUNICIPIO	UF	PAIS	REFERENCIA
@@ -32,7 +32,7 @@ class GarcomController
         $this->g->setNumfixo($numfixo);
         $this->g->setNumcel($numcel);
         $this->g->setEstado($estado);
-        $this->g->setGojeta($gojeta);
+        $this->g->setGorjeta($gorjeta);
         $this->g->setDtadmissao($dtadmissao);
         $this->g->setSalario($salario);
         $this->g->setLogradouro($logradouro);
@@ -46,9 +46,9 @@ class GarcomController
 
         if($this->g->getCpf() != null && $this->g->getNome() != null){
             $this->gdao->insert($this->g);
-            return header("location: coz_form.php?msg=salvo");
+            return header("location: gar_form.php?msg=salvo");
         }else{
-            return header("location: coz_form.php?msg=erro");
+            return header("location: gar_form.php?msg=erro");
         }
 
 
@@ -66,7 +66,7 @@ class GarcomController
         $this->g->setNumfixo($numfixo);
         $this->g->setNumcel($numcel);
         $this->g->setEstado($estado);
-        $this->g->setGojeta($gojeta);
+        $this->g->setGorjeta($gojeta);
         $this->g->setDtadmissao($dtadmissao);
         $this->g->setSalario($salario);
         $this->g->setLogradouro($logradouro);

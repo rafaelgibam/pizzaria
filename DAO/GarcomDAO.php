@@ -12,7 +12,7 @@ class GarcomDAO extends Model implements ICrud
     public function insert($obj)
     {
         $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`,`RG`,`NOME`,`SEXO`,`DATA_NASC`,`NUM_FIXO`,
-                                                `NUM_CELULAR`,`ESTADO`,`GOJETA`,`DATA_ADMISSAO`,`SALARIO`,`LOGRADOURO`, `NUMERO`, `COMPLEMENTO`,
+                                                `NUM_CELULAR`,`ESTADO`,`GORJETA`,`DATA_ADMISSAO`,`SALARIO`,`LOGRADOURO`, `NUMERO`, `COMPLEMENTO`,
                                                 `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`)
                                                  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
@@ -24,7 +24,7 @@ class GarcomDAO extends Model implements ICrud
         $stmt->bindValue(6, $obj->getNumfixo());
         $stmt->bindValue(7, $obj->getNumcel());
         $stmt->bindValue(8, $obj->getEstado());
-        $stmt->bindValue(9, $obj->getGojeta());
+        $stmt->bindValue(9, $obj->getGorjeta());
         $stmt->bindValue(10, $obj->getDtadmissao());
         $stmt->bindValue(11, $obj->getSalario());
         $stmt->bindValue(12, $obj->getLogradouro());
@@ -44,7 +44,7 @@ class GarcomDAO extends Model implements ICrud
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
                                                  SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?, 
-                                                 NUM_CELULAR = ?, ESTADO = ?, GOJETA = ?, DATA_ADMISSAO = ?, SALARIO = ?,
+                                                 NUM_CELULAR = ?, ESTADO = ?, GORJETA = ?, DATA_ADMISSAO = ?, SALARIO = ?,
                                                  LOGRADOURO = ?, NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?,
                                                  PAIS = ?, REFERENCIA = ?
                                                  WHERE ID = ?");
@@ -57,7 +57,7 @@ class GarcomDAO extends Model implements ICrud
         $stmt->bindValue(6, $obj->getNumfixo());
         $stmt->bindValue(7, $obj->getNumcel());
         $stmt->bindValue(8, $obj->getEstado());
-        $stmt->bindValue(9, $obj->getGojeta());
+        $stmt->bindValue(9, $obj->getGorjeta());
         $stmt->bindValue(10, $obj->getDtadmissao());
         $stmt->bindValue(11, $obj->getSalario());
         $stmt->bindValue(12, $obj->getLogradouro());

@@ -6,7 +6,7 @@ namespace Models;
 class Garcom extends Funcionario
 {
 
-    private $gojeta;
+    private $gorjeta;
 
     /**
      * @return mixed
@@ -171,17 +171,17 @@ class Garcom extends Funcionario
     /**
      * @return mixed
      */
-    public function getGojeta()
+    public function getGorjeta()
     {
-        return $this->gojeta;
+        return $this->gorjeta;
     }
 
     /**
-     * @param mixed $gojeta
+     * @param mixed $gorjeta
      */
-    public function setGojeta($gojeta)
+    public function setGorjeta($gorjeta)
     {
-        $this->gojeta = $gojeta;
+        $this->gorjeta = $gorjeta;
     }
 
     /**

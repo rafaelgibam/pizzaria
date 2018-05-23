@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7147cad-035d-4aea-b56a-0fd49f667fde" name="Default" comment="Alteracoes no menu do cozinheiro.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Views/cozinheiro/fun_alterar.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/CozinheiroController.php" afterPath="$PROJECT_DIR$/Controllers/CozinheiroController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/GarcomController.php" afterPath="$PROJECT_DIR$/Controllers/GarcomController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/CozinheiroDAO.php" afterPath="$PROJECT_DIR$/DAO/CozinheiroDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/Cozinheiro.php" afterPath="$PROJECT_DIR$/Models/Cozinheiro.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/cozinheiro/coz_form.php" afterPath="$PROJECT_DIR$/Views/cozinheiro/coz_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/cozinheiro/gar_alterar.php" afterPath="$PROJECT_DIR$/Views/cozinheiro/gar_alterar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/GarcomDAO.php" afterPath="$PROJECT_DIR$/DAO/GarcomDAO.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/Garcom.php" afterPath="$PROJECT_DIR$/Models/Garcom.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/cozinheiro/gar_form.php" afterPath="$PROJECT_DIR$/Views/cozinheiro/gar_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/cozinheiro/mot_alterar.php" afterPath="$PROJECT_DIR$/Views/cozinheiro/mot_alterar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/cozinheiro/mot_form.php" afterPath="$PROJECT_DIR$/Views/cozinheiro/mot_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/cozinheiro/salvar.php" afterPath="$PROJECT_DIR$/Views/cozinheiro/salvar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/errors.php" afterPath="$PROJECT_DIR$/Views/errors.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,8 +19,8 @@
       <file leaf-file-name="salvar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/cozinheiro/salvar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+            <state relative-caret-position="236">
+              <caret line="49" column="34" lean-forward="true" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
               <folding>
                 <marker date="1527087435352" expanded="true" signature="203:217" ph="..." />
               </folding>
@@ -37,25 +28,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GarcomController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GarcomController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controllers/GarcomController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+            <state relative-caret-position="389">
+              <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GarcomDAO.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DAO/GarcomDAO.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-              <folding>
-                <marker date="1527043644751" expanded="true" signature="187:603" ph="INSERT INTO $... " />
-                <marker date="1527043644751" expanded="true" signature="1677:2205" ph="UPDATE ${{$t... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -63,8 +41,8 @@
       <file leaf-file-name="gar_form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/cozinheiro/gar_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2125">
-              <caret line="125" column="56" lean-forward="false" selection-start-line="125" selection-start-column="56" selection-end-line="125" selection-end-column="56" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -114,9 +92,7 @@
         <option value="$PROJECT_DIR$/Models/PessoaFisica.php" />
         <option value="$PROJECT_DIR$/Models/Cliente.php" />
         <option value="$PROJECT_DIR$/Models/MotoBoy.php" />
-        <option value="$PROJECT_DIR$/Models/Garcom.php" />
         <option value="$PROJECT_DIR$/DAO/ClienteDAO.php" />
-        <option value="$PROJECT_DIR$/DAO/GarcomDAO.php" />
         <option value="$PROJECT_DIR$/DAO/MotoBoyDAO.php" />
         <option value="$PROJECT_DIR$/Controllers/MotoBoyController.php" />
         <option value="$PROJECT_DIR$/Models/Funcionario.php" />
@@ -139,11 +115,13 @@
         <option value="$PROJECT_DIR$/Views/cozinheiro/coz_form.php" />
         <option value="$PROJECT_DIR$/Views/errors.php" />
         <option value="$PROJECT_DIR$/DAO/CozinheiroDAO.php" />
-        <option value="$PROJECT_DIR$/Views/cozinheiro/gar_form.php" />
-        <option value="$PROJECT_DIR$/Controllers/GarcomController.php" />
         <option value="$PROJECT_DIR$/Controllers/CozinheiroController.php" />
-        <option value="$PROJECT_DIR$/Views/cozinheiro/salvar.php" />
         <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/Views/cozinheiro/salvar.php" />
+        <option value="$PROJECT_DIR$/Models/Garcom.php" />
+        <option value="$PROJECT_DIR$/Controllers/GarcomController.php" />
+        <option value="$PROJECT_DIR$/Views/cozinheiro/gar_form.php" />
+        <option value="$PROJECT_DIR$/DAO/GarcomDAO.php" />
       </list>
     </option>
   </component>
@@ -154,7 +132,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -183,6 +161,11 @@
             <path>
               <item name="Pizzaria" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pizzaria" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Pizzaria" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pizzaria" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Pizzaria" type="b2602c69:ProjectViewProjectNode" />
@@ -245,7 +228,7 @@
       <workItem from="1526957930067" duration="3088000" />
       <workItem from="1527016880763" duration="323000" />
       <workItem from="1527034417364" duration="12508000" />
-      <workItem from="1527075083668" duration="12611000" />
+      <workItem from="1527075083668" duration="13115000" />
     </task>
     <task id="LOCAL-00001" summary="Alteracoes no menu do cozinheiro.">
       <created>1526960944903</created>
@@ -258,10 +241,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29169000" />
+    <option name="totallyTimeSpent" value="29673000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22552083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -380,14 +363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="593">
           <caret line="345" column="4" lean-forward="false" selection-start-line="345" selection-start-column="4" selection-end-line="345" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Garcom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1647">
-          <caret line="344" column="5" lean-forward="false" selection-start-line="344" selection-start-column="5" selection-end-line="344" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -677,36 +652,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/cozinheiro/gar_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="125" column="56" lean-forward="false" selection-start-line="125" selection-start-column="56" selection-end-line="125" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controllers/CozinheiroController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="59" column="117" lean-forward="false" selection-start-line="59" selection-start-column="117" selection-end-line="59" selection-end-column="117" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/cozinheiro/salvar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-          <folding>
-            <marker date="1527087435352" expanded="true" signature="203:217" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/GarcomController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -719,14 +668,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Views/cozinheiro/salvar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="49" column="34" lean-forward="true" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+          <folding>
+            <marker date="1527087435352" expanded="true" signature="203:217" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Garcom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1740">
+          <caret line="181" column="40" lean-forward="true" selection-start-line="181" selection-start-column="40" selection-end-line="181" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/cozinheiro/gar_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DAO/GarcomDAO.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+        <state relative-caret-position="238">
+          <caret line="14" column="75" lean-forward="false" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
           <folding>
-            <marker date="1527043644751" expanded="true" signature="187:603" ph="INSERT INTO $... " />
-            <marker date="1527043644751" expanded="true" signature="1677:2205" ph="UPDATE ${{$t... " />
+            <marker date="1527088149354" expanded="true" signature="187:604" ph="INSERT INTO $... " />
+            <marker date="1527088149354" expanded="true" signature="1679:2208" ph="UPDATE ${{$t... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/GarcomController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
