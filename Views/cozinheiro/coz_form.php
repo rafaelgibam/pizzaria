@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-12 mt-4">
                 <div class="card">
-                    <h5 class="card-header">Dados do Funcionario</h5>
+                    <h5 class="card-header">Dados do Cozinheiro</h5>
                     <div class="card-body">
                         <div class="form-row">
                             <div class="form-group col-3">
@@ -47,20 +47,14 @@
                                 <label for="numerocelular">Número Celular:</label>
                                 <input type="text" id="numerocelular" maxlength="11" class="form-control" name="numerocelular"  placeholder="DDD+99999-9999">
                             </div>
-                            <div class="form-group col-2">
-                                <label for="sexo">Estado:</label>
+                            <div class="form-group col-3">
+                                <label for="estado">Estado:</label>
                                 <select name="estado" id="estado" class="form-control">
                                     <option value="1">Ativo</option>
                                     <option value="2">Desativado</option>
-
                                 </select>
                             </div>
-                            <div class="form-group col-2">
-                                <label for="gojeta">Perc. Gojeta:</label>
-                                <input type="text" id="gojeta" class="form-control" name="gojeta" maxlength="2" placeholder="%">
-                            </div>
-
-                            <div class="form-group col-2">
+                            <div class="form-group col-3">
                                 <label for="salario">Salário:</label>
                                 <input type="number" id="salario" class="form-control" name="salario"  placeholder="R$">
                             </div>
@@ -74,7 +68,7 @@
         <div class="row mt-4">
             <div class="col-md-12">
                 <div class="card">
-                    <h5 class="card-header">Endereço do Funcionário</h5>
+                    <h5 class="card-header">Endereço do Cozinheiro</h5>
                     <div class="card-body">
 
                         <!---  ID LOGRADOURO NUMERO COMPLEMENTO BAIRRO MUNICIPIO UF PAIS REFERENCIA CEP--->

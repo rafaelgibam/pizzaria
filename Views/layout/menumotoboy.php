@@ -1,8 +1,4 @@
-<?php
-
-    if($_SESSION['tipo'] == "motoboy"){
-
-?>
+<?php if($_SESSION['tipo'] == "motoboy"): ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
@@ -48,4 +44,4 @@
     </div>
 </div>
 
-<?php } ?>
+<?php else: header("location: /../"); endif; ?>

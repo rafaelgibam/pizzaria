@@ -1,3 +1,5 @@
+<?php if($_SESSION['tipo'] = "cozinheiro"): ?>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#">PizzariaCTL</a>
@@ -12,23 +14,40 @@
                 <li class="nav-item">
                     <div class="dropdown">
                         <a href="#" class="nav-link ml-2 dropdown-toggle"
-                           id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Funcionários</a>
+                           id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastro</a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a href="#" class="nav-link ml-2 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Funcionários</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="/../cozinheiro/funcionarios.php">Pesquisar</a>
-                                <a class="dropdown-item" href="/../cozinheiro/funcionarios.php">Pesquisar</a>
-                                <a class="dropdown-item" href="/../cozinheiro/funcionarios.php">Pesquisar</a>
-                            </div>
-                            <a class="dropdown-item" href="/../cozinheiro/funcionarios.php">Pesquisar</a>
-                            <a class="dropdown-item" href="/../cozinheiro/fun_incluir.php">Cadastrar</a>
-                            <a class="dropdown-item" href="/../cozinheiro/fun_alterar.php">Editar</a>
+                            <a class="dropdown-item" href="/../cozinheiro/coz_form.php">Cozinheiro</a>
+                            <a class="dropdown-item" href="/../cozinheiro/gar_form.php">Garcom</a>
+                            <a class="dropdown-item" href="/../cozinheiro/mot_form.php">MotoBoy</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a href="#" class="nav-link ml-2 dropdown-toggle"
+                           id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pesquisa</a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/../cozinheiro/coz_pesquisa.php">Cozinheiro</a>
+                            <a class="dropdown-item" href="/../cozinheiro/gar_pesquisa">Garcom</a>
+                            <a class="dropdown-item" href="/../cozinheiro/mot_pesquisa">MotoBoy</a>
+                            <a class="dropdown-item" href="/../cozinheiro/todos_pesquisa">Buscar Todos</a>
                         </div>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="/../cozinheiro/pedidos.php" class="nav-link ml-2">Pedidos</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link ml-2 dropdown-toggle"
+                           id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pedido</a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/../cozinheiro/ped_abrir.php">Abrir Pedido</a>
+                            <a class="dropdown-item" href="/../cozinheiro/ped_fechar">Fechar Pedido</a>
+                            <a class="dropdown-item" href="/../cozinheiro/ped_pesquisa">Buscar Pedido</a>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a href="/../cozinheiro/delivery.php" class="nav-link ml-2">Delivery</a>
@@ -48,3 +67,5 @@
         </div>
     </div>
 </nav>
+
+<?php else: header("location: /../"); endif; ?>
