@@ -11,7 +11,7 @@ class MotoBoyDAO extends Model implements ICrud
         $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`,`RG`,`NOME`,`SEXO`,`DATA_NASC`,`NUM_FIXO`,
                                                 `NUM_CELULAR`,`ESTADO`,`PLACA`,`DATA_ADMISSAO`,`SALARIO`,`LOGRADOURO`, `NUMERO`, `COMPLEMENTO`,
                                                 `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`)
-                                                 VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+                                                 VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
 
         $stmt->bindValue(1, $obj->getCpf());

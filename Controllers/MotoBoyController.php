@@ -42,8 +42,13 @@ class MotoBoyController
         $this->m->setPais($pais);
         $this->m->setReferencia($referencia);
 
+        if($this->m->getCpf() != null && $this->m->getNome() != null){
+            $this->mdao->insert($this->m);
+            return header("location: mot_form.php?msg=salvo");
+        }else{
+            return header("location: mot_form.php?msg=erro");
+        }
 
-        $this->mdao->insert($this->m);
     }
 
     public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $placa, $dtadmissao, $salario,
