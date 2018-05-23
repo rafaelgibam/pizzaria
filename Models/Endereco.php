@@ -16,6 +16,7 @@ class Endereco
     private $pais;
     private $referencia;
     private $complemento;
+    private $cliente;
 
     public function getEndereco($cep){
         // Método que captura o endereço atráves do cep
@@ -181,11 +182,22 @@ class Endereco
         $this->complemento = $complemento;
     }
 
-    public function inserir($objeto)
+    /**
+     * @return mixed
+     */
+    public function getCliente()
     {
-        $query =  "INSERT INTO `endereco` (`NOMERUA`, `NUMCASA`, `COMPLEMENTO`, `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`, `CEP`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-        parent::inserir($query, $objeto);
+        return $this->cliente;
     }
+
+    /**
+     * @param mixed $cliente
+     */
+    public function setCliente($cliente)
+    {
+        $this->cliente = $cliente;
+    }
+
+
 
 }

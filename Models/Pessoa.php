@@ -10,7 +10,6 @@ abstract class Pessoa
     protected $dtnasc;
     protected $numfixo;
     protected $numcel;
-    protected $endereco;
     protected $estado;
     protected $logradouro;
     protected $numero;
@@ -20,5 +19,6 @@ abstract class Pessoa
     protected $uf;
     protected $pais;
     protected $referencia;
+    protected $cep;
 
 }

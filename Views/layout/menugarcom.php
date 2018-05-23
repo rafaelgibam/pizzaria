@@ -12,11 +12,24 @@
                     <a href="/../garcom/" class="nav-link ml-2">Dashboard</a>
                 </li>
                 <li class="nav-item">
+                    <div class="dropdown">
+                        <a href="#" class="nav-link ml-2 dropdown-toggle"
+                           id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastro</a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/../garcom/cli_form.php">Cliente</a>
+                            <a class="dropdown-item" href="/../garcom/end_form.php">Endereço</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
                     <a href="/../garcom/pedidos.php" class="nav-link ml-2">Pedidos</a>
                 </li>
                 <li class="nav-item">
                     <a href="/../garcom/delivery.php" class="nav-link ml-2">Delivery</a>
                 </li>
+
+
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">

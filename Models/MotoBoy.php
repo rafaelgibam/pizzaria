@@ -279,21 +279,6 @@ class MotoBoy extends Funcionario
         $this->numcel = $numcel;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getEndereco()
-    {
-        return $this->endereco;
-    }
-
-    /**
-     * @param mixed $endereco
-     */
-    public function setEndereco($endereco)
-    {
-        $this->endereco = $endereco;
-    }
 
     /**
      * @return mixed
@@ -342,6 +327,23 @@ class MotoBoy extends Funcionario
     {
         $this->rg = $rg;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCep()
+    {
+        return $this->cep;
+    }
+
+    /**
+     * @param mixed $cep
+     */
+    public function setCep($cep)
+    {
+        $this->cep = $cep;
+    }
+
 
 
 }

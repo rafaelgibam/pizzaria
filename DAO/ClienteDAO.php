@@ -13,8 +13,8 @@ class ClienteDAO extends Model implements ICrud
     {
         //LOGRADOURO	NUMERO	COMPLEMENTO	BAIRRO	MUNICIPIO	UF	PAIS	REFERENCIA
         $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`,`RG`, `NOME`, `SEXO`, `DATA_NASC`, `NUM_FIXO`, `NUM_CELULAR`, `ESTADO`, `LOGRADOURO`, 
-                                                                            `NUMERO`, `COMPLEMENTO`, `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`) 
-                                                 VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                                                                            `NUMERO`, `COMPLEMENTO`, `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`, `CEP`) 
+                                                 VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         $stmt->bindValue(1, $obj->getCpf());
         $stmt->bindValue(2, $obj->getRg());
@@ -32,6 +32,7 @@ class ClienteDAO extends Model implements ICrud
         $stmt->bindValue(14, $obj->getUf());
         $stmt->bindValue(15, $obj->getPais());
         $stmt->bindValue(16, $obj->getReferencia());
+        $stmt->bindValue(17, $obj->getCep());
 
         $stmt->execute();
         $stmt->closeCursor();
@@ -43,7 +44,7 @@ class ClienteDAO extends Model implements ICrud
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
                                                  SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?, 
                                                  NUM_CELULAR = ?, ESTADO = ?, LOGRADOURO = ?, NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?,
-                                                 UF = ?, PAIS = ?, REFERENCIA = ?
+                                                 UF = ?, PAIS = ?, REFERENCIA = ?, CEP = ?
                                                  WHERE ID = ?");
 
         $stmt->bindValue(1, $obj->getCpf());
@@ -62,6 +63,7 @@ class ClienteDAO extends Model implements ICrud
         $stmt->bindValue(14, $obj->getUf());
         $stmt->bindValue(15, $obj->getPais());
         $stmt->bindValue(16, $obj->getReferencia());
+        $stmt->bindValue(18, $obj->getCep());
         $stmt->bindValue(17, $obj->getId());
 
         $stmt->execute();

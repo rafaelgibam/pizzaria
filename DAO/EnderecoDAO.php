@@ -8,8 +8,8 @@ class EnderecoDAO extends Model implements ICrud
 
     public function insert($obj)
     {
-        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (LOGRADOURO,NUMERO,COMPLEMENTO,BAIRRO,MUNICIPIO,UF,PAIS,REFERENCIA,CEP) 
-                                                 VALUES (?,?,?,?,?,?,?,?,?)");
+        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (LOGRADOURO,NUMERO,COMPLEMENTO,BAIRRO,MUNICIPIO,UF,PAIS,REFERENCIA,CEP, CLIENTE_ID) 
+                                                 VALUES (?,?,?,?,?,?,?,?,?,?)");
 
         $stmt->bindValue(1, $obj->getLogradouro());
         $stmt->bindValue(2, $obj->getNumero());
@@ -20,6 +20,7 @@ class EnderecoDAO extends Model implements ICrud
         $stmt->bindValue(7, $obj->getPais());
         $stmt->bindValue(8, $obj->getReferencia());
         $stmt->bindValue(9, $obj->getCep());
+        $stmt->bindValue(10, $obj->getCliente()->getId());
 
         $stmt->execute();
         $stmt->closeCursor();
@@ -29,7 +30,7 @@ class EnderecoDAO extends Model implements ICrud
     public function update($obj)
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET LOGRADOURO = ?, NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?, PAIS = ?, REFERENCIA = ?, CEP = ?
+                                                 SET LOGRADOURO = ?, NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?, PAIS = ?, REFERENCIA = ?, CEP = ?, CLIENTE_ID = ?
                                                  WHERE ID = ?");
 
 
@@ -42,7 +43,8 @@ class EnderecoDAO extends Model implements ICrud
         $stmt->bindValue(7, $obj->getPais());
         $stmt->bindValue(8, $obj->getReferencia());
         $stmt->bindValue(9, $obj->getCep());
-        $stmt->bindValue(10, $obj->getId());
+        $stmt->bindValue(10, $obj->getCliente()->getId());
+        $stmt->bindValue(11, $obj->getId());
 
         $stmt->execute();
         $stmt->closeCursor();

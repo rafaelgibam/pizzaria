@@ -2,24 +2,26 @@
 
 namespace Controllers;
 
+use DAO\ClienteDAO;
 use DAO\EnderecoDAO;
+use Models\Cliente;
 use Models\Endereco;
 
 class EnderecoController
 {
     private $e;
     private $edao;
+    private $c;
 
     public function __construct()
     {
         $this->e = new Endereco();
         $this->edao = new EnderecoDAO();
+        $this->c = new Cliente();
     }
 
-    public function insert($logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia, $cep)
+    public function insert($logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia, $cep, $clienteid)
     {
-        $this->e = new Endereco();
-        $this->edao = new EnderecoDAO();
 
         $this->e->setLogradouro($logradouro);
         $this->e->setNumero($numero);
@@ -31,7 +33,15 @@ class EnderecoController
         $this->e->setReferencia($referencia);
         $this->e->setCep($cep);
 
-        $this->edao->insert($this->e);
+        $this->c->setId($clienteid);
+        $this->e->setCliente($this->c);
+
+        if($this->e->getLogradouro() != null && $this->e->getNumero() != null && $this->e->getMunicipio() != null && $this->c->getId() != null){
+            $this->edao->insert($this->e);
+            return header("location: end_form.php?msg=salvo");
+        }else{
+            return header("location: end_form.php?msg=erro");
+        }
     }
 
     public function update($id ,$logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia, $cep)

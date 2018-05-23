@@ -10,19 +10,15 @@ class ClienteController
 {
     private $c;
     private $cdao;
-    private $e;
 
     public function __construct()
     {
         $this->c = new Cliente();
         $this->cdao = new ClienteDAO();
-        $this->e = new Endereco();
     }
 
-    public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcelular, $estado, $enderecoid){
+    public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcelular, $estado, $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia,$cep){
 
-        $this->e = new Endereco();
-        $this->e->setId($enderecoid);
         $this->c->setCpf($cpf);
         $this->c->setRg($rg);
         $this->c->setNome($nome);
@@ -31,15 +27,26 @@ class ClienteController
         $this->c->setNumfixo($numfixo);
         $this->c->setNumcel($numcelular);
         $this->c->setEstado($estado);
-        $this->c->setEndereco($this->e);
+        $this->c->setLogradouro($logradouro);
+        $this->c->setNumero($numero);
+        $this->c->setComplemento($complemento);
+        $this->c->setBairro($bairro);
+        $this->c->setMunicipio($municipio);
+        $this->c->setUf($uf);
+        $this->c->setPais($pais);
+        $this->c->setReferencia($referencia);
+        $this->c->setCep($cep);
 
-        $this->cdao->insert($this->c);
 
+        if($this->c->getCpf() != null && $this->c->getNome() != null){
+            $this->cdao->insert($this->c);
+            return header("location: cli_form.php?msg=salvo");
+        }else{
+            return header("location: cli_form.php?msg=erro");
+        }
     }
 
-    public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcelular, $estado, $enderecoid){
-
-
+    public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcelular, $estado, $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia, $cep){
 
         $this->c->setId($id);
         $this->c->setCpf($cpf);
@@ -50,9 +57,15 @@ class ClienteController
         $this->c->setNumfixo($numfixo);
         $this->c->setNumcel($numcelular);
         $this->c->setEstado($estado);
-
-        $this->e->setId($enderecoid);
-        $this->c->setEndereco($this->e);
+        $this->c->setLogradouro($logradouro);
+        $this->c->setNumero($numero);
+        $this->c->setComplemento($complemento);
+        $this->c->setBairro($bairro);
+        $this->c->setMunicipio($municipio);
+        $this->c->setUf($uf);
+        $this->c->setPais($pais);
+        $this->c->setReferencia($referencia);
+        $this->c->setCep($cep);
 
         $this->cdao->update($this->c);
     }

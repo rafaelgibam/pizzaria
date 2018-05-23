@@ -122,22 +122,6 @@ class Cozinheiro extends Funcionario
     /**
      * @return mixed
      */
-    public function getEndereco()
-    {
-        return $this->endereco;
-    }
-
-    /**
-     * @param mixed $endereco
-     */
-    public function setEndereco($endereco)
-    {
-        $this->endereco = $endereco;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getEstado()
     {
         return $this->estado;
@@ -342,7 +326,24 @@ class Cozinheiro extends Funcionario
     public function setRg($rg)
     {
         $this->rg = $rg;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCep()
+    {
+        return $this->cep;
+    }
+
+    /**
+     * @param mixed $cep
+     */
+    public function setCep($cep)
+    {
+        $this->cep = $cep;
     } // Objeto de produto
+
 
 
 
