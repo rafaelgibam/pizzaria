@@ -17,7 +17,7 @@
     </div>
 </div>
 
-<h1 class="text-center">Bem Vindo <?php echo $_SESSION['razaosocial']; ?></h1>
+<h1 class="text-center">Bem Vindo <?php echo $_SESSION['nome']; ?></h1>
 
 
 <?php include __DIR__ . "/../layout/footer.php"; ?>

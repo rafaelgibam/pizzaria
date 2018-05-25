@@ -4,6 +4,7 @@
     $cc = new \Controllers\CozinheiroController();
     $mc = new \Controllers\MotoBoyController();
     $gc = new \Controllers\GarcomController();
+    $mesa = new \Controllers\MesaController();
 
     if(isset($_POST['cozinheiro'])){
         $cc->insert(
@@ -71,6 +72,21 @@
             $_POST['uf'],
             $_POST['pais'],
             $_POST['referencia']);
+    }
+
+    if(isset($_POST['mesa'])){
+        //// ID NOME NUMERO COR	QTD_LUGAR	PESO	ALTURA	COMPRIMENTO	LARGURA	ESTADO
+        $mesa->insert(
+            $_POST['nome'],
+            $_POST['numero'],
+            $_POST['cor'],
+            $_POST['capacidade'],
+            $_POST['peso'],
+            $_POST['altura'],
+            $_POST['comprimento'],
+            $_POST['largura'],
+            $_POST['estado']
+        );
     }
 
 

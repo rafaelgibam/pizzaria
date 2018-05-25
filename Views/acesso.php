@@ -10,8 +10,7 @@ $acesso = $ac->acessarLogin($_POST['cpfcnpj'],$_POST['cargo']);
 switch ($acesso){
     case 1:
         //Cozinheiro
-        $_SESSION['codigo'] = $ac->co->getCnpj();
-        $_SESSION['razaosocial'] = $ac->co->getRazaosocial();
+        $_SESSION['codigo'] = $ac->co->getCpf();
         $_SESSION['nome'] = $ac->co->getNome();
         $_SESSION['tipo'] = "cozinheiro";
         header("location: cozinheiro/");

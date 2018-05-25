@@ -26,11 +26,11 @@ class ProdutoController
         // ID	NOME	DESCRICAO	PRECO	ALTURA	COMPRIMENTO	LARGURA	PESO	ESTADO	FATIA	BORDA	COZINHEIRO_ID
         $this->p->setNome($nome);
         $this->p->setDescricao($descricao);
-        $this->p->setPreco($preco);
-        $this->p->setAltura($altura);
-        $this->p->setComprimento($comprimento);
-        $this->p->setLargura($largura);
-        $this->p->setPeso($peso);
+        $this->p->setPreco(str_replace(",",".",$preco));
+        $this->p->setAltura(str_replace(",",".",$altura));
+        $this->p->setComprimento(str_replace(",",".",$comprimento));
+        $this->p->setLargura(str_replace(",",".",$largura));
+        $this->p->setPeso(str_replace(",",".",$peso));
         $this->p->setEstado($estado);
         $this->p->setFatia($fatia);
         $this->p->setBorda($borda);
@@ -38,7 +38,13 @@ class ProdutoController
         $this->co->setId($cozinheiroid);
         $this->p->setCozinheiro($this->co);
 
-        $this->pdao->insert($this->p);
+        if($this->p->getNome() != null && $this->p->getCozinheiro() != null){
+            $this->pdao->insert($this->p);
+            return header("location: prod_form.php?msg=salvo");
+        }else{
+            return header("location: prod_form.php?msg=erro");
+        }
+
 
     }
 

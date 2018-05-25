@@ -16,8 +16,8 @@ class ProdutoDAO extends Model implements ICrud
     public function insert($obj)
     {
 
-        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`NOME`,`DESCRICAO`, `PRECO`, `ALTURA`, `COMPRIMENTO`, `LARGURA`, `PESO`, `ESTADO`, `FATIA`, BORDA) 
-                                                 VALUES (?,?,?,?,?,?,?,?,?,?)");
+        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`NOME`,`DESCRICAO`, `PRECO`, `ALTURA`, `COMPRIMENTO`, `LARGURA`, `PESO`, `ESTADO`, `FATIA`, `BORDA`, `COZINHEIRO_ID`) 
+                                                 VALUES (?,?,?,?,?,?,?,?,?,?,?)");
 
         $stmt->bindValue(1, $obj->getNome());
         $stmt->bindValue(2, $obj->getDescricao());
@@ -29,6 +29,7 @@ class ProdutoDAO extends Model implements ICrud
         $stmt->bindValue(8, $obj->getEstado());
         $stmt->bindValue(9, $obj->getFatia());
         $stmt->bindValue(10, $obj->getBorda());
+        $stmt->bindValue(11, $obj->getCozinheiro()->getId());
 
         $stmt->execute();
         $stmt->closeCursor();
@@ -37,7 +38,7 @@ class ProdutoDAO extends Model implements ICrud
     public function update($obj)
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET NOME = ?, DESCRICAO = ?, PRECO = ?, ALTURA = ?, COMPRIMENTO = ?, LARGURA = ?, PESO = ?, ESTADO = ?, FATIA = ?, BORDA = ?
+                                                 SET NOME = ?, DESCRICAO = ?, PRECO = ?, ALTURA = ?, COMPRIMENTO = ?, LARGURA = ?, PESO = ?, ESTADO = ?, FATIA = ?, BORDA = ?, `COZINHEIRO_ID` = ?
                                                  WHERE ID = ?");
 
         $stmt->bindValue(1, $obj->getNome());
@@ -50,7 +51,8 @@ class ProdutoDAO extends Model implements ICrud
         $stmt->bindValue(8, $obj->getEstado());
         $stmt->bindValue(9, $obj->getFatia());
         $stmt->bindValue(10, $obj->getBorda());
-        $stmt->bindValue(11, $obj->getId());
+        $stmt->bindValue(11, $obj->getCozinheiro()->getId());
+        $stmt->bindValue(12, $obj->getId());
 
         $stmt->execute();
         $stmt->closeCursor();

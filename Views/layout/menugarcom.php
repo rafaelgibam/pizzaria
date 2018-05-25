@@ -23,7 +23,16 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="/../garcom/pedidos.php" class="nav-link ml-2">Pedidos</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link ml-2 dropdown-toggle"
+                           id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pedidos</a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/../pedido/ped_abrir.php">Abrir</a>
+                            <a class="dropdown-item" href="/../pedido/ped_fechar.php">Fechar</a>
+                            <a class="dropdown-item" href="/../pedido/ped_buscar.php">Buscar</a>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a href="/../garcom/delivery.php" class="nav-link ml-2">Delivery</a>

@@ -12,7 +12,7 @@ class MesaDAO extends Model implements ICrud
     {
         $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`NOME`,`NUMERO`,`COR`,`QTD_LUGAR`,
                                                 `PESO`,`ALTURA`,`COMPRIMENTO`,`LARGURA`,`ESTADO`)
-                                                 VALUES (?,?,?,?,?,?,?,?)");
+                                                 VALUES (?,?,?,?,?,?,?,?,?)");
 
         $stmt->bindValue(1, $obj->getNome());
         $stmt->bindValue(2, $obj->getNumero());

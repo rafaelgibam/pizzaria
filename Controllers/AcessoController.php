@@ -35,9 +35,8 @@ class AcessoController
             // Cozinheiro
             foreach ($this->codao->findAll() as $key => $value){
                 if($value->CNPJ == $codigo && $cargo == 1){
-                    $this->co->setRazaosocial($value->RAZAOSOCIAL);
                     $this->co->setNome($value->NOME);
-                    $this->co->setCnpj($value->CNPJ);
+                    $this->co->setCpf($value->CPF);
                     return $cargo;
                 }
             }
