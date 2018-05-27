@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7147cad-035d-4aea-b56a-0fd49f667fde" name="Default" comment="Alteracoes no menu do cozinheiro.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Controllers/MesaController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/cozinheiro/mesa_form.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/layout/menulayout.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/pedido/ped_abrir.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/pedido/ped_buscar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/pedido/ped_fechar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/produto/prod_form.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/produto/salvar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/AcessoController.php" afterPath="$PROJECT_DIR$/Controllers/AcessoController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/ProdutoController.php" afterPath="$PROJECT_DIR$/Controllers/ProdutoController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/MesaDAO.php" afterPath="$PROJECT_DIR$/DAO/MesaDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/ProdutoDAO.php" afterPath="$PROJECT_DIR$/DAO/ProdutoDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/acesso.php" afterPath="$PROJECT_DIR$/Views/acesso.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/cozinheiro/index.php" afterPath="$PROJECT_DIR$/Views/cozinheiro/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/cozinheiro/salvar.php" afterPath="$PROJECT_DIR$/Views/cozinheiro/salvar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/layout/menucozinheiro.php" afterPath="$PROJECT_DIR$/Views/layout/menucozinheiro.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/layout/menugarcom.php" afterPath="$PROJECT_DIR$/Views/layout/menugarcom.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Infra/bancopizzaria.sql" afterPath="$PROJECT_DIR$/Infra/bancopizzaria.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,7 +27,7 @@
       <file leaf-file-name="prod_form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/produto/prod_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="1207">
               <caret line="71" column="63" lean-forward="false" selection-start-line="71" selection-start-column="63" selection-end-line="71" selection-end-column="63" />
               <folding />
             </state>
@@ -53,7 +37,7 @@
       <file leaf-file-name="ProdutoController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controllers/ProdutoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="527">
               <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
               <folding />
             </state>
@@ -63,7 +47,7 @@
       <file leaf-file-name="menulayout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/layout/menulayout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
+            <state relative-caret-position="187">
               <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
               <folding />
             </state>
@@ -203,6 +187,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -213,7 +198,7 @@
             <path>
               <item name="Pizzaria" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pizzaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DAO" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Pizzaria" type="b2602c69:ProjectViewProjectNode" />
@@ -236,7 +221,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -279,7 +263,8 @@
       <workItem from="1527016880763" duration="323000" />
       <workItem from="1527034417364" duration="12508000" />
       <workItem from="1527075083668" duration="22410000" />
-      <workItem from="1527209235610" duration="7560000" />
+      <workItem from="1527209235610" duration="8157000" />
+      <workItem from="1527392560713" duration="300000" />
     </task>
     <task id="LOCAL-00001" summary="Alteracoes no menu do cozinheiro.">
       <created>1526960944903</created>
@@ -292,7 +277,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46528000" />
+    <option name="totallyTimeSpent" value="47425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
@@ -337,7 +322,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
           <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -345,7 +329,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -353,7 +336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -361,7 +343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -400,7 +381,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="59" lean-forward="false" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -416,7 +396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="105" column="14" lean-forward="false" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -424,7 +403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="46" column="0" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="46" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -522,9 +500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="40" column="62" lean-forward="true" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
-          <folding>
-            <element signature="e#31#50#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -539,7 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -547,7 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -563,7 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -579,7 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="60" lean-forward="false" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -587,7 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -595,7 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="49" column="49" lean-forward="false" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -622,7 +591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="712">
           <caret line="114" column="58" lean-forward="true" selection-start-line="114" selection-start-column="58" selection-end-line="114" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -638,13 +606,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/layout/menulayout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
+        <state relative-caret-position="187">
           <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
           <folding />
         </state>
@@ -672,13 +639,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="49" column="9" lean-forward="true" selection-start-line="44" selection-start-column="6" selection-end-line="49" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controllers/ProdutoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="527">
           <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
           <folding />
         </state>
@@ -696,9 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="63" column="27" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="27" />
-          <folding>
-            <marker date="1527212128180" expanded="true" signature="250:264" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -750,7 +713,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/produto/prod_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="1207">
           <caret line="71" column="63" lean-forward="false" selection-start-line="71" selection-start-column="63" selection-end-line="71" selection-end-column="63" />
           <folding />
         </state>
