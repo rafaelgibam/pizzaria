@@ -34,5 +34,3 @@ switch ($acesso){
         header("location: /");
         break;
 }
-
-

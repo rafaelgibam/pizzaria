@@ -31,6 +31,23 @@
                     <h5 class="card-header">Abertura de Pedido</h5>
                     <div class="card-body">
                         <div class="form-row">
+                          <div class="form-group col-4">
+                            <label for="numero">Número:</label>
+                            <input type="text" name="numero" id="numero" class="form-control">
+                          </div>
+
+                          <div class="form-group col-4">
+                            <label for="dtabertura">Data Abertura:</label>
+                            <input type="date" name="dtabertura" id="dtabertura" class="form-control">
+                          </div>
+
+                          <div class="form-group col-4">
+                            <label for="total">Total:</label>
+                            <input type="text" name="total" id="total" class="form-control">
+                          </div>
+
+                        </div>
+                        <div class="form-row">
                             <div class="form-group col-3">
                                 <label for="cliente">Cliente(Obrigatório):</label>
                                 <select name="clienteid" id="cliente" class="form-control">

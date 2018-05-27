@@ -22,6 +22,7 @@
                             <a class="dropdown-item" href="/../cozinheiro/mot_form.php">MotoBoy</a>
                             <a class="dropdown-item" href="/../cozinheiro/mesa_form.php">Mesa</a>
                             <a class="dropdown-item" href="/../produto/prod_form.php">Produto</a>
+                            <a class="dropdown-item" href="/../endereco/end_form.php">Endereço</a>
                         </div>
                     </div>
                 </li>

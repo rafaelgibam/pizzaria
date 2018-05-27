@@ -17,6 +17,7 @@ class Produto
     private $fatia;
     private $borda;
     private $cozinheiro;
+    private $qtd;
 
 
     /**
@@ -226,8 +227,20 @@ class Produto
     {
         $this->cozinheiro = $cozinheiro;
     }
+    /**
+     * @return mixed
+     */
+    public function getQtd()
+    {
+        return $this->qtd;
+    }
 
-
-
+    /**
+     * @param mixed qtd
+     */
+    public function setQtd($qtd)
+    {
+        $this->qtd = $qtd;
+    }
 
 }

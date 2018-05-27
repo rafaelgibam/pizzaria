@@ -24,19 +24,3 @@ if(isset($_POST['cliente'])){
         $_POST['referencia'],
         $_POST['cep']);
 }
-
-if(isset($_POST['endereco'])){
-    $e->insert(
-        $_POST['logradouro'],
-        $_POST['numero'],
-        $_POST['complemento'],
-        $_POST['bairro'],
-        $_POST['municipio'],
-        $_POST['uf'],
-        $_POST['pais'],
-        $_POST['referencia'],
-        $_POST['cep'],
-        $_POST['clienteid']);
-}
-
-
