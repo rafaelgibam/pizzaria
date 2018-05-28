@@ -43,20 +43,54 @@ if($_SESSION['tipo'] == "cozinheiro"){
             <th scope="col">NOME</th>
             <th scope="col">CPF</th>
             <th scope="col">RG</th>
+            <th scope="col">Estado</th>
             <th scope="col">Ação</th>
           </tr>
         </thead>
         <tbody>
+
           <?php $cc = new \Controllers\ClienteController(); ?>
-          <?php foreach ($cc->findAll() as $key => $c): ?>
-            <tr>
-              <th scope="row"><?= $c->ID ?></th>
-              <td><?= $c->NOME ?></td>
-              <td><?= $c->CPF ?></td>
-              <td><?= $c->RG ?></td>
-              <td><a href="?e=<?= $c->ID ?>">Editar</a> | <a href="?d=<?= $c->ID ?>">Apagar</a></td>
-            </tr>
-           <?php endforeach; ?>
+
+          <?php if(isset($_GET['b']) && $_GET['b'] != null):?>
+              <?php $clike = $cc->find($_GET['b']);
+                if($clike != null):
+              ?>
+                  <tr>
+                      <th scope="row"><?= $clike->ID ?></th>
+                      <td><?= $clike->NOME ?></td>
+                      <td><?= $clike->CPF ?></td>
+                      <td><?= $clike->RG ?></td>
+                      <td><?= (isset($clike->ESTADO) == 1) ? "Ativo" : "Desativado" ?></td>
+                      <td>
+                          <a href="?e=<?= $clike->ID ?>">
+                              <i  style="color: blue; text-decoration: none;" class="material-icons">border_color</i>&nbsp;&nbsp;
+                          </a>
+                          <a href="?d=<?= $clike->ID ?>">
+                              <i style="color: red; text-decoration: none; font-size: 28px;" class="material-icons">delete</i>
+                          </a>
+                      </td>
+                  </tr>
+              <?php endif; ?>
+          <?php else: ?>
+              <?php foreach ($cc->findAll() as $c): ?>
+                  <tr>
+                      <th scope="row"><?= $c->ID ?></th>
+                      <td><?= $c->NOME ?></td>
+                      <td><?= $c->CPF ?></td>
+                      <td><?= $c->RG ?></td>
+                      <td><?= (isset($c->ESTADO) == 1) ? "Ativo" : "Desativado" ?></td>
+                      <td>
+                          <a href="?e=<?= $c->ID ?>">
+                              <i  style="color: blue; text-decoration: none;" class="material-icons">border_color</i>
+                              &nbsp;&nbsp;
+                          </a>
+                          <a href="?d=<?= $c->ID ?>">
+                              <i style="color: red; text-decoration: none; font-size: 28px;" class="material-icons">delete</i>
+                          </a>
+                      </td>
+                  </tr>
+              <?php endforeach; ?>
+          <?php endif; ?>
         </tbody>
       </table>
     </div>

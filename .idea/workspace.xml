@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7147cad-035d-4aea-b56a-0fd49f667fde" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Controllers/PedidoPresencialController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/pedido/salvar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Infra/bancopizzaria.mwb" afterPath="$PROJECT_DIR$/Infra/bancopizzaria.mwb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/DB.php" afterPath="$PROJECT_DIR$/DAO/DB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/PedidoPresencialDAO.php" afterPath="$PROJECT_DIR$/DAO/PedidoPresencialDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Infra/bancopizzaria.sql" afterPath="$PROJECT_DIR$/Infra/bancopizzaria.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/PedidoPresencial.php" afterPath="$PROJECT_DIR$/Models/PedidoPresencial.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/pedido/ped_abrir.php" afterPath="$PROJECT_DIR$/Views/pedido/ped_abrir.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/ClienteController.php" afterPath="$PROJECT_DIR$/Controllers/ClienteController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/ClienteDAO.php" afterPath="$PROJECT_DIR$/DAO/ClienteDAO.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/Model.php" afterPath="$PROJECT_DIR$/DAO/Model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/cliente/cli_buscar.php" afterPath="$PROJECT_DIR$/Views/cliente/cli_buscar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/layout/head.php" afterPath="$PROJECT_DIR$/Views/layout/head.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,47 +17,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="menucozinheiro.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/layout/menucozinheiro.php">
+      <file leaf-file-name="cli_buscar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/cliente/cli_buscar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="24" column="70" lean-forward="false" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PedidoPresencialDAO.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DAO/PedidoPresencialDAO.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="43" />
+            <state relative-caret-position="191">
+              <caret line="58" column="25" lean-forward="false" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
               <folding>
-                <marker date="1527526421927" expanded="true" signature="349:630" ph="INSERT INTO $... " />
-                <marker date="1527526421927" expanded="true" signature="1265:1605" ph="UPDATE ${{$t... " />
+                <element signature="n#style#0;n#i#0;n#a#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#2058#2064#0#HTML" expanded="true" />
+                <element signature="e#2064#2070#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#1;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#td#4;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#3015#3021#0#HTML" expanded="true" />
+                <element signature="e#3021#3027#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#1;n#td#4;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="salvar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/pedido/salvar.php">
+      <file leaf-file-name="ClienteController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controllers/ClienteController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="667">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Model.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DAO/Model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+              <folding>
+                <marker date="1527542464620" expanded="true" signature="167:181" ph="SELECT * FRO... $" />
+                <marker date="1527542464620" expanded="true" signature="334:375" ph="SELECT * FRO... $" />
+                <marker date="1527542464620" expanded="true" signature="554:593" ph="DELETE FROM " />
+                <marker date="1527542464620" expanded="true" signature="766:780" ph="SELECT * FRO... this" />
+                <marker date="1527542464620" expanded="true" signature="766:794" ph="SELECT * FRO... ${$this-&gt;table}" />
+                <marker date="1527542464620" expanded="true" signature="766:820" ph="SELECT * FRO... $" />
+                <marker date="1527542464620" expanded="true" signature="766:825" ph="SELECT * FRO... $" />
+                <marker date="1527542464620" expanded="true" signature="766:828" ph="SELECT * FRO... $" />
+                <marker date="1527542464620" expanded="true" signature="766:831" ph="SELECT * FRO... $" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClienteDAO.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DAO/ClienteDAO.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="33" />
+              <folding>
+                <marker date="1527531089976" expanded="true" signature="301:671" ph="INSERT INTO $... " />
+                <marker date="1527531089976" expanded="true" signature="1640:2083" ph="UPDATE ${{$t... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/layout/head.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PedidoPresencialController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Controllers/PedidoPresencialController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-              <folding>
-                <element signature="e#120#148#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -86,9 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Views/motoboy/index.php" />
-        <option value="$PROJECT_DIR$/Views/index.php" />
-        <option value="$PROJECT_DIR$/Views/session.php" />
         <option value="$PROJECT_DIR$/Views/cozinheiro/fun_form.php" />
         <option value="$PROJECT_DIR$/Views/cozinheiro/coz_alterar.php" />
         <option value="$PROJECT_DIR$/Views/cozinheiro/mot_alterar.php" />
@@ -111,9 +131,7 @@
         <option value="$PROJECT_DIR$/Models/Cliente.php" />
         <option value="$PROJECT_DIR$/Models/Cozinheiro.php" />
         <option value="$PROJECT_DIR$/Models/Garcom.php" />
-        <option value="$PROJECT_DIR$/Controllers/ClienteController.php" />
         <option value="$PROJECT_DIR$/Views/garcom/cli_form.php" />
-        <option value="$PROJECT_DIR$/DAO/ClienteDAO.php" />
         <option value="$PROJECT_DIR$/Controllers/EnderecoController.php" />
         <option value="$PROJECT_DIR$/Views/garcom/end_form.php" />
         <option value="$PROJECT_DIR$/Views/garcom/salvar.php" />
@@ -137,6 +155,11 @@
         <option value="$PROJECT_DIR$/Controllers/PedidoPresencialController.php" />
         <option value="$PROJECT_DIR$/Views/pedido/salvar.php" />
         <option value="$PROJECT_DIR$/Views/pedido/ped_abrir.php" />
+        <option value="$PROJECT_DIR$/Views/layout/head.php" />
+        <option value="$PROJECT_DIR$/DAO/ClienteDAO.php" />
+        <option value="$PROJECT_DIR$/Controllers/ClienteController.php" />
+        <option value="$PROJECT_DIR$/DAO/Model.php" />
+        <option value="$PROJECT_DIR$/Views/cliente/cli_buscar.php" />
       </list>
     </option>
   </component>
@@ -191,6 +214,18 @@
               <item name="Pizzaria" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pizzaria" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Pizzaria" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pizzaria" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="cliente" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Pizzaria" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pizzaria" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="layout" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Pizzaria" type="b2602c69:ProjectViewProjectNode" />
@@ -252,7 +287,7 @@
       <workItem from="1527075083668" duration="22410000" />
       <workItem from="1527209235610" duration="8157000" />
       <workItem from="1527392560713" duration="936000" />
-      <workItem from="1527523350308" duration="3052000" />
+      <workItem from="1527523350308" duration="11745000" />
     </task>
     <task id="LOCAL-00001" summary="Alteracoes no menu do cozinheiro.">
       <created>1526960944903</created>
@@ -272,7 +307,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51113000" />
+    <option name="totallyTimeSpent" value="59806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
@@ -285,7 +320,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20251836" sideWeight="0.49791667" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20251836" sideWeight="0.49791667" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -315,26 +350,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.php" />
-    <entry file="file://$PROJECT_DIR$/Controllers/GarcomController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/MotoBoyDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <marker date="1527524979556" expanded="true" signature="186:601" ph="INSERT INTO $... " />
-            <marker date="1527524979556" expanded="true" signature="1675:2203" ph="UPDATE ${{$t... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/cozinheiro/mot_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -541,14 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/ClienteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controllers/AcessoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -666,49 +673,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/layout/menucozinheiro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="24" column="70" lean-forward="false" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controllers/MesaController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="571">
           <caret line="45" column="0" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="45" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/PedidoPresencialDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="43" />
-          <folding>
-            <marker date="1527526421927" expanded="true" signature="349:630" ph="INSERT INTO $... " />
-            <marker date="1527526421927" expanded="true" signature="1265:1605" ph="UPDATE ${{$t... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/pedido/salvar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/ClienteDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="16" column="90" lean-forward="false" selection-start-line="16" selection-start-column="90" selection-end-line="16" selection-end-column="90" />
-          <folding>
-            <marker date="1527524979481" expanded="true" signature="265:635" ph="INSERT INTO $... " />
-            <marker date="1527524979481" expanded="true" signature="1604:2047" ph="UPDATE ${{$t... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -725,7 +694,96 @@
         <state relative-caret-position="459">
           <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
           <folding>
-            <element signature="e#120#148#0#PHP" expanded="true" />
+            <element signature="e#120#148#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/pedido/salvar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/PedidoPresencialDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="43" />
+          <folding>
+            <marker date="1527526421927" expanded="true" signature="349:630" ph="INSERT INTO $... " />
+            <marker date="1527526421927" expanded="true" signature="1265:1605" ph="UPDATE ${{$t... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/layout/menucozinheiro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="70" lean-forward="false" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/layout/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/ClienteDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <marker date="1527531089976" expanded="true" signature="301:671" ph="INSERT INTO $... " />
+            <marker date="1527531089976" expanded="true" signature="1640:2083" ph="UPDATE ${{$t... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/cliente/cli_buscar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="58" column="25" lean-forward="false" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#a#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#2058#2064#0#HTML" expanded="true" />
+            <element signature="e#2064#2070#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#1;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#td#4;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3015#3021#0#HTML" expanded="true" />
+            <element signature="e#3021#3027#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#1;n#td#4;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/ClienteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding>
+            <marker date="1527542464620" expanded="true" signature="167:181" ph="SELECT * FRO... $" />
+            <marker date="1527542464620" expanded="true" signature="334:375" ph="SELECT * FRO... $" />
+            <marker date="1527542464620" expanded="true" signature="554:593" ph="DELETE FROM " />
+            <marker date="1527542464620" expanded="true" signature="766:780" ph="SELECT * FRO... this" />
+            <marker date="1527542464620" expanded="true" signature="766:794" ph="SELECT * FRO... ${$this-&gt;table}" />
+            <marker date="1527542464620" expanded="true" signature="766:820" ph="SELECT * FRO... $" />
+            <marker date="1527542464620" expanded="true" signature="766:825" ph="SELECT * FRO... $" />
+            <marker date="1527542464620" expanded="true" signature="766:828" ph="SELECT * FRO... $" />
+            <marker date="1527542464620" expanded="true" signature="766:831" ph="SELECT * FRO... $" />
           </folding>
         </state>
       </provider>

@@ -78,4 +78,8 @@ class ClienteController
     public function find($id){
         return $this->cdao->find($id);
     }
+
+    public function like($nome){
+       return $this->cdao->like($nome);
+    }
 }
