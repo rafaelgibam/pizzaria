@@ -15,7 +15,7 @@ class PedidoPresencialDAO extends Model implements ICrud
         // 	ID	NUMERO	DATA_ABERTURA	DATA_FECHAMENTO	ESTADO	TOTAL	OBSERVACOES	GARCOM_ID	MESA_ID	ITEM_PEDIDO_ID	CLIENTE_ID
 
         $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`NUMERO`,`DATA_ABERTURA`,`DATA_FECHAMENTO`,`ESTADO`,
-                                                `TOTAL`,`OBSERVACOES`,`GARCOM_ID`, ,`MESA_ID` ,`ITEM_PEDIDO_ID` ,`CLIENTE_ID` )
+                                                `TOTAL`,`OBSERVACOES`,`GARCOM_ID`, `MESA_ID` ,`PRODUTO_ID` ,`CLIENTE_ID` )
                                                  VALUES (?,?,?,?,?,?,?,?,?,?)");
 
         $stmt->bindValue(1, $obj->getNumero());
@@ -26,7 +26,7 @@ class PedidoPresencialDAO extends Model implements ICrud
         $stmt->bindValue(6, $obj->getObs());
         $stmt->bindValue(7, $obj->getGarcom());
         $stmt->bindValue(8, $obj->getMesa());
-        $stmt->bindValue(9, $obj->getItempedido());
+        $stmt->bindValue(9, $obj->getProduto());
         $stmt->bindValue(10, $obj->getCliente());
 
         $stmt->execute();

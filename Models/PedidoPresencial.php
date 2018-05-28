@@ -9,6 +9,7 @@ class PedidoPresencial extends Pedido
     private $mesa;
     private $cliente;
     private $garcom;
+    private $produto;
 
     /**
      * @return mixed
@@ -186,8 +187,21 @@ class PedidoPresencial extends Pedido
         $this->garcom = $garcom;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getProduto()
+    {
+        return $this->produto;
+    }
 
-
+    /**
+     * @param mixed $produto
+     */
+    public function setProduto($produto)
+    {
+        $this->produto = $produto;
+    }
 
 
 

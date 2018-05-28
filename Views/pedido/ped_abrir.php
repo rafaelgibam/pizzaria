@@ -44,8 +44,8 @@
                           <div class="form-group col-4">
                             <label for="estado">Estado:</label>
                             <select class="form-control" name="estado" id="estado">
-                              <option value="0">Aberto</option>
-                              <option value="1">Fechado</option>
+                              <option value="1">Aberto</option>
+                              <option value="0">Fechado</option>
                             </select>
                           </div>
 
