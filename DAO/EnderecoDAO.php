@@ -4,11 +4,11 @@ namespace DAO;
 
 class EnderecoDAO extends Model implements ICrud
 {
-    protected $table = "endereco";
+    protected $table = "ENDERECO";
 
     public function insert($obj)
     {
-        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (LOGRADOURO,NUMERO,COMPLEMENTO,BAIRRO,MUNICIPIO,UF,PAIS,REFERENCIA,CEP, CLIENTE_ID) 
+        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (LOGRADOURO,NUMERO,COMPLEMENTO,BAIRRO,MUNICIPIO,UF,PAIS,REFERENCIA,CEP, CLIENTE_ID)
                                                  VALUES (?,?,?,?,?,?,?,?,?,?)");
 
         $stmt->bindValue(1, $obj->getLogradouro());

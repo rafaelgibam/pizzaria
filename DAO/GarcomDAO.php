@@ -7,7 +7,7 @@ namespace DAO;
 class GarcomDAO extends Model implements ICrud
 {
 
-    protected $table = "garcom";
+    protected $table = "GARCOM";
 
     public function insert($obj)
     {
@@ -43,7 +43,7 @@ class GarcomDAO extends Model implements ICrud
     public function update($obj)
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?, 
+                                                 SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?,
                                                  NUM_CELULAR = ?, ESTADO = ?, GORJETA = ?, DATA_ADMISSAO = ?, SALARIO = ?,
                                                  LOGRADOURO = ?, NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?,
                                                  PAIS = ?, REFERENCIA = ?

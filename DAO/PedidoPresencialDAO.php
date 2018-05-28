@@ -8,7 +8,7 @@ use Models\Pedido;
 
 class PedidoPresencialDAO extends Model implements ICrud
 {
-    protected $table = "pedido_presencial";
+    protected $table = "PEDIDO_PRESENCIAL";
 
     public function insert($obj)
     {
@@ -37,8 +37,8 @@ class PedidoPresencialDAO extends Model implements ICrud
     {
 
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET NUMERO = ?, DATA_ABERTURA = ?, DATA_FECHAMENTO = ?, ESTADO = ?, TOTAL = ?, 
-                                                 OBSERVACOES = ?, GARCOM_ID = ?, MESA_ID = ?, ITEM_PEDIDO_ID = ?, CLIENTE_ID = ? 
+                                                 SET NUMERO = ?, DATA_ABERTURA = ?, DATA_FECHAMENTO = ?, ESTADO = ?, TOTAL = ?,
+                                                 OBSERVACOES = ?, GARCOM_ID = ?, MESA_ID = ?, ITEM_PEDIDO_ID = ?, CLIENTE_ID = ?
                                                  WHERE ID = ?");
 
         $stmt->bindValue(1, $obj->getNumero());

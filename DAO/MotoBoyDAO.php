@@ -4,7 +4,7 @@ namespace DAO;
 
 class MotoBoyDAO extends Model implements ICrud
 {
-    protected $table = "motoboy";
+    protected $table = "MOTOBOY";
 
     public function insert($obj)
     {
@@ -41,7 +41,7 @@ class MotoBoyDAO extends Model implements ICrud
     public function update($obj)
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?, 
+                                                 SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?,
                                                  NUM_CELULAR = ?, ESTADO = ?, GOJETA = ?, DATA_ADMISSAO = ?, SALARIO = ?,
                                                  LOGRADOURO = ?, NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?,
                                                  PAIS = ?, REFERENCIA = ?

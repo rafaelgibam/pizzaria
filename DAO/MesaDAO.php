@@ -6,7 +6,7 @@ namespace DAO;
 
 class MesaDAO extends Model implements ICrud
 {
-    protected $table = "mesa";
+    protected $table = "MESA";
 
     public function insert($obj)
     {
@@ -31,7 +31,7 @@ class MesaDAO extends Model implements ICrud
     public function update($obj)
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET NOME = ?, NUMERO = ?, COR = ?, QTD_LUGAR = ?, 
+                                                 SET NOME = ?, NUMERO = ?, COR = ?, QTD_LUGAR = ?,
                                                  PESO = ?, ALTURA = ?, COMPRIMENTO = ?, LARGURA = ?, ESTADO = ?
                                                  WHERE ID = ?");
 

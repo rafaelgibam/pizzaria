@@ -21,7 +21,7 @@ class ProdutoController
         $this->co = new Cozinheiro();
     }
 
-    public function insert($nome, $descricao, $preco, $altura, $comprimento, $largura, $peso, $estado, $fatia, $borda, $cozinheiroid)
+    public function insert($nome, $descricao, $preco, $altura, $comprimento, $largura, $peso, $estado, $fatia, $borda, $cozinheiroid, $qtd)
     {
         // ID	NOME	DESCRICAO	PRECO	ALTURA	COMPRIMENTO	LARGURA	PESO	ESTADO	FATIA	BORDA	COZINHEIRO_ID
         $this->p->setNome($nome);
@@ -34,11 +34,13 @@ class ProdutoController
         $this->p->setEstado($estado);
         $this->p->setFatia($fatia);
         $this->p->setBorda($borda);
+        $this->p->setQtd($qtd);
 
         $this->co->setId($cozinheiroid);
         $this->p->setCozinheiro($this->co);
 
-        if($this->p->getNome() != null && $this->p->getCozinheiro() != null){
+        if($this->p->getNome() != null && $this->p->getCozinheiro() != null
+        && $this->p->getQtd() != null && $this->p->getPreco() != null){
             $this->pdao->insert($this->p);
             return header("location: prod_form.php?msg=salvo");
         }else{

@@ -5,16 +5,16 @@ namespace DAO;
 class CozinheiroDAO extends Model implements ICrud
 {
 
-    protected $table = "cozinheiro";
+    protected $table = "COZINHEIRO";
 
     public function insert($obj)
     {
         // ID	CNPJ	RAZAOSOCIAL	NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	SALARIO	ENDERECO_ID
 
 
-        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`, `RG`, `NOME`, `SEXO`, `DATA_NASC`, 
+        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`, `RG`, `NOME`, `SEXO`, `DATA_NASC`,
                                                                             `NUM_FIXO`,`NUM_CELULAR`, SALARIO, DATA_ADMISSAO, `ESTADO`,
-                                                                            `LOGRADOURO`, `NUMERO`, `COMPLEMENTO`, `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA` ) 
+                                                                            `LOGRADOURO`, `NUMERO`, `COMPLEMENTO`, `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA` )
                                                                              VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $stmt->bindValue(1, $obj->getCpf());
         $stmt->bindValue(2, $obj->getRg());

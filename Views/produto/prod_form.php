@@ -36,14 +36,21 @@ if($_SESSION['tipo'] == "cozinheiro"){
                                 <label for="preco">Preço:</label>
                                 <input type="text" id="preco" name="preco" class="form-control">
                             </div>
+
+                            <div class="form-group col-2">
+                              <label for="qtd">Quantidade(Obrigatório):</label>
+                              <input type="number" name="qtd" class="form-control">
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">
                             <div class="form-group col-2">
                                 <label for="altura">Altura:</label>
                                 <input type="text" id="altura" name="altura" class="form-control">
                             </div>
-                        </div>
 
-                        <div class="form-row">
-                            <div class="form-group col-4">
+                            <div class="form-group col-2">
                                 <label for="comprimento">Comprimento:</label>
                                 <input type="text" id="comprimento" name="comprimento" class="form-control">
                             </div>
@@ -63,7 +70,10 @@ if($_SESSION['tipo'] == "cozinheiro"){
                         <div class="form-row">
                             <div class="form-group col-3">
                                 <label for="fatia">Fatia:</label>
-                                <input type="text" id="fatia" name="fatia" class="form-control">
+                                <select class="form-control" name="fatia">
+                                  <option value="4">Quatro Fatias</option>
+                                  <option value="8">Oito Fatias</option>
+                                </select>
                             </div>
                             <div class="form-group col-3">
                                 <label for="borda">Borda:</label>
@@ -81,7 +91,7 @@ if($_SESSION['tipo'] == "cozinheiro"){
                                 <select name="cozinheiroid" id="cozinheiro" class="form-control">
                                     <?php foreach ($cc->findAll() as $cozinheiro):?>
                                         <option value="<?= $cozinheiro->ID ?>"><?= $cozinheiro->NOME . " - ". $cozinheiro->CPF ?></option>
-                                    <?php endforeach;?>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
                         </div>
@@ -93,8 +103,7 @@ if($_SESSION['tipo'] == "cozinheiro"){
                             </div>
                         </div>
 
-                        <input type="submit" name="produto" class="btn btn-success btn-block" value="Cadastrar">
-                    </div>
+                    <input type="submit" class="btn btn-success btn-block" name="produto" value="Cadastrar">
                 </div>
 
             </div>

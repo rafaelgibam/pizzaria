@@ -4,7 +4,7 @@ namespace DAO;
 
 class ProdutoDAO extends Model implements ICrud
 {
-    protected $table = "produto";
+    protected $table = "PRODUTO";
 
     public function insert($obj)
     {

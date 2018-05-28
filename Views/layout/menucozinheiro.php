@@ -17,6 +17,7 @@
                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastro</a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/../cliente/cli_form.php">Cliente</a>
                             <a class="dropdown-item" href="/../cozinheiro/coz_form.php">Cozinheiro</a>
                             <a class="dropdown-item" href="/../cozinheiro/gar_form.php">Garcom</a>
                             <a class="dropdown-item" href="/../cozinheiro/mot_form.php">MotoBoy</a>
@@ -33,10 +34,11 @@
                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pesquisa</a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="/../cozinheiro/coz_pesquisa.php">Cozinheiro</a>
-                            <a class="dropdown-item" href="/../cozinheiro/gar_pesquisa">Garcom</a>
-                            <a class="dropdown-item" href="/../cozinheiro/mot_pesquisa">MotoBoy</a>
-                            <a class="dropdown-item" href="/../cozinheiro/todos_pesquisa">Buscar Todos</a>
+                            <a class="dropdown-item" href="/../cliente/cli_buscar.php">Cliente</a>
+                            <a class="dropdown-item" href="/../cozinheiro/coz_buscar.php">Cozinheiro</a>
+                            <a class="dropdown-item" href="/../garcom/gar_buscar.php">Garcom</a>
+                            <a class="dropdown-item" href="/../motoboy/mot_buscar.php">MotoBoy</a>
+                            <a class="dropdown-item" href="/../cozinheiro/todos_buscar.php">Buscar Todos</a>
                         </div>
                     </div>
                 </li>

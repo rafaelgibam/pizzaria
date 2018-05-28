@@ -8,18 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Pizzaria System</title>
 
-    <link rel="stylesheet" href="/../assets/css/style.css">
-    <link rel="stylesheet" href="/../assets/js/scripts.js">
+    <link rel="stylesheet" href="/../assets/css/styles.css">
+    <!--- <link rel="stylesheet" href="/../assets/js/scripts.js"> -->
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/icons/ionicons.min.css">
+    <link rel="stylesheet" href="/../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/../assets/icons/ionicons.min.css">
 
+    <!-- JQuery Slim -->
+    <script src="/../assets/js/jquery-3.3.1.min.js"></script>
 
 </head>
-
-
-
-
-
-
-

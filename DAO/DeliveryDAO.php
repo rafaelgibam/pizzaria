@@ -5,7 +5,7 @@ namespace DAO;
 
 class DeliveryDAO extends Model implements ICrud
 {
-    protected $table = "delivery";
+    protected $table = "DELIVERY";
 
     public function insert($obj)
     {
@@ -28,7 +28,7 @@ class DeliveryDAO extends Model implements ICrud
     {
 
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET DATA_ENTREGA = ?, PRECO = ?, MOTOBOY_ID = ?, 
+                                                 SET DATA_ENTREGA = ?, PRECO = ?, MOTOBOY_ID = ?,
                                                  PEDIDO_DELIVERY_ID = ?, CLIENTE_ID = ?
                                                  WHERE ID = ?");
 

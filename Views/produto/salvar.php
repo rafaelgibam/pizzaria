@@ -15,8 +15,7 @@ if(isset($_POST['produto'])){
         $_POST['estado'],
         $_POST['fatia'],
         $_POST['borda'],
-        $_POST['cozinheiroid']
+        $_POST['cozinheiroid'],
+        $_POST['qtd']
         );
 }
-
-

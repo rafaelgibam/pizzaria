@@ -7,13 +7,13 @@ namespace DAO;
 class ClienteDAO extends Model implements ICrud
 {
 
-    protected $table = "cliente";
+    protected $table = "CLIENTE";
 
     public function insert($obj)
     {
         //LOGRADOURO	NUMERO	COMPLEMENTO	BAIRRO	MUNICIPIO	UF	PAIS	REFERENCIA
-        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`,`RG`, `NOME`, `SEXO`, `DATA_NASC`, `NUM_FIXO`, `NUM_CELULAR`, `ESTADO`, `LOGRADOURO`, 
-                                                                            `NUMERO`, `COMPLEMENTO`, `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`, `CEP`) 
+        $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`,`RG`, `NOME`, `SEXO`, `DATA_NASC`, `NUM_FIXO`, `NUM_CELULAR`, `ESTADO`, `LOGRADOURO`,
+                                                                            `NUMERO`, `COMPLEMENTO`, `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`, `CEP`)
                                                  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         $stmt->bindValue(1, $obj->getCpf());
@@ -42,7 +42,7 @@ class ClienteDAO extends Model implements ICrud
     public function update($obj)
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
-                                                 SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?, 
+                                                 SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?,
                                                  NUM_CELULAR = ?, ESTADO = ?, LOGRADOURO = ?, NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?,
                                                  UF = ?, PAIS = ?, REFERENCIA = ?, CEP = ?
                                                  WHERE ID = ?");
