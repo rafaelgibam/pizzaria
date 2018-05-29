@@ -52,9 +52,8 @@ if($_SESSION['tipo'] == "cozinheiro"){
           <?php $cc = new \Controllers\ClienteController(); ?>
 
           <?php if(isset($_GET['b']) && $_GET['b'] != null):?>
-              <?php $clike = $cc->find($_GET['b']);
-                if($clike != null):
-              ?>
+            <?php $clike = $cc->like($_GET['b']); ?>
+              <?php if($clike != null): ?>
                   <tr>
                       <th scope="row"><?= $clike->ID ?></th>
                       <td><?= $clike->NOME ?></td>

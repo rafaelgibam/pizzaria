@@ -31,8 +31,8 @@ abstract class Model
     }
 
     public function like($nome){
-        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE {$this->colunalike} LIKE '%?%'");
-        $stmt->bindValue(1, $nome);
+        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE {$this->colunalike} LIKE ?");
+        $stmt->bindValue(1, "%" . $nome . "%");
         $stmt->execute();
         return $stmt->fetch();
     }
