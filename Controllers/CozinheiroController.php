@@ -91,5 +91,8 @@ class CozinheiroController
         return $this->codao->find($id);
     }
 
+    public function buscarPorNome($nome){
+      $this->codao->findName($nome);
+    }
 
 }

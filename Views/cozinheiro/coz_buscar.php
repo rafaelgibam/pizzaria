@@ -2,7 +2,7 @@
 <?php include __DIR__ . "/../layout/head.php"; ?>
 
 <?php
-$cc = new \Controllers\ClienteController();
+$cc = new \Controllers\CozinheiroController();
 
 if($_SESSION['tipo'] == "garcom"){
     include __DIR__ . "/../layout/menugarcom.php";
@@ -54,8 +54,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
         <tbody>
 
           <?php if(isset($_GET['b']) && $_GET['b'] != null):?>
-            <?php $clike = $cc->buscarPorNome($_GET['b']); ?>
-              <?php if($clike != null){ ?>
+            <?php foreach($cc->buscarPorNome($_GET['b']) as $clike): ?>
                   <tr>
                       <th scope="row"><?= $clike->ID ?></th>
                       <td><?= $clike->NOME ?></td>
@@ -71,7 +70,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                           </a>
                       </td>
                   </tr>
-              <?php } else { echo "Não conseguimos encontrar, Tente novamente!"; } ?>
+            <?php endforeach; ?>
           <?php else: ?>
               <?php foreach ($cc->findAll() as $c): ?>
                   <tr>

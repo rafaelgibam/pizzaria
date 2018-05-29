@@ -7,7 +7,6 @@ namespace DAO;
 abstract class Model
 {
     protected $table;
-    protected $colunalike;
 
     public function findAll(){
        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table}");
@@ -30,10 +29,11 @@ abstract class Model
         $stmt->closeCursor();
     }
 
-    public function like($nome){
-        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE {$this->colunalike} LIKE ?");
-        $stmt->bindValue(1, "%" . $nome . "%");
-        $stmt->execute();
-        return $stmt->fetch();
+    public function findName($nome){
+          $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE NOME LIKE ? OR CPF LIKE ?");
+          $stmt->bindValue(1, "%" . $nome . "%");
+          $stmt->bindValue(2, "%". $nome ."%");
+          $stmt->execute();
+          return $stmt->fetch();
     }
 }

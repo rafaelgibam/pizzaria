@@ -79,7 +79,11 @@ class ClienteController
         return $this->cdao->find($id);
     }
 
-    public function like($nome){
-       return $this->cdao->like($nome);
+    public function buscarPorNome($nome){
+       return $this->cdao->findName($nome);
+    }
+
+    public function delete($id){
+      $this->cdao->delete($id);
     }
 }

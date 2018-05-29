@@ -8,7 +8,6 @@ class ClienteDAO extends Model implements ICrud
 {
 
     protected $table = "CLIENTE";
-    protected $colunalike = "NOME";
 
     public function insert($obj)
     {
@@ -70,4 +69,5 @@ class ClienteDAO extends Model implements ICrud
         $stmt->execute();
         $stmt->closeCursor();
     }
+
 }
