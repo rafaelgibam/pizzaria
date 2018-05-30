@@ -34,6 +34,6 @@ abstract class Model
           $stmt->bindValue(1, "%" . $nome . "%");
           $stmt->bindValue(2, "%". $nome ."%");
           $stmt->execute();
-          return $stmt->fetch();
+          return $stmt->fetchAll();
     }
 }

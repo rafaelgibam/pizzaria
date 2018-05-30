@@ -52,9 +52,9 @@ if(isset($_GET['d']) && $_GET['d'] != null){
           </tr>
         </thead>
         <tbody>
-
           <?php if(isset($_GET['b']) && $_GET['b'] != null):?>
-            <?php $clike = $cc->buscarPorNome($_GET['b']); ?>
+            <?php foreach( $cc->buscarPorNome($_GET['b']) as $clike ): ?>
+
               <?php if($clike != null){ ?>
                   <tr>
                       <th scope="row"><?= $clike->ID ?></th>
@@ -72,26 +72,29 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                       </td>
                   </tr>
               <?php } else { echo "Não conseguimos encontrar, Tente novamente!"; } ?>
-          <?php else: ?>
-              <?php foreach ($cc->findAll() as $c): ?>
-                  <tr>
-                      <th scope="row"><?= $c->ID ?></th>
-                      <td><?= $c->NOME ?></td>
-                      <td><?= $c->CPF ?></td>
-                      <td><?= $c->RG ?></td>
-                      <td><?= ($c->ESTADO == 1) ? "Ativo" : "Desativado" ?></td>
-                      <td>
-                          <a href="?e=<?= $c->ID ?>">
-                              <i  style="color: blue; text-decoration: none;" class="material-icons">border_color</i>
-                              &nbsp;&nbsp;
-                          </a>
-                          <a href="?d=<?= $c->ID ?>">
-                              <i style="color: red; text-decoration: none; font-size: 28px;" class="material-icons">delete</i>
-                          </a>
-                      </td>
-                  </tr>
-              <?php endforeach; ?>
-          <?php endif; ?>
+
+          <?php endforeach; ?>
+
+        <?php else: ?>
+            <?php foreach ($cc->findAll() as $c): ?>
+                <tr>
+                    <th scope="row"><?= $c->ID ?></th>
+                    <td><?= $c->NOME ?></td>
+                    <td><?= $c->CPF ?></td>
+                    <td><?= $c->RG ?></td>
+                    <td><?= ($c->ESTADO == 1) ? "Ativo" : "Desativado" ?></td>
+                    <td>
+                        <a href="?e=<?= $c->ID ?>">
+                            <i  style="color: blue; text-decoration: none;" class="material-icons">border_color</i>
+                            &nbsp;&nbsp;
+                        </a>
+                        <a href="?d=<?= $c->ID ?>">
+                            <i style="color: red; text-decoration: none; font-size: 28px;" class="material-icons">delete</i>
+                        </a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        <?php endif; ?>
         </tbody>
       </table>
     </div>
