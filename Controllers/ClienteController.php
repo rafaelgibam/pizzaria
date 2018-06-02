@@ -67,7 +67,12 @@ class ClienteController
         $this->c->setReferencia($referencia);
         $this->c->setCep($cep);
 
-        $this->cdao->update($this->c);
+        if($this->c->getCpf() != null && $this->c->getNome() != null){
+            $this->cdao->update($this->c);
+            return header("location: cli_buscar.php?msg=alterado");
+        }else{
+            return header("location: cli_editar.php?msg=erro");
+        }
     }
 
     public function findAll()

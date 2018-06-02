@@ -81,6 +81,10 @@ class GarcomController
         $this->gdao->insert($this->g);
     }
 
+    public function delete($id){
+        $this->gdao->delete($id);
+    }
+
     public function findAll()
     {
         return $this->gdao->findAll();
@@ -88,5 +92,9 @@ class GarcomController
 
     public function find($id){
         return $this->gdao->find($id);
+    }
+
+    public function buscarPorNome($nome){
+        return $this->gdao->findName($nome);
     }
 }

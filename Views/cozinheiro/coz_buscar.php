@@ -4,6 +4,7 @@
 <?php
 $cc = new \Controllers\CozinheiroController();
 
+
 if($_SESSION['tipo'] == "garcom"){
     include __DIR__ . "/../layout/menugarcom.php";
 }
@@ -16,8 +17,9 @@ if($_SESSION['tipo'] == "cozinheiro"){
     include __DIR__ . "/../layout/menucozinheiro.php";
 }
 
+
 if(isset($_GET['d']) && $_GET['d'] != null){
-  $cc->delete($_GET['d']);
+    $cc->delete($_GET['d']);
 }
 
 ?>

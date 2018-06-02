@@ -82,6 +82,10 @@ class CozinheiroController
         $this->codao->insert($this->co);
     }
 
+    public function delete($id){
+        $this->codao->delete($id);
+    }
+
     public function findAll()
     {
         return $this->codao->findAll();
@@ -92,7 +96,7 @@ class CozinheiroController
     }
 
     public function buscarPorNome($nome){
-      $this->codao->findName($nome);
+        return $this->codao->findName($nome);
     }
 
 }

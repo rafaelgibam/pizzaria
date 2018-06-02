@@ -17,7 +17,7 @@ if($_SESSION['tipo'] == "cozinheiro"){
 }
 
 if(isset($_GET['d']) && $_GET['d'] != null){
-  $cc->delete($_GET['d']);
+    $cc->delete($_GET['d']);
 }
 
 ?>
@@ -39,7 +39,9 @@ if(isset($_GET['d']) && $_GET['d'] != null){
   </div>
 
   <div class="row">
+
     <div class="col-md-12">
+        <?php include __DIR__ . "/../errors.php"; ?>
       <table class="table table-sm table-hover">
         <thead class="thead-dark">
           <tr>
@@ -66,7 +68,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                           <a href="?e=<?= $clike->ID ?>">
                               <i  style="color: blue; text-decoration: none;" class="material-icons">border_color</i>&nbsp;&nbsp;
                           </a>
-                          <a href="?d=<?= $clike->ID ?>">
+                          <a href="?d=<?= $clike->ID ?>&msg=deletado">
                               <i style="color: red; text-decoration: none; font-size: 28px;" class="material-icons">delete</i>
                           </a>
                       </td>
@@ -84,7 +86,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                     <td><?= $c->RG ?></td>
                     <td><?= ($c->ESTADO == 1) ? "Ativo" : "Desativado" ?></td>
                     <td>
-                        <a href="?e=<?= $c->ID ?>">
+                        <a href="/cliente/cli_editar.php?e=<?= $c->ID ?>">
                             <i  style="color: blue; text-decoration: none;" class="material-icons">border_color</i>
                             &nbsp;&nbsp;
                         </a>

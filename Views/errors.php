@@ -14,10 +14,16 @@ if($msg != null){
                   </div>";
             break;
         case "alterado":
-            echo "<div class=\"alert alert-success\" role=\"alert\">
+            echo "<div class=\"alert alert-warning\" role=\"alert\">
                         Alterado com sucesso!
             </div>";
             break;
+        case "deletado":
+            echo "<div class=\"alert alert-primary\" role=\"alert\">
+                        Deletado com Sucesso!
+            </div>";
+            break;
+
     }
 }
 
