@@ -40,9 +40,9 @@ class ClienteController
 
         if($this->c->getCpf() != null && $this->c->getNome() != null){
             $this->cdao->insert($this->c);
-            return header("location: cli_form.php?msg=salvo");
+            return header("location: gar_form.php?msg=salvo");
         }else{
-            return header("location: cli_form.php?msg=erro");
+            return header("location: gar_form.php?msg=erro");
         }
     }
 

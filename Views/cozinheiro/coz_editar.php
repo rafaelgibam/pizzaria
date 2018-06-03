@@ -1,51 +1,68 @@
 <?php include __DIR__ . "/../session.php"; ?>
 <?php include __DIR__ . "/../layout/head.php"; ?>
-<?php include __DIR__ . "/../layout/menugarcom.php"; ?>
+
+<?php
+$cc = new \Controllers\CozinheiroController();
+
+if($_SESSION['tipo'] == "garcom"){
+    include __DIR__ . "/../layout/menugarcom.php";
+}
+
+if($_SESSION['tipo'] == "motoboy"){
+    include __DIR__ . "/../layout/menugarcom.php";
+}
+
+if($_SESSION['tipo'] == "cozinheiro"){
+    include __DIR__ . "/../layout/menucozinheiro.php";
+}
+
+?>
 
 <div class="container">
     <form method="post" action="salvar.php">
         <div class="row">
             <div class="col-md-12 mt-4">
                 <?php include __DIR__ . "/../errors.php"; ?>
+                <?php $c = $cc->find($_GET['e'])?>
 
+                <input type="number" hidden name="id" value="<?= $c->ID ?>">
                 <div class="card">
-                    <h5 class="card-header">Dados do Cliente</h5>
+                    <h5 class="card-header">Dados do Cozinheiro</h5>
                     <div class="card-body">
                         <div class="form-row">
                             <div class="form-group col-3">
                                 <label for="nome">Nome(Obrigatório):</label>
-                                <input type="text" id="nome" class="form-control" name="nome">
+                                <input type="text" id="nome" class="form-control" name="nome" value="<?= $c->NOME ?>">
                             </div>
                             <div class="form-group col-2">
                                 <label for="cpf">CPF(Obrigatório):</label>
-                                <input type="text" id="cpf" maxlength="11" class="form-control" name="cpf">
+                                <input type="text" id="cpf" maxlength="11" class="form-control" name="cpf" value="<?= $c->CPF ?>">
                             </div>
                             <div class="form-group col-2">
                                 <label for="rg">RG:</label>
-                                <input type="text" id="rg" maxlength="9" class="form-control" name="rg">
+                                <input type="text" id="rg" maxlength="9" class="form-control" name="rg" value="<?= $c->RG ?>">
                             </div>
                             <div class="form-group col-2">
                                 <label for="sexo">Sexo:</label>
                                 <select name="sexo" id="sexo" class="form-control">
-                                    <option value="NaoInformado">Não Informado</option>
                                     <option value="masculino">Masculino</option>
                                     <option value="feminino">Feminino</option>
                                 </select>
                             </div>
                             <div class="form-group col-3">
                                 <label for="datanasc">Data Nascimento:</label>
-                                <input type="date" id="datanasc" class="form-control" name="datanasc">
+                                <input type="date" id="datanasc" class="form-control" name="datanasc" value="<?= $c->DATA_NASC ?>">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-4">
                                 <label for="numerofixo">Número Fixo:</label>
-                                <input type="text" id="numerofixo"  maxlength="11" class="form-control" name="numerofixo" placeholder="DDD+99999-9999">
+                                <input type="text" id="numerofixo"  maxlength="11" class="form-control" name="numerofixo" value="<?= $c->NUM_FIXO ?>">
                             </div>
                             <div class="form-group col-4">
                                 <label for="numerocelular">Número Celular:</label>
-                                <input type="text" id="numerocelular" maxlength="11" class="form-control" name="numerocelular"  placeholder="DDD+99999-9999">
+                                <input type="text" id="numerocelular" maxlength="11" class="form-control" name="numerocelular" value="<?= $c->NUM_CELULAR ?>">
                             </div>
                             <div class="form-group col-4">
                                 <label for="estado">Estado:</label>
@@ -69,49 +86,48 @@
                                 <div class="form-row">
                                     <div class="form-group col-5">
                                         <label for="logradouro">Logradouro:</label>
-                                        <input type="text" id="logradouro" class="form-control" name="logradouro" placeholder="Rua exemplo">
+                                        <input type="text" id="logradouro" class="form-control" name="logradouro" value="<?= $c->LOGRADOURO ?>">
                                     </div>
                                     <div class="form-group col-2">
                                         <label for="numero">Número:</label>
-                                        <input type="text" id="numero" maxlength="8" class="form-control" name="numero"  placeholder="1111">
+                                        <input type="text" id="numero" maxlength="8" class="form-control" name="numero" value="<?= $c->NUMERO ?>" >
                                     </div>
                                     <div class="form-group col-2">
                                         <label for="bairro">Bairro:</label>
-                                        <input type="text" id="bairro" class="form-control" name="bairro" placeholder="ex: villa x">
+                                        <input type="text" id="bairro" class="form-control" name="bairro" value="<?= $c->BAIRRO ?>">
                                     </div>
 
                                     <div class="form-group col-3">
                                         <label for="municipio">Município:</label>
-                                        <input type="text" id="municipio" class="form-control" name="municipio"  placeholder="ex: recife">
+                                        <input type="text" id="municipio" class="form-control" name="municipio" value="<?= $c->MUNICIPIO ?>">
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="form-group col-1">
                                         <label for="uf">UF:</label>
-                                        <input type="text" id="uf" maxlength="2" class="form-control" name="uf" placeholder="ex: PE">
+                                        <input type="text" id="uf" maxlength="2" class="form-control" name="uf" value="<?= $c->UF ?>">
                                     </div>
                                     <div class="form-group col-2">
                                         <label for="pais">Pais:</label>
-                                        <input type="text" id="pais" class="form-control" name="pais"  placeholder="ex: Brasil">
+                                        <input type="text" id="pais" class="form-control" name="pais" value="<?= $c->PAIS ?>">
                                     </div>
                                     <div class="form-group col-3">
                                         <label for="referencia">Referência:</label>
-                                        <input type="text" id="referencia" class="form-control" name="referencia" placeholder="ex: colégio souza">
+                                        <input type="text" id="referencia" class="form-control" name="referencia" value="<?= $c->REFERENCIA ?>" >
                                     </div>
 
                                     <div class="form-group col-2">
                                         <label for="cep">CEP:</label>
-                                        <input type="text" id="cep" maxlength="8" class="form-control" name="cep"  placeholder="ex: 50721230">
+                                        <input type="text" id="cep" maxlength="8" class="form-control" name="cep" value="<?= $c->CEP ?>">
                                     </div>
 
                                     <div class="form-group col-4">
                                         <label for="complemento">Complemento:</label>
-                                        <input type="text" id="complemento" class="form-control" name="complemento"  placeholder="ex: casa">
-                                    </div>
+                                        <input type="text" id="complemento" class="form-control" name="complemento" value="<?= $c->COMPLEMENTO ?>" >                                </div>
                                 </div>
 
-                                <input type="submit" name="cliente" class="btn btn-success btn-block float-right" value="Cadastrar">
+                                <input type="submit" name="cozinheiro-editar" class="btn btn-success btn-block float-right" value="Confirmar Alteração">
                             </div>
                         </div>
                     </div>

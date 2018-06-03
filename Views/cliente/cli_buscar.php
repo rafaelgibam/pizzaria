@@ -65,7 +65,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                       <td><?= $clike->RG ?></td>
                       <td><?= ($clike->ESTADO == 1) ? "Ativo" : "Desativado" ?></td>
                       <td>
-                          <a href="?e=<?= $clike->ID ?>">
+                          <a href="/cliente/cli_editar.php?e=<?= $clike->ID ?>">
                               <i  style="color: blue; text-decoration: none;" class="material-icons">border_color</i>&nbsp;&nbsp;
                           </a>
                           <a href="?d=<?= $clike->ID ?>&msg=deletado">

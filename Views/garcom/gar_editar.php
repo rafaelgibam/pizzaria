@@ -45,7 +45,6 @@ if($_SESSION['tipo'] == "cozinheiro"){
                             <div class="form-group col-2">
                                 <label for="sexo">Sexo:</label>
                                 <select name="sexo" id="sexo" class="form-control">
-                                    <option value="NaoInformado">Não Informado</option>
                                     <option value="masculino">Masculino</option>
                                     <option value="feminino">Feminino</option>
                                 </select>

@@ -28,8 +28,9 @@
             $_POST['referencia']);
     }
 
-    if(isset($_POST['motoboy'])){
-        $mc->insert(
+    if(isset($_POST['cozinheiro-editar'])){
+        $cc->update(
+            $_POST['id'],
             $_POST['cpf'],
             $_POST['rg'],
             $_POST['nome'],
@@ -38,8 +39,7 @@
             $_POST['numerofixo'],
             $_POST['numerocelular'],
             $_POST['estado'],
-            $_POST['placa'],
-            $_POST['dataadmissao'],
+            $_POST['dtadmissao'],
             $_POST['salario'],
             $_POST['logradouro'],
             $_POST['numero'],
@@ -51,8 +51,8 @@
             $_POST['referencia']);
     }
 
-    if(isset($_POST['garcom'])){
-        $gc->insert(
+    if(isset($_POST['motoboy'])){
+        $mc->insert(
             $_POST['cpf'],
             $_POST['rg'],
             $_POST['nome'],
@@ -61,7 +61,7 @@
             $_POST['numerofixo'],
             $_POST['numerocelular'],
             $_POST['estado'],
-            $_POST['gorjeta'],
+            $_POST['placa'],
             $_POST['dataadmissao'],
             $_POST['salario'],
             $_POST['logradouro'],

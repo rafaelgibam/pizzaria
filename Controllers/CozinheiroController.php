@@ -56,10 +56,10 @@ class CozinheiroController
 
     }
 
-    public function update($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $dtadmissao,
+    public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $dtadmissao,
                            $salario, $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
     {
-
+        $this->co->setId($id);
         $this->co->setCpf($cpf);
         $this->co->setRg($rg);
         $this->co->setNome($nome);
@@ -79,7 +79,12 @@ class CozinheiroController
         $this->co->setPais($pais);
         $this->co->setReferencia($referencia);
 
-        $this->codao->insert($this->co);
+        if($this->co->getCpf() != null && $this->co->getNome() != null){
+            $this->codao->update($this->co);
+            return header("location: coz_buscar.php?msg=alterado");
+        }else{
+            return header("location: coz_editar.php?msg=erro");
+        }
     }
 
     public function delete($id){

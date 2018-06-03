@@ -54,8 +54,8 @@ class GarcomController
 
     }
 
-    public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $gojeta, $dtadmissao, $salario,
-                           $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
+    public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $gorjeta, $dtadmissao, $salario,
+                           $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia, $cep)
     {
         $this->g->setId($id);
         $this->g->setCpf($cpf);
@@ -66,7 +66,7 @@ class GarcomController
         $this->g->setNumfixo($numfixo);
         $this->g->setNumcel($numcel);
         $this->g->setEstado($estado);
-        $this->g->setGorjeta($gojeta);
+        $this->g->setGorjeta($gorjeta);
         $this->g->setDtadmissao($dtadmissao);
         $this->g->setSalario($salario);
         $this->g->setLogradouro($logradouro);
@@ -77,8 +77,15 @@ class GarcomController
         $this->g->setUf($uf);
         $this->g->setPais($pais);
         $this->g->setReferencia($referencia);
+        $this->g->setCep($cep);
 
-        $this->gdao->insert($this->g);
+
+        if($this->g->getCpf() != null && $this->g->getNome() != null){
+            $this->gdao->update($this->g);
+            return header("location: gar_buscar.php?msg=alterado");
+        }else{
+            return header("location: gar_editar.php?msg=erro");
+        }
     }
 
     public function delete($id){
