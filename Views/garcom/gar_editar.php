@@ -2,7 +2,7 @@
 <?php include __DIR__ . "/../layout/head.php"; ?>
 
 <?php
-$cc = new \Controllers\ClienteController();
+$gc = new \Controllers\GarcomController();
 
 if($_SESSION['tipo'] == "garcom"){
     include __DIR__ . "/../layout/menugarcom.php";
@@ -23,7 +23,7 @@ if($_SESSION['tipo'] == "cozinheiro"){
         <div class="row">
             <div class="col-md-12 mt-4">
                 <?php include __DIR__ . "/../errors.php"; ?>
-                <?php $c = $cc->find($_GET['e'])?>
+                <?php $c = $gc->find($_GET['e'])?>
 
                 <input type="number" hidden name="id" value="<?= $c->ID ?>">
                 <div class="card">
@@ -128,7 +128,7 @@ if($_SESSION['tipo'] == "cozinheiro"){
                                         <input type="text" id="complemento" class="form-control" name="complemento" value="<?= $c->COMPLEMENTO ?>" >                                </div>
                                 </div>
 
-                                <input type="submit" name="cliente-editar" class="btn btn-success btn-block float-right" value="Confirmar Alteração">
+                                <input type="submit" name="garcom-editar" class="btn btn-success btn-block float-right" value="Confirmar Alteração">
                             </div>
                         </div>
                     </div>

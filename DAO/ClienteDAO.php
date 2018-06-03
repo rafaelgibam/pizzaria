@@ -63,8 +63,8 @@ class ClienteDAO extends Model implements ICrud
         $stmt->bindValue(14, $obj->getUf());
         $stmt->bindValue(15, $obj->getPais());
         $stmt->bindValue(16, $obj->getReferencia());
-        $stmt->bindValue(18, $obj->getCep());
-        $stmt->bindValue(17, $obj->getId());
+        $stmt->bindValue(17, $obj->getCep());
+        $stmt->bindValue(18, $obj->getId());
 
         $stmt->execute();
         $stmt->closeCursor();

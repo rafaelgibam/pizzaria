@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7147cad-035d-4aea-b56a-0fd49f667fde" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Views/cliente/cli_editar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/garcom/gar_buscar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/garcom/gar_editar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/motoboy/mot_buscar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ClienteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ClienteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/CozinheiroController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/CozinheiroController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/GarcomController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/GarcomController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/cliente/cli_buscar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/cliente/cli_buscar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/cliente/cli_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/cliente/cli_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAO/ClienteDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/DAO/ClienteDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/cliente/cli_editar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/cliente/cli_editar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/cliente/salvar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/cliente/salvar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/cozinheiro/coz_buscar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/cozinheiro/coz_buscar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/errors.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/errors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/cozinheiro/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/cozinheiro/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/garcom/gar_editar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/garcom/gar_editar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/garcom/salvar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/garcom/salvar.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,65 +19,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cli_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/cliente/cli_form.php">
+      <file leaf-file-name="ClienteDAO.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DAO/ClienteDAO.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+            <state relative-caret-position="174">
+              <caret line="49" column="3" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gar_buscar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/garcom/gar_buscar.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Views/cozinheiro/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="67" column="67" selection-start-line="67" selection-start-column="67" selection-end-line="67" selection-end-column="67" />
+            <state relative-caret-position="285">
+              <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gar_editar.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Views/garcom/gar_editar.php">
+      <file leaf-file-name="ClienteController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controllers/ClienteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2010">
-              <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mot_buscar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/motoboy/mot_buscar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="89" column="83" lean-forward="true" selection-start-line="89" selection-start-column="83" selection-end-line="89" selection-end-column="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GarcomController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controllers/GarcomController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="84" column="33" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cli_buscar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/cliente/cli_buscar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="70" column="70" lean-forward="true" selection-end-line="106" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cli_editar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/cliente/cli_editar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="16" column="1" selection-end-line="143" />
+            <state>
+              <caret line="56" column="19" lean-forward="true" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -91,8 +49,17 @@
       <file leaf-file-name="salvar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/cliente/salvar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+            <state relative-caret-position="474">
+              <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cli_editar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/cliente/cli_editar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -132,10 +99,8 @@
         <option value="$PROJECT_DIR$/Views/garcom/cli_form.php" />
         <option value="$PROJECT_DIR$/Controllers/EnderecoController.php" />
         <option value="$PROJECT_DIR$/Views/garcom/end_form.php" />
-        <option value="$PROJECT_DIR$/Views/garcom/salvar.php" />
         <option value="$PROJECT_DIR$/Views/layout/menugarcom.php" />
         <option value="$PROJECT_DIR$/Views/acesso.php" />
-        <option value="$PROJECT_DIR$/Views/cozinheiro/index.php" />
         <option value="$PROJECT_DIR$/Controllers/AcessoController.php" />
         <option value="$PROJECT_DIR$/Views/cozinheiro/salvar.php" />
         <option value="$PROJECT_DIR$/Views/cozinheiro/mesa_form.php" />
@@ -154,20 +119,22 @@
         <option value="$PROJECT_DIR$/Views/pedido/salvar.php" />
         <option value="$PROJECT_DIR$/Views/pedido/ped_abrir.php" />
         <option value="$PROJECT_DIR$/Views/layout/head.php" />
-        <option value="$PROJECT_DIR$/DAO/ClienteDAO.php" />
         <option value="$PROJECT_DIR$/DAO/Model.php" />
         <option value="$PROJECT_DIR$/Controllers/CozinheiroController.php" />
         <option value="$PROJECT_DIR$/Views/cozinheiro/coz_buscar.php" />
-        <option value="$PROJECT_DIR$/Views/cliente/cli_editar.php" />
         <option value="$PROJECT_DIR$/Controllers/ClienteController.php" />
         <option value="$PROJECT_DIR$/Views/cliente/cli_buscar.php" />
         <option value="$PROJECT_DIR$/Views/errors.php" />
-        <option value="$PROJECT_DIR$/Views/cliente/salvar.php" />
         <option value="$PROJECT_DIR$/Views/cliente/cli_form.php" />
         <option value="$PROJECT_DIR$/Controllers/GarcomController.php" />
         <option value="$PROJECT_DIR$/Views/motoboy/mot_buscar.php" />
         <option value="$PROJECT_DIR$/Views/garcom/gar_buscar.php" />
+        <option value="$PROJECT_DIR$/Views/garcom/salvar.php" />
         <option value="$PROJECT_DIR$/Views/garcom/gar_editar.php" />
+        <option value="$PROJECT_DIR$/Views/cliente/cli_editar.php" />
+        <option value="$PROJECT_DIR$/Views/cliente/salvar.php" />
+        <option value="$PROJECT_DIR$/Views/cozinheiro/index.php" />
+        <option value="$PROJECT_DIR$/DAO/ClienteDAO.php" />
       </list>
     </option>
   </component>
@@ -227,7 +194,7 @@
               <item name="pizzaria" type="b2602c69:ProjectViewProjectNode" />
               <item name="pizzaria" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
-              <item name="garcom" type="462c0819:PsiDirectoryNode" />
+              <item name="cozinheiro" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pizzaria" type="b2602c69:ProjectViewProjectNode" />
@@ -291,7 +258,7 @@
       <workItem from="1527523350308" duration="11745000" />
       <workItem from="1527727651238" duration="3872000" />
       <workItem from="1527732232709" duration="4719000" />
-      <workItem from="1527959870333" duration="2074000" />
+      <workItem from="1527959870333" duration="11404000" />
     </task>
     <task id="LOCAL-00001" summary="Alteracoes no menu do cozinheiro.">
       <created>1526960944903</created>
@@ -311,7 +278,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70471000" />
+    <option name="totallyTimeSpent" value="79801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="692" extended-state="0" />
@@ -320,13 +287,13 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22547585" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50208336" side_tool="true" weight="0.26962456" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50208336" side_tool="true" weight="0.26962456" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32935154" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49791667" weight="0.20251836" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49791667" weight="0.20251836" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -355,21 +322,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Models/Cliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/EnderecoDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/garcom/end_form.php" />
     <entry file="file://$PROJECT_DIR$/Controllers/EnderecoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -408,13 +360,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/cozinheiro/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -462,13 +407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/garcom/salvar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="42" />
         </state>
       </provider>
     </entry>
@@ -620,38 +558,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/cliente/salvar.php">
+    <entry file="file://$PROJECT_DIR$/Views/motoboy/mot_buscar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        <state relative-caret-position="429">
+          <caret line="89" column="83" lean-forward="true" selection-start-line="89" selection-start-column="83" selection-end-line="89" selection-end-column="83" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/ClienteDAO.php">
+    <entry file="file://$PROJECT_DIR$/Views/garcom/gar_buscar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/ClienteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        <state relative-caret-position="1005">
+          <caret line="67" column="67" selection-start-line="67" selection-start-column="67" selection-end-line="67" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/cliente/cli_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="285">
           <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/cliente/cli_buscar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="70" column="70" lean-forward="true" selection-end-line="106" />
         </state>
       </provider>
     </entry>
@@ -662,31 +586,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/motoboy/mot_buscar.php">
+    <entry file="file://$PROJECT_DIR$/Views/cliente/cli_buscar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="89" column="83" lean-forward="true" selection-start-line="89" selection-start-column="83" selection-end-line="89" selection-end-column="83" />
+        <state relative-caret-position="-180">
+          <caret line="60" column="22" lean-forward="true" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/garcom/gar_buscar.php">
+    <entry file="file://$PROJECT_DIR$/Views/garcom/salvar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="67" column="67" selection-start-line="67" selection-start-column="67" selection-end-line="67" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/cliente/cli_editar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="16" column="1" selection-end-line="143" />
+        <state relative-caret-position="345">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/garcom/gar_editar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" />
+        <state relative-caret-position="-1335">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Cliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Pessoa.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/CozinheiroDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="67" column="27" lean-forward="true" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/ClienteDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="49" column="3" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/cliente/salvar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/cliente/cli_editar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/ClienteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="56" column="19" lean-forward="true" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/cozinheiro/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
         </state>
       </provider>
     </entry>

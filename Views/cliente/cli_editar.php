@@ -26,6 +26,7 @@ if($_SESSION['tipo'] == "cozinheiro"){
                 <?php $c = $cc->find($_GET['e'])?>
 
                 <input type="number" hidden name="id" value="<?= $c->ID ?>">
+
                 <div class="card">
                     <h5 class="card-header">Dados do Cliente</h5>
                     <div class="card-body">

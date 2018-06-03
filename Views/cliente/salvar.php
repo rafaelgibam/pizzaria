@@ -26,6 +26,7 @@ if(isset($_POST['cliente'])){
 }
 
 if(isset($_POST['cliente-editar'])){
+
     $c->update(
         $_POST['id'],
         $_POST['cpf'],
