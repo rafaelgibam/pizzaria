@@ -24,7 +24,7 @@ class MesaController
     }
 
     public function insert($nome, $numero, $cor, $capacidade, $peso, $altura, $comprimento, $largura, $estado){
-       // ID NOME NUMERO COR	QTD_LUGAR	PESO	ALTURA	COMPRIMENTO	LARGURA	ESTADO
+        // ID NOME NUMERO COR	QTD_LUGAR	PESO	ALTURA	COMPRIMENTO	LARGURA	ESTADO
         $this->m->setNome($nome);
         $this->m->setNumero($numero);
         $this->m->setCor($cor);
@@ -46,8 +46,30 @@ class MesaController
 
     }
 
-    public function update(){
+    public function buscarPorNome($nome){
+        return $this->mdao->findProduct($nome);
+    }
 
+    public function update($id, $nome, $numero, $cor, $capacidade, $peso, $altura, $comprimento, $largura, $estado){
+
+        $this->m->setId($id);
+        $this->m->setNome($nome);
+        $this->m->setNumero($numero);
+        $this->m->setCor($cor);
+        $this->m->setCapacidade($capacidade);
+        $this->m->setPeso(str_replace(",",".",$peso));
+        $this->m->setAltura(str_replace(",",".",$altura));
+        $this->m->setComprimento(str_replace(",",".",$comprimento));
+        $this->m->setAltura(str_replace(",",".",$altura));
+        $this->m->setLargura(str_replace(",",".",$largura));
+        $this->m->setEstado($estado);
+
+        if($this->m->getNome() != null && $this->m->getNumero() != null){
+            $this->mdao->update($this->m);
+            return header("location: mesa_buscar.php?msg=alterado");
+        }else{
+            return header("location: mesa_editar.php?e={$this->m->getId()}&msg=erro");
+        }
     }
 
     public function find($id){

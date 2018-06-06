@@ -44,6 +44,7 @@ class MesaDAO extends Model implements ICrud
         $stmt->bindValue(7, $obj->getComprimento());
         $stmt->bindValue(8, $obj->getLargura());
         $stmt->bindValue(9, $obj->getEstado());
+        $stmt->bindValue(10, $obj->getId());
 
         $stmt->execute();
         $stmt->closeCursor();

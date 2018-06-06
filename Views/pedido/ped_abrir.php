@@ -92,8 +92,7 @@
                               <label for="produto">Produto(Obrigatório):</label>
                               <select name="produtoid" id="produto" class="form-control">
                                   <?php foreach ($pc->findAll() as $produto):?>
-                                      <option value="<?= $produto->ID ?>"><?= $produto->NOME . " - " . "R$ " . $produto->PRECO ?></option>
-                                      <input type="number" id="preco" value="<?= $produto->PRECO ?>" hidden>
+                                      <option value="<?= $produto->ID ?>" id="preco"><?=  $produto->NOME  . " - " . "R$ " . "<p>". $produto->PRECO . "</p>" ?></option>
                                   <?php endforeach;?>
                               </select>
                           </div>
@@ -101,7 +100,7 @@
                           <div class="form-group col-4">
 
                             <label for="total">Total:</label>
-                            <input type="number" class="form-control" id="total" name="total" value="0" dissabled>
+                            <input type="number" class="form-control" id="total" name="total" value="0" disabled>
                           </div>
 
                         </div>
