@@ -13,8 +13,8 @@ class GarcomDAO extends Model implements ICrud
     {
         $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`,`RG`,`NOME`,`SEXO`,`DATA_NASC`,`NUM_FIXO`,
                                                 `NUM_CELULAR`,`ESTADO`,`GORJETA`,`DATA_ADMISSAO`,`SALARIO`,`LOGRADOURO`, `NUMERO`, `COMPLEMENTO`,
-                                                `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`)
-                                                 VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                                                `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`, `CEP`)
+                                                 VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         $stmt->bindValue(1, $obj->getCpf());
         $stmt->bindValue(2, $obj->getRg());
@@ -35,6 +35,7 @@ class GarcomDAO extends Model implements ICrud
         $stmt->bindValue(17, $obj->getUf());
         $stmt->bindValue(18, $obj->getPais());
         $stmt->bindValue(19, $obj->getReferencia());
+        $stmt->bindValue(20, $obj->getCep());
 
         $stmt->execute();
         $stmt->closeCursor();
@@ -46,7 +47,7 @@ class GarcomDAO extends Model implements ICrud
                                                  SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?,
                                                  NUM_CELULAR = ?, ESTADO = ?, GORJETA = ?, DATA_ADMISSAO = ?, SALARIO = ?,
                                                  LOGRADOURO = ?, NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?,
-                                                 PAIS = ?, REFERENCIA = ?
+                                                 PAIS = ?, REFERENCIA = ?, CEP = ?
                                                  WHERE ID = ?");
 
         $stmt->bindValue(1, $obj->getCpf());
@@ -68,7 +69,8 @@ class GarcomDAO extends Model implements ICrud
         $stmt->bindValue(17, $obj->getUf());
         $stmt->bindValue(18, $obj->getPais());
         $stmt->bindValue(19, $obj->getReferencia());
-        $stmt->bindValue(20, $obj->getId());
+        $stmt->bindValue(20, $obj->getCep());
+        $stmt->bindValue(21, $obj->getId());
 
         $stmt->execute();
         $stmt->closeCursor();

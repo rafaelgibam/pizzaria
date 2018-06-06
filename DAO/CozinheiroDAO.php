@@ -14,8 +14,8 @@ class CozinheiroDAO extends Model implements ICrud
 
         $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`CPF`, `RG`, `NOME`, `SEXO`, `DATA_NASC`,
                                                                             `NUM_FIXO`,`NUM_CELULAR`, SALARIO, DATA_ADMISSAO, `ESTADO`,
-                                                                            `LOGRADOURO`, `NUMERO`, `COMPLEMENTO`, `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA` )
-                                                                             VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                                                                            `LOGRADOURO`, `NUMERO`, `COMPLEMENTO`, `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`, `CEP` )
+                                                                             VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $stmt->bindValue(1, $obj->getCpf());
         $stmt->bindValue(2, $obj->getRg());
         $stmt->bindValue(3, $obj->getNome());
@@ -34,6 +34,7 @@ class CozinheiroDAO extends Model implements ICrud
         $stmt->bindValue(16, $obj->getUf());
         $stmt->bindValue(17, $obj->getPais());
         $stmt->bindValue(18, $obj->getReferencia());
+        $stmt->bindValue(19, $obj->getCep());
 
         $stmt->execute();
         $stmt->closeCursor();
@@ -44,7 +45,8 @@ class CozinheiroDAO extends Model implements ICrud
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
                                                  SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?,
                                                  NUM_CELULAR = ?, SALARIO = ?, DATA_ADMISSAO = ?, ESTADO = ?, LOGRADOURO = ?,
-                                                 NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?, PAIS = ?, REFERENCIA = ?
+                                                 NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?, PAIS = ?, 
+                                                 REFERENCIA = ?, CEP = ?
                                                  WHERE ID = ?");
 
 
@@ -66,7 +68,8 @@ class CozinheiroDAO extends Model implements ICrud
         $stmt->bindValue(16, $obj->getUf());
         $stmt->bindValue(17, $obj->getPais());
         $stmt->bindValue(18, $obj->getReferencia());
-        $stmt->bindValue(19, $obj->getId());
+        $stmt->bindValue(19, $obj->getCep());
+        $stmt->bindValue(20, $obj->getId());
 
         $stmt->execute();
         $stmt->closeCursor();

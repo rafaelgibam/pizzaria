@@ -76,7 +76,20 @@ class MotoBoyController
         $this->m->setReferencia($referencia);
 
 
-        $this->mdao->insert($this->m);
+        if($this->m->getCpf() != null && $this->m->getNome() != null){
+            $this->mdao->update($this->m);
+            return header("location: mot_editar.php?msg=alterado");
+        }else{
+            return header("location: mot_editar.php?msg=erro");
+        }
+    }
+
+    public function delete($id){
+        $this->mdao->delete($id);
+    }
+
+    public function buscarPorNome($nome){
+        return $this->mdao->findName($nome);
     }
 
     public function findAll()

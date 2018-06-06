@@ -2,7 +2,7 @@
 <?php include __DIR__ . "/../layout/head.php"; ?>
 
 <?php
-$gc = new \Controllers\GarcomController();
+$mc = new \Controllers\MotoBoyController();
 
 if($_SESSION['tipo'] == "garcom"){
     include __DIR__ . "/../layout/menugarcom.php";
@@ -17,7 +17,7 @@ if($_SESSION['tipo'] == "cozinheiro"){
 }
 
 if(isset($_GET['d']) && $_GET['d'] != null){
-    $gc->delete($_GET['d']);
+    $mc->delete($_GET['d']);
 }
 
 ?>
@@ -55,7 +55,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                 </thead>
                 <tbody>
                 <?php if(isset($_GET['b']) && $_GET['b'] != null):?>
-                    <?php foreach( $gc->buscarPorNome($_GET['b']) as $clike ): ?>
+                    <?php foreach( $mc->buscarPorNome($_GET['b']) as $clike ): ?>
 
                         <?php if($clike != null){ ?>
                             <tr>
@@ -65,7 +65,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                                 <td><?= $clike->RG ?></td>
                                 <td><?= ($clike->ESTADO == 1) ? "Ativo" : "Desativado" ?></td>
                                 <td>
-                                    <a href="?e=<?= $clike->ID ?>">
+                                    <a href="/motoboy/?e=<?= $clike->ID ?>">
                                         <i  style="color: blue; text-decoration: none;" class="material-icons">border_color</i>&nbsp;&nbsp;
                                     </a>
                                     <a href="?d=<?= $clike->ID ?>&msg=deletado">
@@ -78,7 +78,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                     <?php endforeach; ?>
 
                 <?php else: ?>
-                    <?php foreach ($gc->findAll() as $c): ?>
+                    <?php foreach ($mc->findAll() as $c): ?>
                         <tr>
                             <th scope="row"><?= $c->ID ?></th>
                             <td><?= $c->NOME ?></td>
@@ -86,7 +86,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                             <td><?= $c->RG ?></td>
                             <td><?= ($c->ESTADO == 1) ? "Ativo" : "Desativado" ?></td>
                             <td>
-                                <a href="/garcom/mot_editar.php?e=<?= $c->ID ?>">
+                                <a href="/motoboy/mot_editar.php?e=<?= $c->ID ?>">
                                     <i  style="color: blue; text-decoration: none;" class="material-icons">border_color</i>
                                     &nbsp;&nbsp;
                                 </a>

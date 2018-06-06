@@ -3,7 +3,7 @@
 <?php include __DIR__ . "/../layout/menucozinheiro.php"; ?>
 
 <div class="container">
-    <form method="post" action="salvar.php">
+    <form method="post" action="../cozinheiro/salvar.php">
         <div class="row">
             <div class="col-md-12 mt-4">
                 <?php include __DIR__ . "/../errors.php"; ?>

@@ -22,7 +22,7 @@ class CozinheiroController
     }
 
     public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $dtadmissao,
-                           $salario, $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
+                           $salario, $logradouro, $numero, $complemento, $cep, $bairro, $municipio, $uf, $pais, $referencia)
     {
         // ID	CNPJ	RAZAOSOCIAL	NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	ENDERECO_ID
 
@@ -39,6 +39,7 @@ class CozinheiroController
         $this->co->setLogradouro($logradouro);
         $this->co->setNumero($numero);
         $this->co->setComplemento($complemento);
+        $this->co->setCep($cep);
         $this->co->setBairro($bairro);
         $this->co->setMunicipio($municipio);
         $this->co->setUf($uf);
@@ -46,7 +47,9 @@ class CozinheiroController
         $this->co->setReferencia($referencia);
 
 
-        if($this->co->getCpf() != null && $this->co->getNome() != null){
+        if($this->co->getCpf() != null && $this->co->getNome() != null
+            && $this->co->getLogradouro() != null && $this->co->getNumero() != null){
+
             $this->codao->insert($this->co);
             return header("location: coz_form.php?msg=salvo");
         }else{
@@ -57,7 +60,7 @@ class CozinheiroController
     }
 
     public function update($id, $cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $dtadmissao,
-                           $salario, $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
+                           $salario, $logradouro, $numero, $complemento, $cep, $bairro, $municipio, $uf, $pais, $referencia)
     {
         $this->co->setId($id);
         $this->co->setCpf($cpf);
@@ -73,13 +76,15 @@ class CozinheiroController
         $this->co->setLogradouro($logradouro);
         $this->co->setNumero($numero);
         $this->co->setComplemento($complemento);
+        $this->co->setCep($cep);
         $this->co->setBairro($bairro);
         $this->co->setMunicipio($municipio);
         $this->co->setUf($uf);
         $this->co->setPais($pais);
         $this->co->setReferencia($referencia);
 
-        if($this->co->getCpf() != null && $this->co->getNome() != null){
+        if($this->co->getCpf() != null && $this->co->getNome() != null
+            && $this->co->getLogradouro() != null && $this->co->getNumero() != null){
             $this->codao->update($this->co);
             return header("location: coz_buscar.php?msg=alterado");
         }else{

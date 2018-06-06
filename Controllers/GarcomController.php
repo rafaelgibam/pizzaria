@@ -20,7 +20,7 @@ class GarcomController
     }
 
     public function insert($cpf, $rg, $nome, $sexo, $datanasc, $numfixo, $numcel, $estado, $gorjeta, $dtadmissao,
-                           $salario, $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia)
+                           $salario, $logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia, $cep)
     {
         // ID	CPF		RG NOME	SEXO	DATA_NASC	NUM_FIXO	NUM_CELULAR	ESTADO	GOJETA	DATA_ADMISSAO	SALARIO	LOGRADOURO	NUMERO	COMPLEMENTO	BAIRRO	MUNICIPIO	UF	PAIS	REFERENCIA
 
@@ -43,6 +43,7 @@ class GarcomController
         $this->g->setUf($uf);
         $this->g->setPais($pais);
         $this->g->setReferencia($referencia);
+        $this->g->setCep($cep);
 
         if($this->g->getCpf() != null && $this->g->getNome() != null){
             $this->gdao->insert($this->g);

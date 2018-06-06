@@ -42,6 +42,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
 
   <div class="row">
     <div class="col-md-12">
+        <?php include __DIR__ . "/../errors.php"; ?>
       <table class="table table-sm table-hover">
         <thead class="thead-dark">
           <tr>
