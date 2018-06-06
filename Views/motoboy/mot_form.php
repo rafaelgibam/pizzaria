@@ -3,7 +3,7 @@
 <?php include __DIR__ . "/../layout/menucozinheiro.php"; ?>
 
 <div class="container">
-    <form method="post" action="../cozinheiro/salvar.php">
+    <form method="post" action="salvar.php">
         <div class="row">
             <div class="col-md-12 mt-4">
                 <?php include __DIR__ . "/../errors.php"; ?>
@@ -26,10 +26,8 @@
                             <div class="form-group col-2">
                                 <label for="sexo">Sexo:</label>
                                 <select name="sexo" id="sexo" class="form-control">
-                                    <option value="NaoInformado">Não Informado</option>
                                     <option value="masculino">Masculino</option>
                                     <option value="feminino">Feminino</option>
-
                                 </select>
                             </div>
                             <div class="form-group col-3">

@@ -42,7 +42,7 @@ class MotoBoyDAO extends Model implements ICrud
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
                                                  SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?,
-                                                 NUM_CELULAR = ?, ESTADO = ?, GOJETA = ?, DATA_ADMISSAO = ?, SALARIO = ?,
+                                                 NUM_CELULAR = ?, ESTADO = ?, PLACA = ?, DATA_ADMISSAO = ?, SALARIO = ?,
                                                  LOGRADOURO = ?, NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?,
                                                  PAIS = ?, REFERENCIA = ?
                                                  WHERE ID = ?");
@@ -67,7 +67,7 @@ class MotoBoyDAO extends Model implements ICrud
         $stmt->bindValue(17, $obj->getUf());
         $stmt->bindValue(18, $obj->getPais());
         $stmt->bindValue(19, $obj->getReferencia());
-        $stmt->bindValue(20, $obj->getEndereco()->getId());
+        $stmt->bindValue(20, $obj->getId());
 
         $stmt->execute();
         $stmt->closeCursor();

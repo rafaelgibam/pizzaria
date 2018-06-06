@@ -78,7 +78,7 @@ class MotoBoyController
 
         if($this->m->getCpf() != null && $this->m->getNome() != null){
             $this->mdao->update($this->m);
-            return header("location: mot_editar.php?msg=alterado");
+            return header("location: mot_buscar.php?msg=alterado");
         }else{
             return header("location: mot_editar.php?msg=erro");
         }

@@ -1,25 +1,26 @@
     <?php include __DIR__ . "/../session.php"; ?>
 <?php include __DIR__ . "/../layout/head.php"; ?>
 <?php include __DIR__ . "/../layout/menucozinheiro.php"; ?>
-<?php include __DIR__ . "/../errors.php"; ?>
+
 <?php
     $mc = new \Controllers\MotoBoyController();
-    if(isset($_GET['id']) && !empty($_GET['id'])){
-        $m = $mc->find($_GET['id']);
+    if(isset($_GET['e']) && !empty($_GET['e'])){
+        $m = $mc->find($_GET['e']);
     }
 ?>
 
 
 <div class="container">
-    <form method="post">
+    <form method="post" action="salvar.php">
         <div class="row">
             <div class="col-md-12 mt-4">
                 <?php include __DIR__ . "/../errors.php"; ?>
                 <div class="card">
-                    <h5 class="card-header">Dados do Garçom</h5>
+                    <h5 class="card-header">Dados do MotoBoy</h5>
                     <div class="card-body">
 
                         <input type="number" name="id" hidden value="<?= $m->ID ?>">
+
                         <div class="form-row">
                             <div class="form-group col-3">
                                 <label for="nome">Nome:</label>
@@ -36,7 +37,6 @@
                             <div class="form-group col-2">
                                 <label for="sexo">Sexo:</label>
                                 <select name="sexo" id="sexo" class="form-control">
-                                    <option value="NaoInformado">Não Informado</option>
                                     <option value="masculino">Masculino</option>
                                     <option value="feminino">Feminino</option>
                                 </select>
@@ -74,6 +74,12 @@
                                 <input type="number" id="salario" class="form-control" name="salario"  placeholder="R$" value="<?= $m->SALARIO ?>">
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group col-3">
+                                <label for="dtadmissao">Data Adimissão:</label>
+                                <input type="date" id="dtadmissao" class="form-control" name="dtadmissao" value="<?= $m->DATA_ADMISSAO ?>">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,7 +89,7 @@
         <div class="row mt-4">
             <div class="col-md-12">
                 <div class="card">
-                    <h5 class="card-header">Endereço do Garçom</h5>
+                    <h5 class="card-header">Endereço do MotoBoy</h5>
                     <div class="card-body">
 
                         <!---  ID LOGRADOURO NUMERO COMPLEMENTO BAIRRO MUNICIPIO UF PAIS REFERENCIA CEP--->
@@ -116,18 +122,23 @@
                                 <label for="pais">Pais:</label>
                                 <input type="text" id="pais" class="form-control" name="pais"  placeholder="ex: Brasil" value="<?= $m->PAIS ?>">
                             </div>
-                            <div class="form-group col-4">
+                            <div class="form-group col-3">
                                 <label for="referencia">Referência:</label>
                                 <input type="text" id="referencia" class="form-control" name="referencia" placeholder="ex: colégio souza" value="<?= $m->REFERENCIA ?>">
                             </div>
 
-                            <div class="form-group col-4">
+                            <div class="form-group col-3">
+                                <label for="complemento">Complemento:</label>
+                                <input type="text" id="complemento" class="form-control" name="complemento" placeholder="ex: casa, apt" value="<?= $m->COMPLEMENTO ?>">
+                            </div>
+
+                            <div class="form-group col-2">
                                 <label for="cep">CEP:</label>
                                 <input type="text" id="cep" maxlength="8" class="form-control" name="cep"  placeholder="ex: 50721230" value="<?= $m->CEP ?>">
                             </div>
                         </div>
 
-                        <input type="submit" class="btn btn-success btn-block float-right">
+                        <input type="submit" name="motoboy-editar" value="Confirmar Alteração" class="btn btn-success btn-block float-right">
                     </div>
                 </div>
             </div>

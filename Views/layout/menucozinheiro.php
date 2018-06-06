@@ -19,9 +19,9 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="/../cliente/cli_form.php">Cliente</a>
                             <a class="dropdown-item" href="/../cozinheiro/coz_form.php">Cozinheiro</a>
-                            <a class="dropdown-item" href="/../cozinheiro/gar_form.php">Garcom</a>
-                            <a class="dropdown-item" href="/../cozinheiro/mot_form.php">MotoBoy</a>
-                            <a class="dropdown-item" href="/../cozinheiro/mesa_form.php">Mesa</a>
+                            <a class="dropdown-item" href="/../garcom/gar_form.php">Garcom</a>
+                            <a class="dropdown-item" href="/../motoboy/mot_form.php">MotoBoy</a>
+                            <a class="dropdown-item" href="/../mesa/mesa_form.php">Mesa</a>
                             <a class="dropdown-item" href="/../produto/prod_form.php">Produto</a>
                             <a class="dropdown-item" href="/../endereco/end_form.php">Endereço</a>
                         </div>
