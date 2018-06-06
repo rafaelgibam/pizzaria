@@ -50,7 +50,7 @@ class ProdutoController
 
     }
 
-    public function update($id, $nome, $descricao, $preco, $altura, $comprimento, $largura, $peso, $estado, $fatia, $borda, $cozinheiroid)
+    public function update($id, $nome, $descricao, $preco, $altura, $comprimento, $largura, $peso, $estado, $fatia, $borda, $cozinheiroid, $qtd)
     {
         $this->p->setId($id);
         $this->p->setNome($nome);
@@ -63,14 +63,15 @@ class ProdutoController
         $this->p->setEstado($estado);
         $this->p->setFatia($fatia);
         $this->p->setBorda($borda);
+        $this->p->setQtd($qtd);
 
         $this->co->setId($cozinheiroid);
         $this->p->setCozinheiro($this->co);
 
         if($this->p->getNome() != null && $this->p->getCozinheiro() != null
             && $this->p->getQtd() != null && $this->p->getPreco() != null){
-            $this->pdao->insert($this->p);
-            return header("location: prod_buscar.php?msg=editado");
+            $this->pdao->update($this->p);
+            return header("location: prod_buscar.php?msg=alterado");
         }else{
             return header("location: prod_editar.php?e={$this->p->getId()}&msg=erro");
         }

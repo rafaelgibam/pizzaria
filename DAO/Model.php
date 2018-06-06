@@ -48,6 +48,7 @@ abstract class Model
     public function findProduct($nome){
         $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE NOME LIKE ? OR DESCRICAO LIKE ?");
         $stmt->bindValue(1, "%" . $nome . "%");
+        $stmt->bindValue(2, "%" . $nome . "%");
         $stmt->execute();
         return $stmt->fetchAll();
     }

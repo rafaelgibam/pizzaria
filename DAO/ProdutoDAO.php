@@ -37,7 +37,7 @@ class ProdutoDAO extends Model implements ICrud
                                                  WHERE ID = ?");
 
         $stmt->bindValue(1, $obj->getNome());
-        $stmt->bindValue(2, $obj->geDescricao());
+        $stmt->bindValue(2, $obj->getDescricao());
         $stmt->bindValue(3, $obj->getPreco());
         $stmt->bindValue(4, $obj->getAltura());
         $stmt->bindValue(5, $obj->getComprimento());
