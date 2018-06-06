@@ -40,6 +40,7 @@
                             <a class="dropdown-item" href="/../motoboy/mot_buscar.php">MotoBoy</a>
                             <a class="dropdown-item" href="/../endereco/end_buscar.php">Endereço</a>
                             <a class="dropdown-item" href="/../produto/prod_buscar.php">Produto</a>
+                            <a class="dropdown-item" href="/../mesa/mesa_buscar.php">Mesa</a>
                         </div>
                     </div>
                 </li>

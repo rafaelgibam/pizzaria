@@ -51,7 +51,7 @@ class MesaController
     }
 
     public function find($id){
-        $this->mdao->find($id);
+       return $this->mdao->find($id);
     }
 
     public function findAll(){
