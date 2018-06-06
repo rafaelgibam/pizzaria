@@ -15,11 +15,11 @@
                     <!---  ID LOGRADOURO NUMERO COMPLEMENTO BAIRRO MUNICIPIO UF PAIS REFERENCIA CEP--->
                     <div class="form-row">
                         <div class="form-group col-5">
-                            <label for="logradouro">Logradouro:</label>
+                            <label for="logradouro">Logradouro(Obrigatório):</label>
                             <input type="text" id="logradouro" class="form-control" name="logradouro" placeholder="Rua exemplo">
                         </div>
                         <div class="form-group col-2">
-                            <label for="numero">Número:</label>
+                            <label for="numero">Número(Obrigatório):</label>
                             <input type="text" id="numero" maxlength="8" class="form-control" name="numero"  placeholder="1111">
                         </div>
                         <div class="form-group col-2">

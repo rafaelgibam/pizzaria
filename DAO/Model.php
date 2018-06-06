@@ -44,4 +44,11 @@ abstract class Model
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+    public function findProduct($nome){
+        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE NOME LIKE ? OR DESCRICAO LIKE ?");
+        $stmt->bindValue(1, "%" . $nome . "%");
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }

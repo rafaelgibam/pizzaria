@@ -76,6 +76,10 @@ class ProdutoController
         }
     }
 
+    public function buscarPorNome($nome){
+        return $this->pdao->findProduct($nome);
+    }
+
     public function findAll()
     {
         return $this->pdao->findAll();
