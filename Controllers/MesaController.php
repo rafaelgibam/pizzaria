@@ -36,7 +36,6 @@ class MesaController
         $this->m->setLargura(str_replace(",",".",$largura));
         $this->m->setEstado($estado);
 
-
         if($this->m->getNome() != null && $this->m->getNumero() != null){
             $this->mdao->insert($this->m);
             return header("location: mesa_form.php?msg=salvo");

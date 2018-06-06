@@ -85,7 +85,7 @@ class GarcomController
             $this->gdao->update($this->g);
             return header("location: gar_buscar.php?msg=alterado");
         }else{
-            return header("location: gar_editar.php?msg=erro");
+            return header("location: gar_editar.php?e={$this->g->getId()}msg=erro");
         }
     }
 

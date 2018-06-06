@@ -16,6 +16,7 @@ class CozinheiroDAO extends Model implements ICrud
                                                                             `NUM_FIXO`,`NUM_CELULAR`, SALARIO, DATA_ADMISSAO, `ESTADO`,
                                                                             `LOGRADOURO`, `NUMERO`, `COMPLEMENTO`, `BAIRRO`, `MUNICIPIO`, `UF`, `PAIS`, `REFERENCIA`, `CEP` )
                                                                              VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+
         $stmt->bindValue(1, $obj->getCpf());
         $stmt->bindValue(2, $obj->getRg());
         $stmt->bindValue(3, $obj->getNome());
@@ -44,12 +45,11 @@ class CozinheiroDAO extends Model implements ICrud
     {
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
                                                  SET CPF = ?, RG = ?, NOME = ?, SEXO = ?, DATA_NASC = ?, NUM_FIXO = ?,
-                                                 NUM_CELULAR = ?, SALARIO = ?, DATA_ADMISSAO = ?, ESTADO = ?, LOGRADOURO = ?,
+                                                 NUM_CELULAR = ?, SALARIO = ?, ESTADO = ?, LOGRADOURO = ?,
                                                  NUMERO = ?, COMPLEMENTO = ?, BAIRRO = ?, MUNICIPIO = ?, UF = ?, PAIS = ?, 
                                                  REFERENCIA = ?, CEP = ?
                                                  WHERE ID = ?");
-
-
+        
         $stmt->bindValue(1, $obj->getCpf());
         $stmt->bindValue(2, $obj->getRg());
         $stmt->bindValue(3, $obj->getNome());
@@ -58,18 +58,17 @@ class CozinheiroDAO extends Model implements ICrud
         $stmt->bindValue(6, $obj->getNumfixo());
         $stmt->bindValue(7, $obj->getNumcel());
         $stmt->bindValue(8, $obj->getSalario());
-        $stmt->bindValue(9, $obj->getDtadmissao());
-        $stmt->bindValue(10, $obj->getEstado());
-        $stmt->bindValue(11, $obj->getLogradouro());
-        $stmt->bindValue(12, $obj->getNumero());
-        $stmt->bindValue(13, $obj->getComplemento());
-        $stmt->bindValue(14, $obj->getBairro());
-        $stmt->bindValue(15, $obj->getMunicipio());
-        $stmt->bindValue(16, $obj->getUf());
-        $stmt->bindValue(17, $obj->getPais());
-        $stmt->bindValue(18, $obj->getReferencia());
-        $stmt->bindValue(19, $obj->getCep());
-        $stmt->bindValue(20, $obj->getId());
+        $stmt->bindValue(9, $obj->getEstado());
+        $stmt->bindValue(10, $obj->getLogradouro());
+        $stmt->bindValue(11, $obj->getNumero());
+        $stmt->bindValue(12, $obj->getComplemento());
+        $stmt->bindValue(13, $obj->getBairro());
+        $stmt->bindValue(14, $obj->getMunicipio());
+        $stmt->bindValue(15, $obj->getUf());
+        $stmt->bindValue(16, $obj->getPais());
+        $stmt->bindValue(17, $obj->getReferencia());
+        $stmt->bindValue(18, $obj->getCep());
+        $stmt->bindValue(19, $obj->getId());
 
         $stmt->execute();
         $stmt->closeCursor();

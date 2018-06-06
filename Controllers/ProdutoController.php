@@ -67,7 +67,13 @@ class ProdutoController
         $this->co->setId($cozinheiroid);
         $this->p->setCozinheiro($this->co);
 
-        $this->pdao->insert($this->p);
+        if($this->p->getNome() != null && $this->p->getCozinheiro() != null
+            && $this->p->getQtd() != null && $this->p->getPreco() != null){
+            $this->pdao->insert($this->p);
+            return header("location: prod_buscar.php?msg=editado");
+        }else{
+            return header("location: prod_editar.php?e={$this->p->getId()}&msg=erro");
+        }
     }
 
     public function findAll()

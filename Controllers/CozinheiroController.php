@@ -88,7 +88,7 @@ class CozinheiroController
             $this->codao->update($this->co);
             return header("location: coz_buscar.php?msg=alterado");
         }else{
-            return header("location: coz_editar.php?msg=erro");
+            return header("location: coz_editar.php?e={$this->co->getId()}&msg=erro");
         }
     }
 

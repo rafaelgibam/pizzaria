@@ -80,7 +80,7 @@ class MotoBoyController
             $this->mdao->update($this->m);
             return header("location: mot_buscar.php?msg=alterado");
         }else{
-            return header("location: mot_editar.php?msg=erro");
+            return header("location: mot_editar.php?e={$this->m->getId()}msg=erro");
         }
     }
 
