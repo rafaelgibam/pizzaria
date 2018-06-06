@@ -38,7 +38,7 @@
                             <a class="dropdown-item" href="/../cozinheiro/coz_buscar.php">Cozinheiro</a>
                             <a class="dropdown-item" href="/../garcom/gar_buscar.php">Garcom</a>
                             <a class="dropdown-item" href="/../motoboy/mot_buscar.php">MotoBoy</a>
-                            <a class="dropdown-item" href="/../endereco/end_buscar.php">Endereçp</a>
+                            <a class="dropdown-item" href="/../endereco/end_buscar.php">Endereço</a>
                             <a class="dropdown-item" href="/../cozinheiro/todos_buscar.php">Buscar Todos</a>
                         </div>
                     </div>

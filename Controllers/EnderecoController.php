@@ -44,8 +44,9 @@ class EnderecoController
         }
     }
 
-    public function update($id ,$logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia, $cep)
+    public function update($id ,$logradouro, $numero, $complemento, $bairro, $municipio, $uf, $pais, $referencia, $cep, $clienteid)
     {
+
         $this->e->setId($id);
         $this->e->setLogradouro($logradouro);
         $this->e->setNumero($numero);
@@ -57,7 +58,19 @@ class EnderecoController
         $this->e->setReferencia($referencia);
         $this->e->setCep($cep);
 
-        $this->edao->update($this->e);
+        $this->c->setId($clienteid);
+        $this->e->setCliente($this->c);
+
+        if($this->e->getLogradouro() != null && $this->e->getNumero() != null && $this->e->getMunicipio() != null && $this->c->getId() != null){
+            $this->edao->update($this->e);
+            return header("location: end_buscar.php?msg=alterado");
+        }else{
+            return header("location: end_editar.php?e={$this->e->getId()}&msg=erro");
+        }
+    }
+
+    public function buscarPorEndereco($end){
+        return $this->edao->findEndress($end);
     }
 
     public function findAll()

@@ -33,7 +33,15 @@ abstract class Model
           $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE NOME LIKE ? OR CPF LIKE ?");
           $stmt->bindValue(1, "%" . $nome . "%");
           $stmt->bindValue(2, "%". $nome ."%");
+          $stmt->bindValue(3, "%" . $nome . "%");
           $stmt->execute();
           return $stmt->fetchAll();
+    }
+
+    public function findEndress($endereco){
+        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE LOGRADOURO LIKE ?");
+        $stmt->bindValue(1, "%" . $endereco . "%");
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 }
