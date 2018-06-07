@@ -4,6 +4,7 @@
     <list default="true" id="c7147cad-035d-4aea-b56a-0fd49f667fde" name="Default" comment="">
 <<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/Controllers/CozinheiroController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/CozinheiroController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/GarcomController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/GarcomController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/MotoBoyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/MotoBoyController.php" afterDir="false" />
@@ -19,6 +20,8 @@
 =======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,12 +36,17 @@
         <entry file="file://$PROJECT_DIR$/Views/motoboy/mot_buscar.php">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <state relative-caret-position="311">
               <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
 =======
             <state relative-caret-position="986">
               <caret line="58" column="25" lean-forward="false" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
               <folding />
+>>>>>>> Stashed changes
+=======
+            <state relative-caret-position="504">
+              <caret line="96" column="29" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
 >>>>>>> Stashed changes
             </state>
           </provider>
@@ -206,6 +214,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -256,10 +265,13 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< Updated upstream
       <pane id="Scope" />
 <<<<<<< Updated upstream
 =======
       <pane id="Scratches" />
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     </panes>
   </component>
@@ -320,8 +332,13 @@
       <workItem from="1528231218017" duration="2719000" />
       <workItem from="1528246888473" duration="225000" />
       <workItem from="1528247185330" duration="440000" />
+<<<<<<< Updated upstream
 =======
       <workItem from="1528289258982" duration="595000" />
+>>>>>>> Stashed changes
+=======
+      <workItem from="1528250412647" duration="600000" />
+      <workItem from="1528336752196" duration="267000" />
 >>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Alteracoes no menu do cozinheiro.">
@@ -343,10 +360,15 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="97037000" />
+=======
+    <option name="totallyTimeSpent" value="97904000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="692" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22547585" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -870,6 +892,7 @@
     <entry file="file://$PROJECT_DIR$/Views/motoboy/mot_buscar.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <state relative-caret-position="311">
           <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
 =======
@@ -886,6 +909,10 @@
             <marker date="1527542464620" expanded="true" signature="766:828" ph="SELECT * FRO... $" />
             <marker date="1527542464620" expanded="true" signature="766:831" ph="SELECT * FRO... $" />
           </folding>
+>>>>>>> Stashed changes
+=======
+        <state relative-caret-position="504">
+          <caret line="96" column="29" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
 >>>>>>> Stashed changes
         </state>
       </provider>
