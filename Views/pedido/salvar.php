@@ -9,7 +9,6 @@ if(isset($_POST['abrirpedido'])){
     $p->insert(
         $_POST['numero'],
         $_POST['dtabertura'],
-        $_POST['dtfechado'],
         $_POST['estado'],
         $_POST['total'],
         $_POST['obs'],

@@ -32,8 +32,8 @@
                     <div class="card-body">
                         <div class="form-row">
                           <div class="form-group col-4">
-                            <label for="numero">Número:</label>
-                            <input type="text" name="numero" id="numero" class="form-control">
+                            <label for="numerolb">Número:</label>
+                            <input type="number" name="numero" id="numerolb" readonly class="form-control" value="<?= rand(1,10000000) ?>">
                           </div>
 
                           <div class="form-group col-4">
@@ -92,15 +92,15 @@
                               <label for="produto">Produto(Obrigatório):</label>
                               <select name="produtoid" id="produto" class="form-control">
                                   <?php foreach ($pc->findAll() as $produto):?>
-                                      <option value="<?= $produto->ID ?>" id="preco"><?=  $produto->NOME  . " - " . "R$ " . "<p>". $produto->PRECO . "</p>" ?></option>
+                                      <option value="<?= $produto->ID ?>"><?=  $produto->NOME  . " - " . "R$ " . $produto->PRECO  ?></option>
+                                      <input type="number" id="preco" hidden value="<?= $produto->PRECO ?>">
                                   <?php endforeach;?>
                               </select>
                           </div>
 
                           <div class="form-group col-4">
-
-                            <label for="total">Total:</label>
-                            <input type="number" class="form-control" id="total" name="total" value="0" disabled>
+                            <label for="totallb">Total:</label>
+                            <input type="number" class="form-control" id="totallb" name="total" value="0" readonly>
                           </div>
 
                         </div>
