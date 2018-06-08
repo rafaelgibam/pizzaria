@@ -24,6 +24,17 @@ if($msg != null){
             </div>";
             break;
 
+        case "fechado":
+            echo "<div class=\"alert alert-info\" role=\"alert\">
+                        Pedido fechado com Sucesso!
+            </div>";
+            break;
+
+        case "aberto":
+            echo "<div class=\"alert alert-success\" role=\"alert\">
+                        Pedido Aberto com Sucesso!
+            </div>";
+            break;
     }
 }
 

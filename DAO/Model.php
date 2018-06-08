@@ -51,4 +51,11 @@ abstract class Model
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+    public function findPedido($numero){
+        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE NUMERO LIKE ?");
+        $stmt->bindValue(1, "%" . $numero . "%");
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }

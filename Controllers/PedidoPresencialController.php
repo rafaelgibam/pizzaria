@@ -59,14 +59,65 @@ class PedidoPresencialController
 
         if($this->p->getNumero() != null && $this->p->getDtabertura() != null && $this->p->getTotal() != null){
             $this->pdao->insert($this->p);
-            return header("location: ped_abrir.php?msg=salvo");
+            return header("location: ped_abrir.php?msg=aberto");
         }else{
             return header("location: ped_abrir.php?msg=erro");
         }
 
     }
 
-    public function update(){
+    public function update($id, $numero, $dtabertura, $estado, $total, $obs, $garcomid, $mesaid, $clienteid, $produtoid){
 
+        $this->p->setId($id);
+        $this->p->setNumero($numero);
+        $this->p->setDtabertura($dtabertura);
+        $this->p->setEstado($estado);
+        $this->p->setTotal($total);
+        $this->p->setObs($obs);
+
+        $this->g->setId($garcomid);
+        $this->p->setGarcom($this->g);
+
+        $this->m->setId($mesaid);
+        $this->p->setMesa($this->m);
+
+        $this->c->setId($clienteid);
+        $this->p->setCliente($this->c);
+
+        $this->pr->setId($produtoid);
+        $this->p->setProduto($this->pr);
+
+        if($this->p->getNumero() != null && $this->p->getDtabertura() != null && $this->p->getTotal() != null){
+            $this->pdao->update($this->p);
+            return header("location: ped_buscar.php?msg=alterado");
+        }else{
+            return header("location: ped_editar.php?msg=erro");
+        }
+
+    }
+
+    public function fecharPedido($id){
+        $this->p->setId($id);
+        $this->p->setEstado(0);
+        $this->p->setDtfechamento(date("Y-m-d"));
+
+        if($this->p->getDtfechamento() != null){
+            $this->pdao->fecharPedido($this->p);
+            return header("location: ped_fechar.php?msg=fechado");
+        }else{
+            return header("location: ped_fechar.php?msg=erro");
+        }
+    }
+
+    public function find($id){
+        return $this->pdao->find($id);
+    }
+
+    public function findAll(){
+        return $this->pdao->findAll();
+    }
+
+    public function buscarPorNumero($numero){
+        return $this->pdao->findPedido($numero);
     }
 }

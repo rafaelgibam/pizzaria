@@ -3,6 +3,7 @@
 
 <?php
 $ppc = new \Controllers\PedidoPresencialController();
+$cc = new \Controllers\ClienteController();
 
 if($_SESSION['tipo'] == "garcom"){
     include __DIR__ . "/../layout/menugarcom.php";
@@ -18,6 +19,10 @@ if($_SESSION['tipo'] == "cozinheiro"){
 
 if(isset($_GET['d']) && $_GET['d'] != null){
     $mc->delete($_GET['d']);
+}
+
+if(isset($_GET['p']) && $_GET['p'] == "fechar" && isset($_GET['id']) &&  $_GET['id'] != null){
+    $ppc->fecharPedido($_GET['id']);
 }
 
 ?>
@@ -46,31 +51,30 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                 <thead class="thead-dark">
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">NOME</th>
-                    <th scope="col">CPF</th>
-                    <th scope="col">RG</th>
-                    <th scope="col">Estado</th>
+                    <th scope="col">NÚMERO</th>
+                    <th scope="col">DATA ABERTURA</th>
+                    <th scope="col">ESTADO</th>
+                    <th scope="col">CLIENTE</th>
                     <th scope="col">Ação</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php if(isset($_GET['b']) && $_GET['b'] != null):?>
-                    <?php foreach( $ppc->buscarPorNome($_GET['b']) as $clike ): ?>
+                    <?php foreach( $ppc->buscarPorNumero($_GET['b']) as $clike ): ?>
 
                         <?php if($clike != null){ ?>
                             <tr>
                                 <th scope="row"><?= $clike->ID ?></th>
-                                <td><?= $clike->NOME ?></td>
-                                <td><?= $clike->CPF ?></td>
-                                <td><?= $clike->RG ?></td>
-                                <td><?= ($clike->ESTADO == 1) ? "Ativo" : "Desativado" ?></td>
+                                <td><?= $clike->NUMERO ?></td>
+                                <td><?= $clike->DATA_ABERTURA ?></td>
+                                <td><?= ($clike->ESTADO == 1) ? "ABERTO" : "FECHADO" ?></td>
+                                <td><?= $cc->find($clike->CLIENTE_ID)->NOME ?></td>
                                 <td>
-                                    <a href="/pedido/?e=<?= $clike->ID ?>">
-                                        <i  style="color: blue; text-decoration: none;" class="material-icons">border_color</i>&nbsp;&nbsp;
+                                    <a href="/pedido/ped_fechar.php?p=fechar&id=<?= $c->ID ?>" class="btn btn-danger btn-sm">
+                                        <i class="material-icons">pause_circle_filled</i>
                                     </a>
-                                    <a href="?d=<?= $clike->ID ?>&msg=deletado">
-                                        <i style="color: red; text-decoration: none; font-size: 28px;" class="material-icons">delete</i>
-                                    </a>
+                                    <a href="" class="btn btn-primary btn-sm"><i class="material-icons">search</i></a>
+                                    <a href="" class="btn btn-info btn-sm"><i class="material-icons">border_color</i></a>
                                 </td>
                             </tr>
                         <?php } else { echo "Não conseguimos encontrar, Tente novamente!"; } ?>
@@ -78,21 +82,19 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                     <?php endforeach; ?>
 
                 <?php else: ?>
-                    <?php foreach ($mc->findAll() as $c): ?>
+                    <?php foreach ($ppc->findAll() as $c):?>
                         <tr>
                             <th scope="row"><?= $c->ID ?></th>
-                            <td><?= $c->NOME ?></td>
-                            <td><?= $c->CPF ?></td>
-                            <td><?= $c->RG ?></td>
-                            <td><?= ($c->ESTADO == 1) ? "Ativo" : "Desativado" ?></td>
+                            <td><?= $c->NUMERO ?></td>
+                            <td><?= $c->DATA_ABERTURA ?></td>
+                            <td><?= ($c->ESTADO == 1) ? "ABERTO" : "FECHADO"?></td>
+                            <td><?= $cc->find($c->CLIENTE_ID)->NOME ?></td>
                             <td>
-                                <a href="/pedido/ped_editar.php?e=<?= $c->ID ?>">
-                                    <i  style="color: blue; text-decoration: none;" class="material-icons">border_color</i>
-                                    &nbsp;&nbsp;
+                                <a href="/pedido/ped_fechar.php?p=fechar&id=<?= $c->ID ?>" class="btn btn-danger btn-sm">
+                                    <i class="material-icons">pause_circle_filled</i>
                                 </a>
-                                <a href="?d=<?= $c->ID ?>">
-                                    <i style="color: red; text-decoration: none; font-size: 28px;" class="material-icons">delete</i>
-                                </a>
+                                <a href="" class="btn btn-primary btn-sm"><i class="material-icons">search</i></a>
+                                <a href="" class="btn btn-info btn-sm"><i class="material-icons">border_color</i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

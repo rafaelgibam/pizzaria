@@ -2,22 +2,22 @@
 <?php include __DIR__ . "/../layout/head.php"; ?>
 
 <?php
-    $cc = new \Controllers\ClienteController();
-    $gc = new \Controllers\GarcomController();
-    $mc = new \Controllers\MesaController();
-    $pc = new \Controllers\ProdutoController();
+$cc = new \Controllers\ClienteController();
+$gc = new \Controllers\GarcomController();
+$mc = new \Controllers\MesaController();
+$pc = new \Controllers\ProdutoController();
 
-    if($_SESSION['tipo'] == "garcom"){
-        include __DIR__ . "/../layout/menugarcom.php";
-    }
+if($_SESSION['tipo'] == "garcom"){
+    include __DIR__ . "/../layout/menugarcom.php";
+}
 
-    if($_SESSION['tipo'] == "motoboy"){
-        include __DIR__ . "/../layout/menugarcom.php";
-    }
+if($_SESSION['tipo'] == "motoboy"){
+    include __DIR__ . "/../layout/menugarcom.php";
+}
 
-    if($_SESSION['tipo'] == "cozinheiro"){
-        include __DIR__ . "/../layout/menucozinheiro.php";
-    }
+if($_SESSION['tipo'] == "cozinheiro"){
+    include __DIR__ . "/../layout/menucozinheiro.php";
+}
 
 ?>
 
@@ -32,15 +32,15 @@
                     <h5 class="card-header">Abertura de Pedido</h5>
                     <div class="card-body">
                         <div class="form-row">
-                          <div class="form-group col-4">
-                            <label for="numerolb">Número:</label>
-                            <input type="number" name="numero" id="numerolb" readonly class="form-control" value="<?= rand(1,10000000) ?>">
-                          </div>
+                            <div class="form-group col-4">
+                                <label for="numerolb">Número:</label>
+                                <input type="number" name="numero" id="numerolb" readonly class="form-control" value="<?= rand(1,10000000) ?>">
+                            </div>
 
-                          <div class="form-group col-4">
-                            <label for="dtabertura">Data Abertura:</label>
-                            <input type="date" name="dtabertura" id="dtabertura" class="form-control">
-                          </div>
+                            <div class="form-group col-4">
+                                <label for="dtabertura">Data Abertura:</label>
+                                <input type="date" name="dtabertura" id="dtabertura" class="form-control">
+                            </div>
                         </div>
 
                         <div class="form-row">
@@ -48,7 +48,7 @@
                                 <label for="cliente">Cliente(Obrigatório):</label>
                                 <select name="clienteid" id="cliente" class="form-control">
                                     <?php foreach ($cc->findAll() as $cliente):?>
-                                    <option value="<?= $cliente->ID ?>"><?= $cliente->NOME . " - ". $cliente->CPF ?></option>
+                                        <option value="<?= $cliente->ID ?>"><?= $cliente->NOME . " - ". $cliente->CPF ?></option>
                                     <?php endforeach;?>
                                 </select>
                             </div>
@@ -75,33 +75,32 @@
 
                         <div class="form-row">
 
-                          <div class="form-group col-4">
-                            <label for="qtd">Qtd. Produto(Obrigatório):</label>
-                            <input type="number" name="qtdprod" id="qtd" class="form-control">
-                          </div>
+                            <div class="form-group col-4">
+                                <label for="qtd">Qtd. Produto(Obrigatório):</label>
+                                <input type="number" name="qtdprod" id="qtd" class="form-control">
+                            </div>
 
-                          <div class="form-group col-4">
-                              <label for="produto">Produto(Obrigatório):</label>
-                              <select name="produtoid" id="produto" class="form-control">
-                                  <?php foreach ($pc->findAll() as $produto):?>
-                                      <option value="<?= $produto->ID ?>"><?=  $produto->NOME  . " - " . "R$ " . $produto->PRECO  ?></option>
-                                      <input type="number" id="preco" hidden value="<?= $produto->PRECO ?>">
-                                  <?php endforeach;?>
-                              </select>
-                          </div>
+                            <div class="form-group col-4">
+                                <label for="produto">Produto(Obrigatório):</label>
+                                <select name="produtoid" id="produto" class="form-control">
+                                    <?php foreach ($pc->findAll() as $produto):?>
+                                        <option value="<?= $produto->ID ?>"><?=  $produto->NOME  . " - " . "R$ " . $produto->PRECO  ?></option>
+                                        <input type="number" id="preco" hidden value="<?= $produto->PRECO ?>">
+                                    <?php endforeach;?>
+                                </select>
+                            </div>
 
-                          <div class="form-group col-4">
-                            <label for="totallb">Total:</label>
-                            <input type="number" class="form-control" id="totallb" name="total" value="0" readonly>
-                          </div>
-
+                            <div class="form-group col-4">
+                                <label for="totallb">Total:</label>
+                                <input type="number" class="form-control" id="totallb" name="total" value="0" readonly>
+                            </div>
                         </div>
 
                         <div class="form-row">
-                          <div class="form-group col-12">
-                            <label for="obs">Observações:</label>
-                            <textarea name="obs" id="obs" class="form-control" rows="8" cols="80"></textarea>
-                          </div>
+                            <div class="form-group col-12">
+                                <label for="obs">Observações:</label>
+                                <textarea name="obs" id="obs" class="form-control" rows="8" cols="80"></textarea>
+                            </div>
                         </div>
 
                         <input type="submit" name="abrirpedido" value="Abrir Pedido" class="btn btn-success btn-block">
@@ -116,3 +115,4 @@
 
 <script type="text/javascript" src="/../assets/js/pedido/pedido.js"></script>
 <?php include __DIR__ . "/../layout/footer.php"; ?>
+A

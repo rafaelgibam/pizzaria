@@ -56,4 +56,17 @@ class PedidoPresencialDAO extends Model implements ICrud
         $stmt->closeCursor();
 
     }
+
+    public function fecharPedido($obj){
+        $stmt = DB::getCon()->prepare("UPDATE {$this->table}
+                                                SET DATA_FECHAMENTO = ?, ESTADO = ?
+                                                WHERE ID = ?");
+
+        $stmt->bindValue(1,$obj->getDtfechamento());
+        $stmt->bindValue(2,$obj->getEstado());
+        $stmt->bindValue(3,$obj->getId());
+
+        $stmt->execute();
+        $stmt->closeCursor();
+    }
 }
