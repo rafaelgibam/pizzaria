@@ -52,7 +52,6 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="/../pedido/ped_abrir.php">Abrir Pedido</a>
                             <a class="dropdown-item" href="/../pedido/ped_fechar.php">Fechar Pedido</a>
-                            <a class="dropdown-item" href="/../pedido/ped_pesquisa.php">Buscar Pedido</a>
                         </div>
                     </div>
                 </li>

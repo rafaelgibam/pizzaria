@@ -15,8 +15,9 @@ class PedidoPresencialDAO extends Model implements ICrud
         // 	ID	NUMERO	DATA_ABERTURA	DATA_FECHAMENTO	ESTADO	TOTAL	OBSERVACOES	GARCOM_ID	MESA_ID	ITEM_PEDIDO_ID	CLIENTE_ID
 
         $stmt = DB::getCon()->prepare("INSERT INTO {$this->table} (`NUMERO`,`DATA_ABERTURA`,`ESTADO`,
-                                                `TOTAL`,`OBSERVACOES`,`GARCOM_ID`, `MESA_ID` ,`PRODUTO_ID` ,`CLIENTE_ID` )
-                                                 VALUES (?,?,?,?,?,?,?,?,?)");
+                                                `TOTAL`,`OBSERVACOES`,`GARCOM_ID`, `MESA_ID`, `PRODUTO_ID`, 
+                                                `CLIENTE_ID`, `QTD_PRODUTO`)
+                                                 VALUES (?,?,?,?,?,?,?,?,?,?)");
 
         $stmt->bindValue(1, $obj->getNumero());
         $stmt->bindValue(2, $obj->getDtabertura());
@@ -27,6 +28,7 @@ class PedidoPresencialDAO extends Model implements ICrud
         $stmt->bindValue(7, $obj->getMesa()->getId());
         $stmt->bindValue(8, $obj->getProduto()->getId());
         $stmt->bindValue(9, $obj->getCliente()->getId());
+        $stmt->bindValue(10, $obj->getQtdprod());
 
         $stmt->execute();
         $stmt->closeCursor();
@@ -37,7 +39,8 @@ class PedidoPresencialDAO extends Model implements ICrud
 
         $stmt = DB::getCon()->prepare("UPDATE {$this->table}
                                                  SET NUMERO = ?, DATA_ABERTURA = ?, ESTADO = ?, TOTAL = ?,
-                                                 OBSERVACOES = ?, GARCOM_ID = ?, MESA_ID = ?, ITEM_PEDIDO_ID = ?, CLIENTE_ID = ?
+                                                 OBSERVACOES = ?, GARCOM_ID = ?, MESA_ID = ?, PRODUTO_ID = ?, 
+                                                 CLIENTE_ID = ?
                                                  WHERE ID = ?");
 
         $stmt->bindValue(1, $obj->getNumero());
@@ -47,7 +50,7 @@ class PedidoPresencialDAO extends Model implements ICrud
         $stmt->bindValue(5, $obj->getObs());
         $stmt->bindValue(6, $obj->getGarcom()->getId());
         $stmt->bindValue(7, $obj->getMesa()->getId());
-        $stmt->bindValue(8, $obj->getItempedido()->getId());
+        $stmt->bindValue(8, $obj->getProduto()->getId());
         $stmt->bindValue(9, $obj->getCliente()->getId());
         $stmt->bindValue(10, $obj->getId());
 

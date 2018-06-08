@@ -2,10 +2,12 @@
 <?php include __DIR__ . "/../layout/head.php"; ?>
 
 <?php
+$ppc = new \Controllers\PedidoPresencialController();
+$pc = new \Controllers\ProdutoController();
 $cc = new \Controllers\ClienteController();
 $gc = new \Controllers\GarcomController();
 $mc = new \Controllers\MesaController();
-$pc = new \Controllers\ProdutoController();
+
 
 if($_SESSION['tipo'] == "garcom"){
     include __DIR__ . "/../layout/menugarcom.php";
@@ -19,6 +21,8 @@ if($_SESSION['tipo'] == "cozinheiro"){
     include __DIR__ . "/../layout/menucozinheiro.php";
 }
 
+$p = $ppc->find($_GET['e']);
+
 ?>
 
 <div class="container">
@@ -26,20 +30,20 @@ if($_SESSION['tipo'] == "cozinheiro"){
         <div class="row">
             <div class="col-md-12 mt-4">
                 <?php include __DIR__ . "/../errors.php"; ?>
-                <input type="number" name="estado" value="1" hidden>
 
                 <div class="card">
-                    <h5 class="card-header">Abertura de Pedido</h5>
+                    <h5 class="card-header">Edição de Pedido</h5>
                     <div class="card-body">
                         <div class="form-row">
                             <div class="form-group col-4">
+                                <input type="number" name="id" value="<?= $_GET['e'] ?>" hidden>
                                 <label for="numerolb">Número:</label>
-                                <input type="number" name="numero" id="numerolb" readonly class="form-control" value="<?= rand(1,10000000) ?>">
+                                <input type="number" id="numerolb" name="numero" class="form-control" value="<?= $p->NUMERO ?>">
                             </div>
 
                             <div class="form-group col-4">
                                 <label for="dtabertura">Data Abertura:</label>
-                                <input type="date" name="dtabertura" id="dtabertura" class="form-control">
+                                <input type="date" name="dtabertura" id="dtabertura" class="form-control" value="<?= $c->DATA_ABERTURA ?>" >
                             </div>
                         </div>
 
@@ -75,12 +79,12 @@ if($_SESSION['tipo'] == "cozinheiro"){
 
                         <div class="form-row">
 
-                            <div class="form-group col-4">
+                            <div class="form-group col-3">
                                 <label for="qtd">Qtd. Produto(Obrigatório):</label>
-                                <input type="number" name="qtdprod" id="qtd" class="form-control">
+                                <input type="number" name="qtdprod" id="qtd" class="form-control" value="<?= $p->QTD_PRODUTO ?>">
                             </div>
 
-                            <div class="form-group col-4">
+                            <div class="form-group col-3">
                                 <label for="produto">Produto(Obrigatório):</label>
                                 <select name="produtoid" id="produto" class="form-control">
                                     <?php foreach ($pc->findAll() as $produto):?>
@@ -90,20 +94,30 @@ if($_SESSION['tipo'] == "cozinheiro"){
                                 </select>
                             </div>
 
-                            <div class="form-group col-4">
+                            <div class="form-group col-3">
                                 <label for="totallb">Total:</label>
-                                <input type="number" class="form-control" id="totallb" name="total" value="0" readonly>
+                                <input type="number" class="form-control" name="total" id="totallb" value="<?= $p->TOTAL ?>">
                             </div>
+
+                            <div class="form-group col-3">
+                                <label for="estado">Estado:</label>
+                                <select name="estado" id="estado" class="form-control">
+                                    <option value="1">ABERTO</option>
+                                    <option value="0">FECHADO</option>
+                                </select>
+                            </div>
+
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-12">
                                 <label for="obs">Observações:</label>
-                                <textarea name="obs" id="obs" class="form-control" rows="8" cols="80"></textarea>
+                                <textarea name="obs" id="obs" class="form-control" rows="8" cols="80"><?= $p->OBSERVACOES ?></textarea>
                             </div>
                         </div>
 
-                        <input type="submit" name="abrirpedido" value="Abrir Pedido" class="btn btn-success btn-block">
+                        <input type="submit" name="editar-pedido" value="Confirmar Alteração" class="btn btn-success btn-block">
+
                     </div>
 
                 </div>
@@ -115,4 +129,3 @@ if($_SESSION['tipo'] == "cozinheiro"){
 
 <script type="text/javascript" src="/../assets/js/pedido/pedido.js"></script>
 <?php include __DIR__ . "/../layout/footer.php"; ?>
-A

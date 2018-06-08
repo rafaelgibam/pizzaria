@@ -18,10 +18,11 @@ if($_SESSION['tipo'] == "cozinheiro"){
 }
 
 if(isset($_GET['d']) && $_GET['d'] != null){
-    $mc->delete($_GET['d']);
+    $ppc->delete($_GET['d']);
 }
 
 if(isset($_GET['p']) && $_GET['p'] == "fechar" && isset($_GET['id']) &&  $_GET['id'] != null){
+
     $ppc->fecharPedido($_GET['id']);
 }
 
@@ -66,15 +67,16 @@ if(isset($_GET['p']) && $_GET['p'] == "fechar" && isset($_GET['id']) &&  $_GET['
                             <tr>
                                 <th scope="row"><?= $clike->ID ?></th>
                                 <td><?= $clike->NUMERO ?></td>
-                                <td><?= $clike->DATA_ABERTURA ?></td>
+                                <td><?= date( "d-m-Y", strtotime($clike->DATA_ABERTURA)) ?></td>
                                 <td><?= ($clike->ESTADO == 1) ? "ABERTO" : "FECHADO" ?></td>
                                 <td><?= $cc->find($clike->CLIENTE_ID)->NOME ?></td>
                                 <td>
-                                    <a href="/pedido/ped_fechar.php?p=fechar&id=<?= $c->ID ?>" class="btn btn-danger btn-sm">
+                                    <a href="/pedido/ped_fechar.php?p=fechar&id=<?= $c->ID ?>" class="btn btn-secondary btn-sm">
                                         <i class="material-icons">pause_circle_filled</i>
                                     </a>
-                                    <a href="" class="btn btn-primary btn-sm"><i class="material-icons">search</i></a>
-                                    <a href="" class="btn btn-info btn-sm"><i class="material-icons">border_color</i></a>
+                                    <a href="/pedido/ped_ver.php?v=<?= $c->ID ?>" class="btn btn-primary btn-sm"><i class="material-icons">search</i></a>
+                                    <a href="/pedido/ped_editar.php?e=<?= $c->ID ?>" class="btn btn-info btn-sm"><i class="material-icons">border_color</i></a>
+                                    <a href="?d=<?= $c->ID ?>" class="btn btn-danger btn-sm"><i class="material-icons">delete</i></a>
                                 </td>
                             </tr>
                         <?php } else { echo "Não conseguimos encontrar, Tente novamente!"; } ?>
@@ -86,15 +88,16 @@ if(isset($_GET['p']) && $_GET['p'] == "fechar" && isset($_GET['id']) &&  $_GET['
                         <tr>
                             <th scope="row"><?= $c->ID ?></th>
                             <td><?= $c->NUMERO ?></td>
-                            <td><?= $c->DATA_ABERTURA ?></td>
+                            <td><?= date( "d-m-Y", strtotime($c->DATA_ABERTURA)) ?></td>
                             <td><?= ($c->ESTADO == 1) ? "ABERTO" : "FECHADO"?></td>
                             <td><?= $cc->find($c->CLIENTE_ID)->NOME ?></td>
                             <td>
-                                <a href="/pedido/ped_fechar.php?p=fechar&id=<?= $c->ID ?>" class="btn btn-danger btn-sm">
+                                <a href="/pedido/ped_fechar.php?p=fechar&id=<?= $c->ID ?>" class="btn btn-secondary btn-sm">
                                     <i class="material-icons">pause_circle_filled</i>
                                 </a>
-                                <a href="" class="btn btn-primary btn-sm"><i class="material-icons">search</i></a>
-                                <a href="" class="btn btn-info btn-sm"><i class="material-icons">border_color</i></a>
+                                <a href="/pedido/ped_ver.php?v=<?= $c->ID ?>" class="btn btn-primary btn-sm"><i class="material-icons">search</i></a>
+                                <a href="/pedido/ped_editar.php?e=<?= $c->ID ?>" class="btn btn-info btn-sm"><i class="material-icons">border_color</i></a>
+                                <a href="?d=<?= $c->ID ?>" class="btn btn-danger btn-sm"><i class="material-icons">delete</i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

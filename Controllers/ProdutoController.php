@@ -77,6 +77,15 @@ class ProdutoController
         }
     }
 
+    public function saidaProduto($id, $qtd){
+        $p = $this->find($id);
+        $newQtd = $p->QTD - $qtd;
+
+        if($newQtd != null){
+            $this->pdao->saidaProduto($id,$newQtd);
+        }
+    }
+
     public function buscarPorNome($nome){
         return $this->pdao->findProduct($nome);
     }

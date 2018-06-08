@@ -36,7 +36,7 @@ class PedidoPresencialController
         $this->c = new Cliente();
     }
 
-    public function insert($numero, $dtabertura, $estado, $total, $obs, $garcomid, $mesaid, $clienteid, $produtoid){
+    public function insert($numero, $dtabertura, $estado, $total, $obs, $garcomid, $mesaid, $clienteid, $produtoid, $qtdprod){
     //ID	NUMERO	DATA_ABERTURA	DATA_FECHAMENTO, ESTADO,	TOTAL	OBSERVACOES	GARCOM_ID	MESA_ID	CLIENTE_ID	PRODUTO_ID
 
         $this->p->setNumero($numero);
@@ -44,6 +44,7 @@ class PedidoPresencialController
         $this->p->setEstado($estado);
         $this->p->setTotal($total);
         $this->p->setObs($obs);
+        $this->p->setQtdprod($qtdprod);
 
         $this->g->setId($garcomid);
         $this->p->setGarcom($this->g);
@@ -59,7 +60,7 @@ class PedidoPresencialController
 
         if($this->p->getNumero() != null && $this->p->getDtabertura() != null && $this->p->getTotal() != null){
             $this->pdao->insert($this->p);
-            return header("location: ped_abrir.php?msg=aberto");
+            return header("location: ped_fechar.php?msg=aberto");
         }else{
             return header("location: ped_abrir.php?msg=erro");
         }
@@ -89,9 +90,9 @@ class PedidoPresencialController
 
         if($this->p->getNumero() != null && $this->p->getDtabertura() != null && $this->p->getTotal() != null){
             $this->pdao->update($this->p);
-            return header("location: ped_buscar.php?msg=alterado");
+            return header("location: ped_fechar.php?msg=alterado");
         }else{
-            return header("location: ped_editar.php?msg=erro");
+            return header("location: ped_editar.php?d={$this->p->getId()}&msg=erro");
         }
 
     }
@@ -107,6 +108,10 @@ class PedidoPresencialController
         }else{
             return header("location: ped_fechar.php?msg=erro");
         }
+    }
+
+    public function delete($id){
+        $this->pdao->delete($id);
     }
 
     public function find($id){

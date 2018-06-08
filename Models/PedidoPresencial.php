@@ -10,6 +10,8 @@ class PedidoPresencial extends Pedido
     private $cliente;
     private $garcom;
     private $produto;
+    private $qtdprod;
+
 
     /**
      * @return mixed
@@ -201,6 +203,22 @@ class PedidoPresencial extends Pedido
     public function setProduto($produto)
     {
         $this->produto = $produto;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getQtdprod()
+    {
+        return $this->qtdprod;
+    }
+
+    /**
+     * @param mixed $qtdprod
+     */
+    public function setQtdprod($qtdprod): void
+    {
+        $this->qtdprod = $qtdprod;
     }
 
 

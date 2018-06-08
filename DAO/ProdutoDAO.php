@@ -53,4 +53,13 @@ class ProdutoDAO extends Model implements ICrud
         $stmt->execute();
         $stmt->closeCursor();
     }
+
+    public function saidaProduto($id, $qtd){
+        $stmt = DB::getCon()->prepare("UPDATE {$this->table} SET QTD = ? WHERE ID = ?");
+        $stmt->bindValue(1, $qtd);
+        $stmt->bindValue(2, $id);
+
+        $stmt->execute();
+        $stmt->closeCursor();
+    }
 }

@@ -35,6 +35,12 @@ if($msg != null){
                         Pedido Aberto com Sucesso!
             </div>";
             break;
+
+        case "pf":
+            echo "<div class=\"alert alert-success\" role=\"alert\">
+                        O Pedido já está fechado!
+            </div>";
+            break;
     }
 }
 
