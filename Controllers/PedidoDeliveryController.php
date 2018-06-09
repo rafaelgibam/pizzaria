@@ -1,19 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rafaelgibam
- * Date: 28/05/2018
- * Time: 13:45
- */
 
 namespace Controllers;
 
-
-use DAO\PedidoPresencialDAO;
+use DAO\PedidoDeliveryDAO;
 use Models\Cliente;
-use Models\Garcom;
-use Models\Mesa;
-use Models\PedidoPresencial;
+use Models\Delivery;
+use Models\MotoBoy;
 use Models\Produto;
 
 class PedidoPresencialController
@@ -22,22 +14,20 @@ class PedidoPresencialController
     private $pdao;
     private $p;
     private $pr;
-    private $g;
     private $m;
     private $c;
 
     public function __construct()
     {
-        $this->pdao = new PedidoPresencialDAO();
-        $this->p = new PedidoPresencial();
+        $this->pdao = new PedidoDeliveryDAO();
+        $this->p = new Delivery();
         $this->pr = new Produto();
-        $this->g = new Garcom();
-        $this->m = new Mesa();
         $this->c = new Cliente();
+        $this->m = new MotoBoy();
     }
 
-    public function insert($numero, $dtabertura, $estado, $total, $obs, $garcomid, $mesaid, $clienteid, $produtoid, $qtdprod){
-    //ID	NUMERO	DATA_ABERTURA	DATA_FECHAMENTO, ESTADO,	TOTAL	OBSERVACOES	GARCOM_ID	MESA_ID	CLIENTE_ID	PRODUTO_ID
+    public function insert($numero, $dtabertura, $estado, $total, $obs, $motoboyid, $clienteid, $produtoid, $qtdprod){
+    //ID	NUMERO	DATA_ABERTURA	DATA_FECHAMENTO, ESTADO,	TOTAL	OBSERVACOES	MOTOBOY_ID CLIENTE_ID	PRODUTO_ID
 
         $this->p->setNumero($numero);
         $this->p->setDtabertura($dtabertura);

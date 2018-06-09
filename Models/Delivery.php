@@ -1,22 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rafaelgibam
- * Date: 17/05/2018
- * Time: 11:57
- */
+
 
 namespace Models;
 
 
-class Delivery
+class Delivery extends Pedido
 {
-    private $id;
+
     private $dtentraga;
     private $precofrete;
     private $motoboy; // Objeto de Motoboy
     private $cliente; // Objeto de Cliente
-    private $pedidodelivery; // Objeto de PedidoDelivery
 
     /**
      * @return mixed
@@ -97,21 +91,5 @@ class Delivery
     {
         $this->cliente = $cliente;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getPedidodelivery()
-    {
-        return $this->pedidodelivery;
-    }
-
-    /**
-     * @param mixed $pedidodelivery
-     */
-    public function setPedidodelivery($pedidodelivery)
-    {
-        $this->pedidodelivery = $pedidodelivery;
-    } // Objeto de PedidoDelivery
 
 }

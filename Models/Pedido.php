@@ -8,7 +8,6 @@ class Pedido
     public $numero;
     public $dtabertura;
     public $dtfechamento;
-    public $itempedido; // objeto de itemPedido
     public $estado;
     public $total;
     public $obs;
@@ -77,21 +76,6 @@ class Pedido
         $this->dtfechamento = $dtfechamento;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getItempedido()
-    {
-        return $this->itempedido;
-    }
-
-    /**
-     * @param mixed $itempedido
-     */
-    public function setItempedido($itempedido)
-    {
-        $this->itempedido = $itempedido;
-    }
 
     /**
      * @return mixed
@@ -118,7 +102,7 @@ class Pedido
     }
 
     /**
-     * @param mixed $valorpedido
+     * @param mixed $total
      */
     public function setTotal($total)
     {
