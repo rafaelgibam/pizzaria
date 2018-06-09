@@ -56,11 +56,17 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="/../cozinheiro/delivery.php" class="nav-link ml-2">Delivery</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link ml-2 dropdown-toggle"
+                           id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Delivery</a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/../delivery/deli_abrir.php">Abrir Pedido</a>
+                            <a class="dropdown-item" href="/../delivery/deli_fechar.php">Fechar Pedido</a>
+                        </div>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a href="/../cozinheiro/relatorio.php" class="nav-link ml-2">Relatório</a>
-                </li>
+
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">

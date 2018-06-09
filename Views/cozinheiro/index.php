@@ -17,6 +17,35 @@
     </div>
 </div>
 
-<h1 class="text-center">Bem Vindo <?php echo $_SESSION['nome']; ?></h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div id="g-clientes"></div>
+        </div>
+        <div class="col-md-6">
+            <div id="g-pedidos"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="g-clientes"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div id="g-clientes"></div>
+        </div>
+        <div class="col-md-6">
+            <div id="g-pedidos"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/../assets/js/graficos/dashboard.js"></script>
 
 <?php include __DIR__ . "/../layout/footer.php"; ?>

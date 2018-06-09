@@ -2,12 +2,9 @@
 <?php include __DIR__ . "/../layout/head.php"; ?>
 
 <?php
-$ppc = new \Controllers\PedidoPresencialController();
-$pc = new \Controllers\ProdutoController();
 $cc = new \Controllers\ClienteController();
-$gc = new \Controllers\GarcomController();
-$mc = new \Controllers\MesaController();
-
+$pc = new \Controllers\ProdutoController();
+$mc = new \Controllers\MotoBoyController();
 
 if($_SESSION['tipo'] == "garcom"){
     include __DIR__ . "/../layout/menugarcom.php";
@@ -21,8 +18,6 @@ if($_SESSION['tipo'] == "cozinheiro"){
     include __DIR__ . "/../layout/menucozinheiro.php";
 }
 
-$p = $ppc->find($_GET['e']);
-
 ?>
 
 <div class="container">
@@ -30,25 +25,23 @@ $p = $ppc->find($_GET['e']);
         <div class="row">
             <div class="col-md-12 mt-4">
                 <?php include __DIR__ . "/../errors.php"; ?>
+                <input type="number" name="estado" value="1" hidden>
 
                 <div class="card">
-                    <h5 class="card-header">Edição de Pedido</h5>
+                    <h5 class="card-header">Abertura de Pedido</h5>
                     <div class="card-body">
                         <div class="form-row">
-                            <div class="form-group col-4">
-                                <input type="number" name="id" value="<?= $_GET['e'] ?>" hidden>
+                            <div class="form-group col-3">
                                 <label for="numerolb">Número:</label>
-                                <input type="number" id="numerolb" name="numero" readonly class="form-control" value="<?= $p->NUMERO ?>">
+                                <input type="number" name="numero" id="numerolb" readonly class="form-control" value="<?= rand(1,10000000) ?>">
                             </div>
 
-                            <div class="form-group col-4">
+                            <div class="form-group col-3">
                                 <label for="dtabertura">Data Abertura:</label>
-                                <input type="date" name="dtabertura" id="dtabertura" class="form-control" value="<?= $c->DATA_ABERTURA ?>" >
+                                <input type="date" name="dtabertura" id="dtabertura" class="form-control">
                             </div>
-                        </div>
 
-                        <div class="form-row">
-                            <div class="form-group col-4">
+                            <div class="form-group col-3">
                                 <label for="cliente">Cliente(Obrigatório):</label>
                                 <select name="clienteid" id="cliente" class="form-control">
                                     <?php foreach ($cc->findAll() as $cliente):?>
@@ -58,20 +51,11 @@ $p = $ppc->find($_GET['e']);
                             </div>
 
 
-                            <div class="form-group col-4">
-                                <label for="garcom">Garcom(Obrigatório):</label>
+                            <div class="form-group col-3">
+                                <label for="garcom">MotoBoy(Obrigatório):</label>
                                 <select name="garcomid" id="garcom" class="form-control">
-                                    <?php foreach ($gc->findAll() as $garcom):?>
-                                        <option value="<?= $garcom->ID ?>"><?= $garcom->NOME . " - ". $garcom->CPF ?></option>
-                                    <?php endforeach;?>
-                                </select>
-                            </div>
-
-                            <div class="form-group col-4">
-                                <label for="mesa">Mesa(Obrigatório):</label>
-                                <select name="mesaid" id="mesa" class="form-control">
-                                    <?php foreach ($mc->findAll() as $mesa):?>
-                                        <option value="<?= $mesa->ID ?>"><?= $mesa->NOME . " - ". $mesa->NUMERO ?></option>
+                                    <?php foreach ($mc->findAll() as $moto):?>
+                                        <option value="<?= $moto->ID ?>"><?= $moto->NOME . " - ". $moto->PLACA ?></option>
                                     <?php endforeach;?>
                                 </select>
                             </div>
@@ -79,12 +63,12 @@ $p = $ppc->find($_GET['e']);
 
                         <div class="form-row">
 
-                            <div class="form-group col-3">
+                            <div class="form-group col-4">
                                 <label for="qtd">Qtd. Produto(Obrigatório):</label>
-                                <input type="number" name="qtdprod" id="qtd" class="form-control" value="<?= $p->QTD_PRODUTO ?>">
+                                <input type="number" name="qtdprod" id="qtd" class="form-control">
                             </div>
 
-                            <div class="form-group col-3">
+                            <div class="form-group col-4">
                                 <label for="produto">Produto(Obrigatório):</label>
                                 <select name="produtoid" id="produto" class="form-control">
                                     <?php foreach ($pc->findAll() as $produto):?>
@@ -94,17 +78,9 @@ $p = $ppc->find($_GET['e']);
                                 </select>
                             </div>
 
-                            <div class="form-group col-3">
+                            <div class="form-group col-4">
                                 <label for="totallb">Total:</label>
-                                <input type="number" class="form-control" name="total" id="totallb" value="<?= $p->TOTAL ?>">
-                            </div>
-
-                            <div class="form-group col-3">
-                                <label for="estado">Estado:</label>
-                                <select name="estado" id="estado" class="form-control">
-                                    <option value="1">ABERTO</option>
-                                    <option value="0">FECHADO</option>
-                                </select>
+                                <input type="number" class="form-control" id="totallb" name="total" value="0" readonly>
                             </div>
 
                         </div>
@@ -112,12 +88,11 @@ $p = $ppc->find($_GET['e']);
                         <div class="form-row">
                             <div class="form-group col-12">
                                 <label for="obs">Observações:</label>
-                                <textarea name="obs" id="obs" class="form-control" rows="8" cols="80"><?= $p->OBSERVACOES ?></textarea>
+                                <textarea name="obs" id="obs" class="form-control" rows="8" cols="80"></textarea>
                             </div>
                         </div>
 
-                        <input type="submit" name="editar-pedido" value="Confirmar Alteração" class="btn btn-success btn-block">
-
+                        <input type="submit" name="abrir-delivery" value="Abrir Pedido" class="btn btn-success btn-block">
                     </div>
 
                 </div>

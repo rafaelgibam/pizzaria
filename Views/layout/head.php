@@ -12,11 +12,17 @@
 
     <link rel="stylesheet" href="/../assets/css/styles.css">
     <!--- <link rel="stylesheet" href="/../assets/js/scripts.js"> -->
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/../assets/icons/ionicons.min.css">
 
-    <!-- JQuery Slim -->
+    <!-- Google Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- Jquery -->
     <script src="/../assets/js/jquery-3.3.1.min.js"></script>
+
+
 
 </head>
