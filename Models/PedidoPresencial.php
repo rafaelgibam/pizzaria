@@ -10,7 +10,6 @@ class PedidoPresencial extends Pedido
     private $cliente;
     private $garcom;
     private $produto;
-    private $qtdprod;
 
 
     /**
@@ -75,22 +74,6 @@ class PedidoPresencial extends Pedido
     public function setDtfechamento($dtfechamento)
     {
         $this->dtfechamento = $dtfechamento;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getItempedido()
-    {
-        return $this->itempedido;
-    }
-
-    /**
-     * @param mixed $itempedido
-     */
-    public function setItempedido($itempedido)
-    {
-        $this->itempedido = $itempedido;
     }
 
     /**

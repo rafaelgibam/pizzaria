@@ -17,8 +17,9 @@
     <link rel="stylesheet" href="/../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/../assets/icons/ionicons.min.css">
 
-    <!-- Google Charts -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Charts JS -->
+    <script src="/assets/js/graficos/chart.js"></script>
+    <script src="/assets/js/graficos/chart.bundle.js"></script>
 
     <!-- Jquery -->
     <script src="/../assets/js/jquery-3.3.1.min.js"></script>

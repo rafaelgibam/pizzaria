@@ -92,7 +92,12 @@
 
                           <div class="form-group col-4">
                             <label for="totallb">Total:</label>
-                            <input type="number" class="form-control" id="totallb" name="total" value="0" readonly>
+                              <div class="input-group">
+                                  <div class="input-group-prepend">
+                                      <div class="input-group-text">R$</div>
+                                  </div>
+                                  <input type="number" class="form-control" id="totallb" name="total" value="0" readonly>
+                              </div>
                           </div>
 
                         </div>

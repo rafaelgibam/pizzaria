@@ -4,11 +4,11 @@ namespace Controllers;
 
 use DAO\PedidoDeliveryDAO;
 use Models\Cliente;
-use Models\Delivery;
 use Models\MotoBoy;
+use Models\PedidoDelivery;
 use Models\Produto;
 
-class PedidoPresencialController
+class PedidoDeliveryController
 {
 
     private $pdao;
@@ -20,27 +20,27 @@ class PedidoPresencialController
     public function __construct()
     {
         $this->pdao = new PedidoDeliveryDAO();
-        $this->p = new Delivery();
+        $this->p = new PedidoDelivery();
         $this->pr = new Produto();
         $this->c = new Cliente();
         $this->m = new MotoBoy();
     }
 
-    public function insert($numero, $dtabertura, $estado, $total, $obs, $motoboyid, $clienteid, $produtoid, $qtdprod){
+    public function insert($numero, $dtabertura, $dtentrega, $estado, $total, $obs, $motoboyid, $clienteid, $produtoid,
+                           $qtdprod, $precofrete){
     //ID	NUMERO	DATA_ABERTURA	DATA_FECHAMENTO, ESTADO,	TOTAL	OBSERVACOES	MOTOBOY_ID CLIENTE_ID	PRODUTO_ID
 
         $this->p->setNumero($numero);
         $this->p->setDtabertura($dtabertura);
+        $this->p->setDtentrega($dtentrega);
         $this->p->setEstado($estado);
         $this->p->setTotal($total);
         $this->p->setObs($obs);
         $this->p->setQtdprod($qtdprod);
+        $this->p->setPrecofrete($precofrete);
 
-        $this->g->setId($garcomid);
-        $this->p->setGarcom($this->g);
-
-        $this->m->setId($mesaid);
-        $this->p->setMesa($this->m);
+        $this->m->setId($motoboyid);
+        $this->p->setMotoboy($this->m);
 
         $this->c->setId($clienteid);
         $this->p->setCliente($this->c);
@@ -50,27 +50,28 @@ class PedidoPresencialController
 
         if($this->p->getNumero() != null && $this->p->getDtabertura() != null && $this->p->getTotal() != null){
             $this->pdao->insert($this->p);
-            return header("location: ped_fechar.php?msg=aberto");
+            return header("location: deli_fechar.php?msg=aberto");
         }else{
-            return header("location: ped_abrir.php?msg=erro");
+            return header("location: deli_abrir.php?msg=erro");
         }
 
     }
 
-    public function update($id, $numero, $dtabertura, $estado, $total, $obs, $garcomid, $mesaid, $clienteid, $produtoid){
+    public function update($id, $numero, $dtabertura, $dtentrega, $estado, $total, $obs, $motoboyid, $clienteid, $produtoid,
+                           $qtdprod, $precofrete){
 
         $this->p->setId($id);
         $this->p->setNumero($numero);
         $this->p->setDtabertura($dtabertura);
+        $this->p->setDtentrega($dtentrega);
         $this->p->setEstado($estado);
         $this->p->setTotal($total);
         $this->p->setObs($obs);
+        $this->p->setQtdprod($qtdprod);
+        $this->p->setPrecofrete($precofrete);
 
-        $this->g->setId($garcomid);
-        $this->p->setGarcom($this->g);
-
-        $this->m->setId($mesaid);
-        $this->p->setMesa($this->m);
+        $this->m->setId($motoboyid);
+        $this->p->setMotoboy($this->m);
 
         $this->c->setId($clienteid);
         $this->p->setCliente($this->c);
@@ -80,9 +81,9 @@ class PedidoPresencialController
 
         if($this->p->getNumero() != null && $this->p->getDtabertura() != null && $this->p->getTotal() != null){
             $this->pdao->update($this->p);
-            return header("location: ped_fechar.php?msg=alterado");
+            return header("location: deli_fechar.php?msg=alterado");
         }else{
-            return header("location: ped_editar.php?d={$this->p->getId()}&msg=erro");
+            return header("location: deli_editar.php?e={$this->p->getId()}&msg=erro");
         }
 
     }
@@ -94,9 +95,9 @@ class PedidoPresencialController
 
         if($this->p->getDtfechamento() != null){
             $this->pdao->fecharPedido($this->p);
-            return header("location: ped_fechar.php?msg=fechado");
+            return header("location: deli_fechar.php?msg=fechado");
         }else{
-            return header("location: ped_fechar.php?msg=erro");
+            return header("location: deli_fechar.php?msg=erro");
         }
     }
 

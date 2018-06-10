@@ -92,7 +92,7 @@ class PedidoPresencialController
             $this->pdao->update($this->p);
             return header("location: ped_fechar.php?msg=alterado");
         }else{
-            return header("location: ped_editar.php?d={$this->p->getId()}&msg=erro");
+            return header("location: ped_editar.php?e={$this->p->getId()}&msg=erro");
         }
 
     }

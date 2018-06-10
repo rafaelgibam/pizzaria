@@ -19,26 +19,28 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
-            <div id="g-clientes"></div>
-        </div>
-        <div class="col-md-6">
-            <div id="g-pedidos"></div>
-        </div>
-    </div>
-
-    <div class="row">
         <div class="col-md-12">
-            <div id="g-clientes"></div>
-        </div>
-    </div>
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h5>Dashboard</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <canvas id="gpedido" width="1200" height="400"></canvas>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <canvas id="gcliente" width="600" height="400"></canvas>
+                        </div>
+                        <div class="col-md-6">
+                            <canvas id="gpedidopizza" width="600" height="400"></canvas>
+                        </div>
+                    </div>
 
-    <div class="row">
-        <div class="col-md-6">
-            <div id="g-clientes"></div>
-        </div>
-        <div class="col-md-6">
-            <div id="g-pedidos"></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -2,11 +2,49 @@
 
 namespace Models;
 
-class PedidoDelivery extends Pedido
+class PedidoDelivery extends Delivery
 {
+    private $motoboy;
+    private $cliente;
+    private $produto;
 
-    public function calculaFrete(Endereco $endereco){
-        // Calcula frete com informações do endereço;
+
+    protected function calculaFrete($cep)
+    {
+        // TODO: Implement calculaFrete() method.
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getDtentrega()
+    {
+        return $this->dtentrega;
+    }
+
+    /**
+     * @param mixed $dtentraga
+     */
+    public function setDtentrega($dtentrega): void
+    {
+        $this->dtentrega = $dtentrega;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrecofrete()
+    {
+        return $this->precofrete;
+    }
+
+    /**
+     * @param mixed $precofrete
+     */
+    public function setPrecofrete($precofrete): void
+    {
+        $this->precofrete = $precofrete;
     }
 
     /**
@@ -20,7 +58,7 @@ class PedidoDelivery extends Pedido
     /**
      * @param mixed $id
      */
-    public function setId($id)
+    public function setId($id): void
     {
         $this->id = $id;
     }
@@ -36,7 +74,7 @@ class PedidoDelivery extends Pedido
     /**
      * @param mixed $numero
      */
-    public function setNumero($numero)
+    public function setNumero($numero): void
     {
         $this->numero = $numero;
     }
@@ -52,7 +90,7 @@ class PedidoDelivery extends Pedido
     /**
      * @param mixed $dtabertura
      */
-    public function setDtabertura($dtabertura)
+    public function setDtabertura($dtabertura): void
     {
         $this->dtabertura = $dtabertura;
     }
@@ -68,25 +106,9 @@ class PedidoDelivery extends Pedido
     /**
      * @param mixed $dtfechamento
      */
-    public function setDtfechamento($dtfechamento)
+    public function setDtfechamento($dtfechamento): void
     {
         $this->dtfechamento = $dtfechamento;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getItempedido()
-    {
-        return $this->itempedido;
-    }
-
-    /**
-     * @param mixed $itempedido
-     */
-    public function setItempedido($itempedido)
-    {
-        $this->itempedido = $itempedido;
     }
 
     /**
@@ -100,9 +122,25 @@ class PedidoDelivery extends Pedido
     /**
      * @param mixed $estado
      */
-    public function setEstado($estado)
+    public function setEstado($estado): void
     {
         $this->estado = $estado;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getQtdprod()
+    {
+        return $this->qtdprod;
+    }
+
+    /**
+     * @param mixed $qtdprod
+     */
+    public function setQtdprod($qtdprod): void
+    {
+        $this->qtdprod = $qtdprod;
     }
 
     /**
@@ -116,7 +154,7 @@ class PedidoDelivery extends Pedido
     /**
      * @param mixed $total
      */
-    public function setTotal($total)
+    public function setTotal($total): void
     {
         $this->total = $total;
     }
@@ -132,12 +170,58 @@ class PedidoDelivery extends Pedido
     /**
      * @param mixed $obs
      */
-    public function setObs($obs)
+    public function setObs($obs): void
     {
         $this->obs = $obs;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getMotoboy()
+    {
+        return $this->motoboy;
+    }
 
+    /**
+     * @param mixed $motoboy
+     */
+    public function setMotoboy($motoboy): void
+    {
+        $this->motoboy = $motoboy;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCliente()
+    {
+        return $this->cliente;
+    }
+
+    /**
+     * @param mixed $cliente
+     */
+    public function setCliente($cliente): void
+    {
+        $this->cliente = $cliente;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProduto()
+    {
+        return $this->produto;
+    }
+
+    /**
+     * @param mixed $produto
+     */
+    public function setProduto($produto): void
+    {
+        $this->produto = $produto;
+    }
 
 
 }

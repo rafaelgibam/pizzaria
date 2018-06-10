@@ -96,7 +96,12 @@ $p = $ppc->find($_GET['e']);
 
                             <div class="form-group col-3">
                                 <label for="totallb">Total:</label>
-                                <input type="number" class="form-control" name="total" id="totallb" value="<?= $p->TOTAL ?>">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">R$</div>
+                                    </div>
+                                    <input type="number" class="form-control" name="total" readonly id="totallb" value="<?= $p->TOTAL ?>">
+                                </div>
                             </div>
 
                             <div class="form-group col-3">

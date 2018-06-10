@@ -31,7 +31,10 @@ if($_SESSION['tipo'] == "cozinheiro"){
                     <h5 class="card-header">Abertura de Pedido</h5>
                     <div class="card-body">
                         <div class="form-row">
-                            <div class="form-group col-3">
+
+                            <input type="number" name="estado" value="1" hidden>
+
+                            <div class="form-group col-2">
                                 <label for="numerolb">Número:</label>
                                 <input type="number" name="numero" id="numerolb" readonly class="form-control" value="<?= rand(1,10000000) ?>">
                             </div>
@@ -42,6 +45,11 @@ if($_SESSION['tipo'] == "cozinheiro"){
                             </div>
 
                             <div class="form-group col-3">
+                                <label for="dtentrega">Data Entrega:</label>
+                                <input type="date" name="dtentrega" id="dtentrega" class="form-control">
+                            </div>
+
+                            <div class="form-group col-4">
                                 <label for="cliente">Cliente(Obrigatório):</label>
                                 <select name="clienteid" id="cliente" class="form-control">
                                     <?php foreach ($cc->findAll() as $cliente):?>
@@ -50,25 +58,35 @@ if($_SESSION['tipo'] == "cozinheiro"){
                                 </select>
                             </div>
 
+                        </div>
+
+                        <div class="form-row">
 
                             <div class="form-group col-3">
-                                <label for="garcom">MotoBoy(Obrigatório):</label>
-                                <select name="garcomid" id="garcom" class="form-control">
+                                <label for="motoboy">MotoBoy(Obrigatório):</label>
+                                <select name="motoboyid" id="motoboy" class="form-control">
                                     <?php foreach ($mc->findAll() as $moto):?>
                                         <option value="<?= $moto->ID ?>"><?= $moto->NOME . " - ". $moto->PLACA ?></option>
                                     <?php endforeach;?>
                                 </select>
                             </div>
-                        </div>
 
-                        <div class="form-row">
+                            <div class="form-group col-2">
+                                <label for="precofrete">Preço Frete:</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">R$</div>
+                                    </div>
+                                    <input type="number" class="form-control" id="precofrete" name="precofrete">
+                                </div>
+                            </div>
 
-                            <div class="form-group col-4">
-                                <label for="qtd">Qtd. Produto(Obrigatório):</label>
+                            <div class="form-group col-2">
+                                <label for="qtd">Qtd.Prod(Obrigatório):</label>
                                 <input type="number" name="qtdprod" id="qtd" class="form-control">
                             </div>
 
-                            <div class="form-group col-4">
+                            <div class="form-group col-3">
                                 <label for="produto">Produto(Obrigatório):</label>
                                 <select name="produtoid" id="produto" class="form-control">
                                     <?php foreach ($pc->findAll() as $produto):?>
@@ -78,11 +96,15 @@ if($_SESSION['tipo'] == "cozinheiro"){
                                 </select>
                             </div>
 
-                            <div class="form-group col-4">
+                            <div class="form-group col-2">
                                 <label for="totallb">Total:</label>
-                                <input type="number" class="form-control" id="totallb" name="total" value="0" readonly>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">R$</div>
+                                    </div>
+                                    <input type="number" class="form-control" id="totallb" name="total" value="0" readonly>
+                                </div>
                             </div>
-
                         </div>
 
                         <div class="form-row">

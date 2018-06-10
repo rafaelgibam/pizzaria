@@ -2,12 +2,10 @@
 <?php include __DIR__ . "/../layout/head.php"; ?>
 
 <?php
-$ppc = new \Controllers\PedidoPresencialController();
+$pdc = new \Controllers\PedidoDeliveryController();
 $pc = new \Controllers\ProdutoController();
 $cc = new \Controllers\ClienteController();
-$gc = new \Controllers\GarcomController();
-$mc = new \Controllers\MesaController();
-
+$mc = new \Controllers\MotoBoyController();
 
 if($_SESSION['tipo'] == "garcom"){
     include __DIR__ . "/../layout/menugarcom.php";
@@ -21,7 +19,7 @@ if($_SESSION['tipo'] == "cozinheiro"){
     include __DIR__ . "/../layout/menucozinheiro.php";
 }
 
-$p = $ppc->find($_GET['v']);
+$p = $pdc->find($_GET['v']);
 
 ?>
 
@@ -44,6 +42,11 @@ $p = $ppc->find($_GET['v']);
                                 <label for="dtabertura">Data Abertura:</label>
                                 <input type="date" disabled id="dtabertura" class="form-control" value="<?= $p->DATA_ABERTURA ?>" >
                             </div>
+
+                            <div class="form-group col-4">
+                                <label for="dtentrega">Data Abertura:</label>
+                                <input type="date" disabled id="dtentrega" class="form-control" value="<?= $p->DATA_ENTREGA ?>" >
+                            </div>
                         </div>
 
                         <div class="form-row">
@@ -54,13 +57,18 @@ $p = $ppc->find($_GET['v']);
 
 
                             <div class="form-group col-4">
-                                <label for="garcom">Garcom(Obrigatório):</label>
-                                <input type="text" id="garcom" class="form-control" disabled value="<?= $gc->find($p->GARCOM_ID)->NOME ?>">
+                                <label for="motoboy">MotoBoy(Obrigatório):</label>
+                                <input type="text" id="motoboy" class="form-control" disabled value="<?= $mc->find($p->MOTOBOY_ID)->NOME ?>">
                             </div>
 
                             <div class="form-group col-4">
-                                <label for="mesa">Mesa(Obrigatório):</label>
-                                <input type="text" id="mesa" class="form-control" disabled value="<?= $mc->find($p->MESA_ID)->NOME ?>">
+                                <label for="frete">Preço Frete(Obrigatório):</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">R$</div>
+                                    </div>
+                                    <input type="number" id="frete" class="form-control" disabled value="<?= $p->PRECO_FRETE ?>">
+                                </div>
                             </div>
                         </div>
 
@@ -68,7 +76,7 @@ $p = $ppc->find($_GET['v']);
 
                             <div class="form-group col-4">
                                 <label for="qtd">Qtd. Produto(Obrigatório):</label>
-                                <input type="number" disabled id="qtd" class="form-control" value="<?= $p->QTD_PRODUTO ?>">
+                                <input type="number" disabled id="qtd"  class="form-control" value="<?= $p->QTD_PRODUTO ?>">
                             </div>
 
                             <div class="form-group col-4">
@@ -78,7 +86,12 @@ $p = $ppc->find($_GET['v']);
 
                             <div class="form-group col-4">
                                 <label for="totallb">Total:</label>
-                                <input type="number" class="form-control" disabled id="totallb" value="<?= $p->TOTAL ?>">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">R$</div>
+                                    </div>
+                                    <input type="number" class="form-control" disabled id="totallb" value="<?= $p->TOTAL ?>">
+                                </div>
                             </div>
 
                         </div>
@@ -90,7 +103,7 @@ $p = $ppc->find($_GET['v']);
                             </div>
                         </div>
 
-                        <a href="/pedido/ped_fechar.php" class="btn btn-danger btn-block">Voltar</a>
+                        <a href="/delivery/deli_fechar.php" class="btn btn-danger btn-block">Voltar</a>
                     </div>
 
                 </div>
