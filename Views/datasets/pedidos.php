@@ -1,7 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rafaelgibam
- * Date: 10/06/18
- * Time: 12:49
- */
+
+require_once __DIR__ . "/../../autoload.php";
+
+$cc = new \Controllers\ClienteController();
+
+echo json_encode($cc->findAll());
