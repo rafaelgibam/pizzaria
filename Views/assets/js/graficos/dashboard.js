@@ -5,8 +5,7 @@ $(document).ready(function(){
         method: "GET",
         success: function(data) {
 
-            var cont = [];
-            var clientes = [];
+            var clientes = [1,2,4,6,9,20,10];
             var semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 
             console.log(data);
