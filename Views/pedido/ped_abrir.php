@@ -22,7 +22,7 @@
 ?>
 
 <div class="container">
-    <form method="post" action="salvar.php">
+    <form method="post" action="resumo.php">
         <div class="row">
             <div class="col-md-12 mt-4">
                 <?php include __DIR__ . "/../errors.php"; ?>
@@ -85,19 +85,8 @@
                               <select name="produtoid" id="produto" class="form-control">
                                   <?php foreach ($pc->findAll() as $produto):?>
                                       <option value="<?= $produto->ID ?>"><?=  $produto->NOME  . " - " . "R$ " . $produto->PRECO  ?></option>
-                                      <input type="number" id="preco" hidden value="<?= $produto->PRECO ?>">
                                   <?php endforeach;?>
                               </select>
-                          </div>
-
-                          <div class="form-group col-4">
-                            <label for="totallb">Total:</label>
-                              <div class="input-group">
-                                  <div class="input-group-prepend">
-                                      <div class="input-group-text">R$</div>
-                                  </div>
-                                  <input type="number" class="form-control" id="totallb" name="total" value="0" readonly>
-                              </div>
                           </div>
 
                         </div>
@@ -119,5 +108,4 @@
     </form>
 </div>
 
-<script type="text/javascript" src="/../assets/js/pedido/pedido.js"></script>
 <?php include __DIR__ . "/../layout/footer.php"; ?>

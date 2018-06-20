@@ -20,5 +20,4 @@ abstract class Pessoa
     protected $pais;
     protected $referencia;
     protected $cep;
-
 }

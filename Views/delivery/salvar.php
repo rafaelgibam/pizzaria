@@ -5,7 +5,11 @@ require_once __DIR__ . "/../../autoload.php";
 $pdc = new \Controllers\PedidoDeliveryController();
 $pc = new \Controllers\ProdutoController();
 
-if(isset($_POST['abrir-delivery'])){
+$preco = $pc->find($_POST['produtoid'])->PRECO;
+
+$total = ($_POST['qtdprod'] * $preco) + $_POST['precofrete'];
+
+/*if(isset($_POST['abrir-delivery'])){
 
     $pdc->insert(
         $_POST['numero'],
@@ -23,7 +27,7 @@ if(isset($_POST['abrir-delivery'])){
     $pc->saidaProduto(
         $_POST['produtoid'],
         $_POST['qtdprod']);
-}
+}*/
 
 
 if(isset($_POST['editar-delivery'])) {
@@ -33,7 +37,7 @@ if(isset($_POST['editar-delivery'])) {
         $_POST['dtabertura'],
         $_POST['dtentrega'],
         $_POST['estado'],
-        $_POST['total'],
+        $total,
         $_POST['obs'],
         $_POST['motoboyid'],
         $_POST['clienteid'],

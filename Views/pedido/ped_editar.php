@@ -23,6 +23,8 @@ if($_SESSION['tipo'] == "cozinheiro"){
 
 $p = $ppc->find($_GET['e']);
 
+$dtabertura = new DateTime($p->DATA_ABERTURA);
+
 ?>
 
 <div class="container">
@@ -35,15 +37,15 @@ $p = $ppc->find($_GET['e']);
                     <h5 class="card-header">Edição de Pedido</h5>
                     <div class="card-body">
                         <div class="form-row">
-                            <div class="form-group col-4">
+                            <div class="form-group col-6">
                                 <input type="number" name="id" value="<?= $_GET['e'] ?>" hidden>
                                 <label for="numerolb">Número:</label>
                                 <input type="number" id="numerolb" name="numero" readonly class="form-control" value="<?= $p->NUMERO ?>">
                             </div>
 
-                            <div class="form-group col-4">
+                            <div class="form-group col-6">
                                 <label for="dtabertura">Data Abertura:</label>
-                                <input type="date" name="dtabertura" id="dtabertura" class="form-control" value="<?= $c->DATA_ABERTURA ?>" >
+                                <input type="date" name="dtabertura" id="dtabertura" class="form-control" value="<?= $dtabertura->format("Y-m-d") ?>" >
                             </div>
                         </div>
 
@@ -79,32 +81,21 @@ $p = $ppc->find($_GET['e']);
 
                         <div class="form-row">
 
-                            <div class="form-group col-3">
+                            <div class="form-group col-4">
                                 <label for="qtd">Qtd. Produto(Obrigatório):</label>
                                 <input type="number" name="qtdprod" id="qtd" class="form-control" value="<?= $p->QTD_PRODUTO ?>">
                             </div>
 
-                            <div class="form-group col-3">
+                            <div class="form-group col-4">
                                 <label for="produto">Produto(Obrigatório):</label>
                                 <select name="produtoid" id="produto" class="form-control">
                                     <?php foreach ($pc->findAll() as $produto):?>
                                         <option value="<?= $produto->ID ?>"><?=  $produto->NOME  . " - " . "R$ " . $produto->PRECO  ?></option>
-                                        <input type="number" id="preco" hidden value="<?= $produto->PRECO ?>">
                                     <?php endforeach;?>
                                 </select>
                             </div>
 
-                            <div class="form-group col-3">
-                                <label for="totallb">Total:</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">R$</div>
-                                    </div>
-                                    <input type="number" class="form-control" name="total" readonly id="totallb" value="<?= $p->TOTAL ?>">
-                                </div>
-                            </div>
-
-                            <div class="form-group col-3">
+                            <div class="form-group col-4">
                                 <label for="estado">Estado:</label>
                                 <select name="estado" id="estado" class="form-control">
                                     <option value="1">ABERTO</option>

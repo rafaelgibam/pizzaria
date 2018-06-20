@@ -49,6 +49,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                         <th scope="col">ID</th>
                         <th scope="col">NOME</th>
                         <th scope="col">DESCRIÇÃO</th>
+                        <th scope="col">QTD</th>
                         <th scope="col">PREÇO</th>
                         <th scope="col">COZINHEIRO</th>
                         <th scope="col">Ação</th>
@@ -62,6 +63,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                                 <th scope="row"><?= $clike->ID ?></th>
                                 <td><?= $clike->NOME ?></td>
                                 <td><?= $clike->DESCRICAO ?></td>
+                                <td><?= $clike->QTD ?></td>
                                 <td><?= $clike->PRECO ?></td>
                                 <td><?= $cc->find($clike->COZINHEIRO_ID)->NOME ?></td>
                                 <td>
@@ -83,6 +85,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
                             <th scope="row"><?= $c->ID ?></th>
                             <td><?= $c->NOME ?></td>
                             <td><?= $c->DESCRICAO ?></td>
+                            <td><?= $c->QTD ?></td>
                             <td><?= $c->PRECO ?></td>
                             <td><?= $cc->find($c->COZINHEIRO_ID)->NOME ?></td>
                             <td>

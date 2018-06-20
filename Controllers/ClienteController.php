@@ -71,7 +71,7 @@ class ClienteController
             $this->cdao->update($this->c);
             return header("location: cli_buscar.php?msg=alterado");
         }else{
-            return header("location: cli_editar.php?e={$this->c->getId()}msg=erro");
+            return header("location: cli_editar.php?e={$this->c->getId()}&msg=erro");
         }
     }
 

@@ -71,7 +71,13 @@
 
                             <div class="form-group col-2">
                                 <label for="salario">Salário:</label>
-                                <input type="number" id="salario" class="form-control" name="salario"  placeholder="R$" value="<?= $m->SALARIO ?>">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">R$</div>
+                                    </div>
+                                    <input type="number" id="salario" class="form-control" name="salario"  placeholder="R$" value="<?= $m->SALARIO ?>">
+                                </div>
+
                             </div>
                         </div>
                         <div class="form-row">

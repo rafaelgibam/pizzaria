@@ -34,7 +34,12 @@ if($_SESSION['tipo'] == "cozinheiro"){
                             </div>
                             <div class="form-group col-2">
                                 <label for="preco">Preço:</label>
-                                <input type="text" id="preco" name="preco" class="form-control">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">R$</div>
+                                    </div>
+                                    <input type="text" id="preco" name="preco" class="form-control">
+                                </div>
                             </div>
 
                             <div class="form-group col-2">

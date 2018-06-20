@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Pizzaria System</title>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/../assets/icons/materialicon.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/../assets/css/styles.css">
     <!--- <link rel="stylesheet" href="/../assets/js/scripts.js"> -->

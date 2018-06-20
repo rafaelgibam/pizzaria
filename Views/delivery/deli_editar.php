@@ -23,6 +23,9 @@ if($_SESSION['tipo'] == "cozinheiro"){
 
 $p = $pdc->find($_GET['e']);
 
+$dtabertura = new DateTime($p->DATA_ABERTURA);
+$dtfechamento = new DateTime($p->DATA_FECHAMENTO);
+
 ?>
 
 <div class="container">
@@ -43,12 +46,12 @@ $p = $pdc->find($_GET['e']);
 
                             <div class="form-group col-4">
                                 <label for="dtabertura">Data Abertura:</label>
-                                <input type="date" name="dtabertura" id="dtabertura" class="form-control" value="<?= $c->DATA_ABERTURA ?>" >
+                                <input type="date" name="dtabertura" id="dtabertura" class="form-control" value="<?= $dtabertura->format("Y-m-d") ?>" >
                             </div>
 
                             <div class="form-group col-4">
                                 <label for="dtentrega">Data Entrega:</label>
-                                <input type="date" name="dtentrega" id="dtentrega" class="form-control" value="<?= $c->DATA_ENTREGA ?>" >
+                                <input type="date" name="dtentrega" id="dtentrega" class="form-control" value="<?= $dtfechamento->format("Y-m-d") ?>" >
                             </div>
                         </div>
 
@@ -72,7 +75,7 @@ $p = $pdc->find($_GET['e']);
                                 </select>
                             </div>
 
-                            <div class="form-group col-2">
+                            <div class="form-group col-4">
                                 <label for="precofrete">Preço Frete:</label>
 
                                 <div class="input-group">
@@ -86,32 +89,21 @@ $p = $pdc->find($_GET['e']);
 
                         <div class="form-row">
 
-                            <div class="form-group col-3">
+                            <div class="form-group col-4">
                                 <label for="qtd">Qtd. Produto(Obrigatório):</label>
                                 <input type="number" name="qtdprod" id="qtd" class="form-control" value="<?= $p->QTD_PRODUTO ?>">
                             </div>
 
-                            <div class="form-group col-3">
+                            <div class="form-group col-4">
                                 <label for="produto">Produto(Obrigatório):</label>
                                 <select name="produtoid" id="produto" class="form-control">
                                     <?php foreach ($pc->findAll() as $produto):?>
                                         <option value="<?= $produto->ID ?>"><?=  $produto->NOME  . " - " . "R$ " . $produto->PRECO  ?></option>
-                                        <input type="number" id="preco" hidden value="<?= $produto->PRECO ?>">
                                     <?php endforeach;?>
                                 </select>
                             </div>
 
-                            <div class="form-group col-3">
-                                <label for="totallb">Total:</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">R$</div>
-                                    </div>
-                                    <input type="number" class="form-control" name="total" id="totallb" value="<?= $p->TOTAL ?>">
-                                </div>
-                            </div>
-
-                            <div class="form-group col-3">
+                            <div class="form-group col-4">
                                 <label for="estado">Estado:</label>
                                 <select name="estado" id="estado" class="form-control">
                                     <option value="1">ABERTO</option>

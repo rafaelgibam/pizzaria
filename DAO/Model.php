@@ -21,6 +21,13 @@ abstract class Model
         return $stmt->fetch();
     }
 
+    function findNumPed($numero){
+        $stmt = DB::getCon()->prepare("SELECT * FROM {$this->table} WHERE NUMERO = ?");
+        $stmt->bindValue(1, $numero);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
     public function delete($id)
     {
         $stmt = DB::getCon()->prepare("DELETE FROM {$this->table} WHERE ID = ?");

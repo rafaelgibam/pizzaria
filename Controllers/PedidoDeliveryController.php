@@ -48,9 +48,9 @@ class PedidoDeliveryController
         $this->pr->setId($produtoid);
         $this->p->setProduto($this->pr);
 
-        if($this->p->getNumero() != null && $this->p->getDtabertura() != null && $this->p->getTotal() != null){
+        if($this->p->getNumero() != null && $this->p->getDtabertura() != null){
             $this->pdao->insert($this->p);
-            return header("location: deli_fechar.php?msg=aberto");
+            return header("location: resumo.php?id={$this->p->getNumero()}");
         }else{
             return header("location: deli_abrir.php?msg=erro");
         }
@@ -115,5 +115,9 @@ class PedidoDeliveryController
 
     public function buscarPorNumero($numero){
         return $this->pdao->findPedido($numero);
+    }
+
+    public function findNum($numero){
+        return $this->pdao->findNumPed($numero);
     }
 }

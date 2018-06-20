@@ -5,13 +5,14 @@ $(document).ready(function(){
         method: "GET",
         success: function(data) {
 
-            var clientes = [1,2,4,6,9,20,10];
-            var semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+            var clientes = [1,2,3,4,5,6];
 
-            console.log(data);
+            var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+                "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+            ]
 
             var clientesConf = {
-                labels: semana,
+                labels: meses,
                 datasets : [
                     {
                         label: 'clientes',
