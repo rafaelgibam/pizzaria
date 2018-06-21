@@ -7,19 +7,7 @@ $pc = new \Controllers\ProdutoController();
 $cc = new \Controllers\ClienteController();
 $mc = new \Controllers\MotoBoyController();
 
-
-
-if($_SESSION['tipo'] == "garcom"){
-    include __DIR__ . "/../layout/menugarcom.php";
-}
-
-if($_SESSION['tipo'] == "motoboy"){
-    include __DIR__ . "/../layout/menugarcom.php";
-}
-
-if($_SESSION['tipo'] == "cozinheiro"){
-    include __DIR__ . "/../layout/menucozinheiro.php";
-}
+include __DIR__ . "/../layout/menucozinheiro.php";
 
 $p = $pdc->find($_GET['e']);
 

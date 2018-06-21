@@ -2399,7 +2399,7 @@ defaults._set('bubble', {
 		xAxes: [{
 			type: 'linear', // bubble should probably use a linear scale by default
 			position: 'bottom',
-			id: 'x-axis-0' // need an ID so datasets can reference the scale
+			id: 'x-axis-0' // need an ID so api can reference the scale
 		}],
 		yAxes: [{
 			type: 'linear',
@@ -2699,7 +2699,7 @@ module.exports = function(Chart) {
 
 		linkScales: helpers.noop,
 
-		// Get index of the dataset in relation to the visible datasets. This allows determining the inner and outer radius correctly
+		// Get index of the dataset in relation to the visible api. This allows determining the inner and outer radius correctly
 		getRingIndex: function(datasetIndex) {
 			var ringIndex = 0;
 
@@ -3607,7 +3607,7 @@ defaults._set('scatter', {
 
 	scales: {
 		xAxes: [{
-			id: 'x-axis-1',    // need an ID so datasets can reference the scale
+			id: 'x-axis-1',    // need an ID so api can reference the scale
 			type: 'linear',    // scatter should not use a category axis
 			position: 'bottom'
 		}],
@@ -3842,7 +3842,7 @@ module.exports = function(Chart) {
 		config = config || {};
 
 		// Do NOT use configMerge() for the data object because this method merges arrays
-		// and so would change references to labels and datasets, preventing data updates.
+		// and so would change references to labels and api, preventing data updates.
 		var data = config.data = config.data || {};
 		data.datasets = data.datasets || [];
 		data.labels = data.labels || [];
@@ -4161,7 +4161,7 @@ module.exports = function(Chart) {
 		},
 
 		/**
-		 * Reset the elements of all datasets
+		 * Reset the elements of all api
 		 * @private
 		 */
 		resetElements: function() {
@@ -4270,7 +4270,7 @@ module.exports = function(Chart) {
 		},
 
 		/**
-		 * Updates all datasets unless a plugin returns `false` to the `beforeDatasetsUpdate`
+		 * Updates all api unless a plugin returns `false` to the `beforeDatasetsUpdate`
 		 * hook, in which case, plugins will not be called on `afterDatasetsUpdate`.
 		 * @private
 		 */
@@ -4408,7 +4408,7 @@ module.exports = function(Chart) {
 		},
 
 		/**
-		 * Draws all datasets unless a plugin returns `false` to the `beforeDatasetsDraw`
+		 * Draws all api unless a plugin returns `false` to the `beforeDatasetsDraw`
 		 * hook, in which case, plugins will not be called on `afterDatasetsDraw`.
 		 * @private
 		 */
@@ -4419,7 +4419,7 @@ module.exports = function(Chart) {
 				return;
 			}
 
-			// Draw datasets reversed to support proper line stacking
+			// Draw api reversed to support proper line stacking
 			for (var i = (me.data.datasets || []).length - 1; i >= 0; --i) {
 				if (me.isDatasetVisible(i)) {
 					me.drawDataset(i, easingValue);
@@ -6849,17 +6849,17 @@ module.exports = {
  */
 /**
  * @method IPlugin#beforeDatasetsUpdate
- * @desc Called before updating the `chart` datasets. If any plugin returns `false`,
- * the datasets update is cancelled until another `update` is triggered.
+ * @desc Called before updating the `chart` api. If any plugin returns `false`,
+ * the api update is cancelled until another `update` is triggered.
  * @param {Chart.Controller} chart - The chart instance.
  * @param {Object} options - The plugin options.
- * @returns {Boolean} false to cancel the datasets update.
+ * @returns {Boolean} false to cancel the api update.
  * @since version 2.1.5
 */
 /**
  * @method IPlugin#afterDatasetsUpdate
- * @desc Called after the `chart` datasets have been updated. Note that this hook
- * will not be called if the datasets update has been previously cancelled.
+ * @desc Called after the `chart` api have been updated. Note that this hook
+ * will not be called if the api update has been previously cancelled.
  * @param {Chart.Controller} chart - The chart instance.
  * @param {Object} options - The plugin options.
  * @since version 2.1.5
@@ -6867,18 +6867,18 @@ module.exports = {
 /**
  * @method IPlugin#beforeDatasetUpdate
  * @desc Called before updating the `chart` dataset at the given `args.index`. If any plugin
- * returns `false`, the datasets update is cancelled until another `update` is triggered.
+ * returns `false`, the api update is cancelled until another `update` is triggered.
  * @param {Chart} chart - The chart instance.
  * @param {Object} args - The call arguments.
  * @param {Number} args.index - The dataset index.
  * @param {Object} args.meta - The dataset metadata.
  * @param {Object} options - The plugin options.
- * @returns {Boolean} `false` to cancel the chart datasets drawing.
+ * @returns {Boolean} `false` to cancel the chart api drawing.
  */
 /**
  * @method IPlugin#afterDatasetUpdate
- * @desc Called after the `chart` datasets at the given `args.index` has been updated. Note
- * that this hook will not be called if the datasets update has been previously cancelled.
+ * @desc Called after the `chart` api at the given `args.index` has been updated. Note
+ * that this hook will not be called if the api update has been previously cancelled.
  * @param {Chart} chart - The chart instance.
  * @param {Object} args - The call arguments.
  * @param {Number} args.index - The dataset index.
@@ -6935,25 +6935,25 @@ module.exports = {
  */
 /**
  * @method IPlugin#beforeDatasetsDraw
- * @desc Called before drawing the `chart` datasets. If any plugin returns `false`,
- * the datasets drawing is cancelled until another `render` is triggered.
+ * @desc Called before drawing the `chart` api. If any plugin returns `false`,
+ * the api drawing is cancelled until another `render` is triggered.
  * @param {Chart.Controller} chart - The chart instance.
  * @param {Number} easingValue - The current animation value, between 0.0 and 1.0.
  * @param {Object} options - The plugin options.
- * @returns {Boolean} `false` to cancel the chart datasets drawing.
+ * @returns {Boolean} `false` to cancel the chart api drawing.
  */
 /**
  * @method IPlugin#afterDatasetsDraw
- * @desc Called after the `chart` datasets have been drawn. Note that this hook
- * will not be called if the datasets drawing has been previously cancelled.
+ * @desc Called after the `chart` api have been drawn. Note that this hook
+ * will not be called if the api drawing has been previously cancelled.
  * @param {Chart.Controller} chart - The chart instance.
  * @param {Number} easingValue - The current animation value, between 0.0 and 1.0.
  * @param {Object} options - The plugin options.
  */
 /**
  * @method IPlugin#beforeDatasetDraw
- * @desc Called before drawing the `chart` dataset at the given `args.index` (datasets
- * are drawn in the reverse order). If any plugin returns `false`, the datasets drawing
+ * @desc Called before drawing the `chart` dataset at the given `args.index` (api
+ * are drawn in the reverse order). If any plugin returns `false`, the api drawing
  * is cancelled until another `render` is triggered.
  * @param {Chart} chart - The chart instance.
  * @param {Object} args - The call arguments.
@@ -6961,13 +6961,13 @@ module.exports = {
  * @param {Object} args.meta - The dataset metadata.
  * @param {Number} args.easingValue - The current animation value, between 0.0 and 1.0.
  * @param {Object} options - The plugin options.
- * @returns {Boolean} `false` to cancel the chart datasets drawing.
+ * @returns {Boolean} `false` to cancel the chart api drawing.
  */
 /**
  * @method IPlugin#afterDatasetDraw
- * @desc Called after the `chart` datasets at the given `args.index` have been drawn
- * (datasets are drawn in the reverse order). Note that this hook will not be called
- * if the datasets drawing has been previously cancelled.
+ * @desc Called after the `chart` api at the given `args.index` have been drawn
+ * (api are drawn in the reverse order). Note that this hook will not be called
+ * if the api drawing has been previously cancelled.
  * @param {Chart} chart - The chart instance.
  * @param {Object} args - The call arguments.
  * @param {Number} args.index - The dataset index.
@@ -11429,7 +11429,7 @@ defaults._set('global', {
 						strokeStyle: dataset.borderColor,
 						pointStyle: dataset.pointStyle,
 
-						// Below is extra data used for toggling the datasets
+						// Below is extra data used for toggling the api
 						datasetIndex: i
 					};
 				}, this) : [];
@@ -12392,7 +12392,7 @@ module.exports = function(Chart) {
 					var meta = chart.getDatasetMeta(datasetIndex);
 					var key = [
 						meta.type,
-						// we have a separate stack for stack=undefined datasets when the opts.stacked is undefined
+						// we have a separate stack for stack=undefined api when the opts.stacked is undefined
 						((opts.stacked === undefined && meta.stack === undefined) ? datasetIndex : ''),
 						meta.stack
 					].join('.');
@@ -12647,7 +12647,7 @@ module.exports = function(Chart) {
 				// We set the min or the max but not both.
 				// So ensure that our range is good
 				// Inverted or 0 length range can happen when
-				// ticks.min is set, and no datasets are visible
+				// ticks.min is set, and no api are visible
 				if (me.min >= me.max) {
 					if (setMin) {
 						me.max = me.min + 1;
@@ -12823,7 +12823,7 @@ module.exports = function(Chart) {
 					var meta = chart.getDatasetMeta(datasetIndex);
 					var key = [
 						meta.type,
-						// we have a separate stack for stack=undefined datasets when the opts.stacked is undefined
+						// we have a separate stack for stack=undefined api when the opts.stacked is undefined
 						((opts.stacked === undefined && meta.stack === undefined) ? datasetIndex : ''),
 						meta.stack
 					].join('.');

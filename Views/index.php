@@ -1,7 +1,6 @@
 <?php require_once __DIR__ . "/../autoload.php"; ?>
 <?php include_once __DIR__ . "/layout/head.php"; ?>
 <?php include_once __DIR__ . "/layout/menu.php"; ?>
-
 <?php
 session_start();
 
@@ -20,8 +19,13 @@ if($sessao == "garcom"){
 }
 
 ?>
-
-<h1 class="text-center">Funcionário acesse sua área administrativa!</h1>
+<div class="container" id="inicio">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center mt-5">Funcionário acesse sua área administrativa!</h1>
+        </div>
+    </div>
+</div>
 
 <?php include_once __DIR__ . "/layout/footer.php"; ?>
 

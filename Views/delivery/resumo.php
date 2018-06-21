@@ -38,7 +38,7 @@ $dtentrega = new DateTime($p->DATA_ENTREGA);
 
 ?>
 
-<div class="container mt-5">
+<div class="container mt-5" id="tabela">
     <div class="row">
         <div class="col-md-4">
             <h2>PizzariaCTL</h2>
@@ -82,10 +82,10 @@ $dtentrega = new DateTime($p->DATA_ENTREGA);
     <div class="row">
         <div class="col-md-12">
             <label for="obs">Observações:</label>
-            <textarea id="obs" cols="120" rows="10" disabled><?= $p->OBSERVACOES ?></textarea>
+            <textarea id="obs" cols="12" class="form-control" rows="10" disabled><?= $p->OBSERVACOES ?></textarea>
         </div>
     </div>
-    <div class="row">
+    <div class="row mt-3">
         <div class="col-md-12">
             <a href="/delivery/deli_fechar.php" class="btn btn-danger btn-block">Ver Pedidos</a>
         </div>

@@ -4,17 +4,7 @@
 <?php
 $gc = new \Controllers\GarcomController();
 
-if($_SESSION['tipo'] == "garcom"){
-    include __DIR__ . "/../layout/menugarcom.php";
-}
-
-if($_SESSION['tipo'] == "motoboy"){
-    include __DIR__ . "/../layout/menugarcom.php";
-}
-
-if($_SESSION['tipo'] == "cozinheiro"){
-    include __DIR__ . "/../layout/menucozinheiro.php";
-}
+include __DIR__ . "/../layout/menucozinheiro.php";
 
 ?>
 

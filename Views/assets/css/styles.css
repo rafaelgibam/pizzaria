@@ -1,0 +1,43 @@
+html,body {
+    height: 100%;
+}
+
+body {
+    background: url("/assets/img/bg.png"), linear-gradient(0deg, #c60200, #ffaa00);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+nav {
+    box-shadow: 0px 0px 45px 0px #000000;
+}
+
+#footer {
+    background-color: white;
+    padding-top: 20px;
+    box-shadow: 0px 0px 45px 0px #000;
+    background-attachment: fixed;
+    object-position: bottom;
+
+}
+
+#tabela {
+    background-color: white;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    margin-bottom: 150px;
+}
+
+#inicio {
+    margin-bottom: 230px;
+    margin-top: 150px;
+}
+
+#inicio h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}

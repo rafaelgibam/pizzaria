@@ -1,4 +1,4 @@
-    <?php include __DIR__ . "/../session.php"; ?>
+<?php include __DIR__ . "/../session.php"; ?>
 <?php include __DIR__ . "/../layout/head.php"; ?>
 <?php include __DIR__ . "/../layout/menucozinheiro.php"; ?>
 

@@ -1,13 +1,14 @@
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="/../index.php">PizzariaCTL</a>
+        <a class="navbar-brand" href="#">PizzariaCTL</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link ml-2" data-toggle="modal" data-target="#exampleModal" >Área do Funcionário</a>
+                    <a href="#" class="nav-link ml-2" data-toggle="modal" data-target="#exampleModal" >Acesso Funcionário</a>
                 </li>
             </ul>
         </div>

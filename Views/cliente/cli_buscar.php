@@ -4,17 +4,7 @@
 <?php
 $cc = new \Controllers\ClienteController();
 
-if($_SESSION['tipo'] == "garcom"){
-    include __DIR__ . "/../layout/menugarcom.php";
-}
-
-if($_SESSION['tipo'] == "motoboy"){
-    include __DIR__ . "/../layout/menugarcom.php";
-}
-
-if($_SESSION['tipo'] == "cozinheiro"){
-    include __DIR__ . "/../layout/menucozinheiro.php";
-}
+include __DIR__ . "/../layout/menucozinheiro.php";
 
 if(isset($_GET['d']) && $_GET['d'] != null){
     $cc->delete($_GET['d']);
@@ -22,7 +12,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
 
 ?>
 
-<div class="container">
+<div class="container" id="tabela">
   <div class="row mt-4">
     <div class="col-md-12">
       <form>
@@ -39,7 +29,6 @@ if(isset($_GET['d']) && $_GET['d'] != null){
   </div>
 
   <div class="row">
-
     <div class="col-md-12">
         <?php include __DIR__ . "/../errors.php"; ?>
       <table class="table table-sm table-hover">

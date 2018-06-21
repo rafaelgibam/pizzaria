@@ -1,11 +1,11 @@
 
 $(document).ready(function(){
     $.ajax({
-        url: "http://localhost:8080/datasets/clientes.php",
+        url: "http://localhost:8080/api/clientes.php",
         method: "GET",
         success: function(data) {
 
-            var clientes = [1,2,3,4,5,6];
+            var clientes = [1,2,3,4,5,6,2,1,10,3,10,1];
 
             var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
                 "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"

@@ -4,17 +4,8 @@
 <?php
 $mc = new \Controllers\MotoBoyController();
 
-if($_SESSION['tipo'] == "garcom"){
-    include __DIR__ . "/../layout/menugarcom.php";
-}
+include __DIR__ . "/../layout/menucozinheiro.php";
 
-if($_SESSION['tipo'] == "motoboy"){
-    include __DIR__ . "/../layout/menugarcom.php";
-}
-
-if($_SESSION['tipo'] == "cozinheiro"){
-    include __DIR__ . "/../layout/menucozinheiro.php";
-}
 
 if(isset($_GET['d']) && $_GET['d'] != null){
     $mc->delete($_GET['d']);
@@ -22,7 +13,7 @@ if(isset($_GET['d']) && $_GET['d'] != null){
 
 ?>
 
-<div class="container">
+<div class="container" id="tabela">
     <div class="row mt-4">
         <div class="col-md-12">
             <form>
